@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0px;
     background-color: #afafaf;
 }
 
@@ -11,4 +11,14 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-logo img {
+    margin-left: 17%;
+    margin-top: 60%;
+    width: 70%;
+}
+
+.container-null {
+    margin-top: 100%;
 }
