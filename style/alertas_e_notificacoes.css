@@ -1,0 +1,33 @@
+.div{
+    padding: 100px;
+}
+
+.container{
+    max-width: 650px;
+    margin: 0;
+    background-color: rgb(242,211,124);
+    padding: 20px;
+    box-sizing: 6px;
+    box-shadow: 0 0 10px rgba(82, 15, 15, 0.1);
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+h1{
+color: black;
+background-color: rgb(242,211,124);
+}
+
+#notificacao1{
+
+}
+
+#notificacao2{
+
+}
+
+#notificacao3{
+
+}
+
