@@ -8,7 +8,7 @@ body {
 .container {
     max-width: 650px;
     margin: 0 auto;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -23,17 +23,30 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
-    
+
 }
 
-.container_status{
+.container_status {
     display: flex;
     max-width: 100px;
     max-height: 100px;
     margin: 0 auto;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
+}
+
+h1 {
+    background-color: #f3e40e;
+}
+
+img {
+    max-width: 100px;
+    max-height: 150px;
+    background-color: #f3e40e;
+}
+.relogio{
+    background-color: #f3e40e;
 }
