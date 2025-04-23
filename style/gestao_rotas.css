@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    background-color: #afafaf;
+    overflow-y: hidden;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.container-logo img {
+    width: 50%;
+}
