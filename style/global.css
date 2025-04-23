@@ -1,3 +1,11 @@
 * {
     background-color: #F0F0F0;
 }
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
