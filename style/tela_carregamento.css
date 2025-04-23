@@ -6,14 +6,18 @@ body {
 }
 
 .container {
-    max-width: 710px;
+    max-width: 650px;
     margin: 0 auto;
     background-color: #f0f0f0;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container-null {
-    margin-top: 240%;
+.container-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.container-logo img {
+    width: 50%;
 }
