@@ -1,0 +1,15 @@
+.imagem{
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.imagem img{
+    width: 100%;
+}
+
+.texto{
+    border-radius: 50px;
+    background-color: rgb(242,211,124);
+}
