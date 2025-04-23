@@ -8,14 +8,14 @@ body {
 .container {
     max-width: 650px;
     margin: 0 auto;
-    background-color: #f0f0f0;
+    background-color:#f0f0f0;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
 }
 
-.containeramarelo {
+.container_amarelo {
     max-width: 650px;
     margin: 0 auto;
     background-color: #f3e40e;
@@ -24,4 +24,16 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
     
+}
+
+.container_status{
+    display: flex;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0 auto;
+    background-color:#f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
 }
