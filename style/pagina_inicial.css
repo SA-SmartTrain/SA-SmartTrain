@@ -1,10 +1,18 @@
-hr{
-   color: yellow;
-}
+
 
 body{
     font-family:Arial, Helvetica, sans-serif;
 }
 h1{
+
     font-weight: bold;
+}
+.container hr{
+    width: 210px;
+    height: 1px;
+    border: 1px;
+    border-top: 3px solid rgb(242,211,124);
+    background-color: rgb(242,211,124);
+    border-radius: 80px;
+   margin-right: 700px;
 }
