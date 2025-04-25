@@ -1,12 +1,17 @@
 * {
     background-color: #F0F0F0;
+    color: #2C2C2C;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
 }
 
 .container {
     max-width: 650px;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #F0F0F0;
     padding: 20px;
-    box-sizing: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
