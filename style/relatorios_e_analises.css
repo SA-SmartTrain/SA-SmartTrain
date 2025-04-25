@@ -70,6 +70,9 @@ h1{
 }
 
 .container-menu-bar {
+    position: relative;
+    top: 150px;
+    right: 20px;
     display: flex;
     margin-top: 40px;
     width: 400px;
