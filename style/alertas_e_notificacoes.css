@@ -4,33 +4,58 @@ div {
 
 .container {
     background-color: rgb(242, 211, 124);
-    padding: 20px;
-    box-sizing: 6px;
+    padding-bottom: 10px; /* Espaço na base */
+    box-sizing: border-box;
     display: flex;
-    margin-bottom: 20px;
     margin-top: 20px;
-    max-width: 650px;
+    max-width: 600px;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
+    margin-bottom: 10px; /* Espaço na base */
 }
 
-h1 {
+p{
     color: black;
-    background-color: rgb(242, 211, 124)
+    background-color: rgb(242, 211, 124);
+    margin: 0;
+    padding: 10px;
+}
+
+h3 {
+    color: black;
+    background-color: rgb(242, 211, 124);
+    margin: 0;
+    padding: 10px;
+
 }
 
 #notificacao1 {
     align-items: center;
     background-color: rgb(242, 211, 124);
+    width: 100%;
+}
+
+img{
+    max-width: 50px;
+    max-height: 100px;
+    background-color: rgb(242, 211, 124);
+    padding: 0px;
+}
+
+.lupa{
+   background-color: rgb(242, 211, 124); 
 }
 
 #notificacao2 {
+    align-items: center;
     background-color: rgb(242, 211, 124);
     width: 100%;
 }
 
 #notificacao3 {
-    
+    align-items: center;
+    background-color: rgb(242, 211, 124);
+    width: 100%;
 }
