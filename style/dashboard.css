@@ -139,6 +139,10 @@ h1 {
     width: 100%;
 }
 
+.sections-double-right a {
+    text-decoration: none;
+}
+
 .sections-double-right {
     position: relative;
     bottom: 216px;
@@ -159,9 +163,17 @@ h1 {
 
 .sections-main-bottom {
     position: relative;
-    bottom: 200px;
+    bottom: 220px;
     width: 390px;
     height: 250px;
     background-color: rgb(242, 211, 124);
     border-radius: 8px;
+    box-shadow: 0px 7px 16px 1px rgba(0, 0, 0, 0.2);
+}
+
+.sections-main-bottom p {
+    border-radius: 8px;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(242, 211, 124);
 }
