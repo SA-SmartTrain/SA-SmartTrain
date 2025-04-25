@@ -28,18 +28,17 @@ body {
 .container_horario {
     display: flex;
     max-width: 100px;
-    max-height: 10px;
+    max-height: 30px;
     margin: 0 auto;
     background-color:rgb(241, 220, 161);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
-
+    
 }
 
 .container_status {
-    display: flex;
     max-width: 100px;
     max-height: 100px;
     margin: 0 auto;
@@ -48,6 +47,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
+    text-align: center;
 }
 
 h1 {
@@ -70,6 +70,7 @@ img {
     background-color: rgb(242, 211, 124);
 }
 
+
 .relogio {
     background-color: rgb(242, 211, 124);
 }
@@ -78,8 +79,17 @@ img {
     background-color: rgb(242, 211, 124);
 }
 
-.container_alertas {
-    display: flex;
+.modo_noturno {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.modo_noturno img {
+    width: 100%;
+    background-color:#f0f0f0;
+}
+
+#container_alertas {
     max-width: 400px;
     max-height: 500px;
     margin: 0 auto;
@@ -95,3 +105,8 @@ img {
     background-color: rgb(242, 211, 124);
 }
 
+#topo {
+    justify-content: space-between;
+    display: flex;
+    background-color:#f0f0f0;
+}
