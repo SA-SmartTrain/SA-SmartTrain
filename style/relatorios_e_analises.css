@@ -14,7 +14,7 @@ body {
 .container-accessibility-buttons {
     display: flex;
     position: relative;
-    bottom: 155px;
+    bottom: 225px;
     margin-left: 300px;
     width: 100px;
     height: 30px;
@@ -36,7 +36,7 @@ body {
 h1{
     position: relative;
     left: 25px;
-    bottom: 200px;
+    bottom: 270px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 23px;
     font-weight: bold;
@@ -116,7 +116,7 @@ h1{
     height: 42px;
     background-color:rgb(242,211,124);
     position: relative;
-    bottom: 200px;
+    bottom: 270px;
     border-radius: 70px;
 }
 .circulo{
@@ -126,9 +126,8 @@ h1{
     display:inline-block;
     background-color: rgb(242,211,124);
     position: relative;
-    bottom: 160px;
+    bottom: 260px;
 }
 
-.enumeracao{
-}
+
 
