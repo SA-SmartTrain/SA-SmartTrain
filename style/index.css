@@ -1,7 +1,11 @@
+/*Sempre começar com esta base nos .html*/
+
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0px;
-    background-color: #afafaf;
+    background-color: #F0F0F0;
     overflow-y: hidden;
 }
 
@@ -18,11 +22,12 @@ body {
 .container-logo-senai img {
     margin-top: 700px;
     position: relative;
-    bottom: 90px;
+    bottom: 230px;
+    width: 50%;
 }
 
 .container-logo img {
     position: relative;
     width: 70%;
-    top: 300px;
+    top: 340px;
 }

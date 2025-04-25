@@ -1,33 +1,32 @@
-.div{
-    padding: 100px;
+div {
+    padding: 30px;
 }
 
-.container{
-    max-width: 650px;
-    margin: 0;
-    background-color: rgb(242,211,124);
+.container {
+    background-color: rgb(242, 211, 124);
     padding: 20px;
     box-sizing: 6px;
-    box-shadow: 0 0 10px rgba(82, 15, 15, 0.1);
     display: flex;
     margin-bottom: 20px;
     margin-top: 20px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
 }
 
-h1{
-color: black;
-background-color: rgb(242,211,124);
+h1 {
+    color: black;
+    background-color: rgb(242, 211, 124)
 }
 
-#notificacao1{
-
+#notificacao1 {
+    align-items: center;
+    background-color: rgb(242, 211, 124);
 }
 
-#notificacao2{
-
+#notificacao2 {
+    background-color: rgb(242, 211, 124);
+    width: 100%;
 }
-
-#notificacao3{
-
-}
-
