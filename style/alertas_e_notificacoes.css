@@ -1,7 +1,13 @@
 div {
     padding: 30px;
 }
-.containerum{
+
+.flex{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.containerum{  
     text-align: top;
     background-color: rgb(242, 211, 124);
     padding-bottom: 5px; /* Espaço na base */
@@ -14,7 +20,13 @@ div {
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
     margin-bottom: 100px; /* Espaço na base */
+   
 }
+
+.containerum input {
+    height: 20px;
+}
+
 
 .container {
     background-color: rgb(242, 211, 124);
@@ -59,13 +71,19 @@ img{
 }
 
 .lupa{
-   background-color: rgb(242, 211, 124); 
+   background-color: rgb(242, 211, 124);
+   width: 100%;
+   max-width: 50px;
+}
+
+.lupa img {
+    width: 100%;
+    height: auto;
 }
 
 #notificacao2 {
     align-items: center;
     background-color: rgb(242, 211, 124);
-    width: 100%;
 }
 
 #notificacao3 {
