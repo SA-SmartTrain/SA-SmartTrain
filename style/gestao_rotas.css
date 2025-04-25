@@ -23,15 +23,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
-
 }
 
 .container_horario {
     display: flex;
-    max-width: 300px;
+    max-width: 100px;
     max-height: 10px;
     margin: 0 auto;
-    background-color: #f0f0f0;
+    background-color:rgb(241, 220, 161);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -57,10 +56,12 @@ h1 {
 
 h2 {
     background-color: rgb(242, 211, 124);
+    text-align: center;
 }
 
 h3 {
     color: #9b1212;
+    text-align: center;
 }
 
 img {
@@ -91,5 +92,6 @@ img {
 
 .flex {
     display: flex;
-    background-color:rgb(242, 211, 124);
+    background-color: rgb(242, 211, 124);
 }
+
