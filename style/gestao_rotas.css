@@ -31,16 +31,24 @@ body {
     max-height: 30px;
     margin: 0 auto;
     background-color:rgb(241, 220, 161);
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
-    
+}
+
+.container_interno {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(242, 211, 124);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
 }
 
 .container_status {
     max-width: 100px;
-    max-height: 100px;
+    max-height: 90px;
     margin: 0 auto;
     background-color: #f0f0f0;
     padding: 20px;
@@ -66,7 +74,7 @@ h3 {
 
 img {
     max-width: 100px;
-    max-height: 150px;
+    max-height: 100px;
     background-color: rgb(242, 211, 124);
 }
 
@@ -85,7 +93,11 @@ img {
 }
 
 .modo_noturno img {
-    width: 100%;
+    width: 80%;
+    background-color:#f0f0f0;
+}
+.seta img {
+    width: 40%;
     background-color:#f0f0f0;
 }
 
