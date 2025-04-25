@@ -18,7 +18,20 @@ body {
 .container_amarelo {
     max-width: 650px;
     margin: 0 auto;
-    background-color: #f3e40e;
+    background-color: rgb(242, 211, 124);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+
+}
+
+.container_horario {
+    display: flex;
+    max-width: 300px;
+    max-height: 10px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -39,26 +52,32 @@ body {
 }
 
 h1 {
-    background-color: #f3e40e;
+    background-color: #f0f0f0;
 }
 
-h3{
-    color:#9b1212;
+h2 {
+    background-color: rgb(242, 211, 124);
+}
+
+h3 {
+    color: #9b1212;
 }
 
 img {
     max-width: 100px;
     max-height: 150px;
-    background-color: #f3e40e;
-}
-.relogio{
-    background-color: #f3e40e;
-}
-.alerta{
-    background-color: #f3e40e;
+    background-color: rgb(242, 211, 124);
 }
 
-.container_alertas{
+.relogio {
+    background-color: rgb(242, 211, 124);
+}
+
+.alerta {
+    background-color: rgb(242, 211, 124);
+}
+
+.container_alertas {
     display: flex;
     max-width: 400px;
     max-height: 500px;
@@ -68,4 +87,9 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+    background-color:rgb(242, 211, 124);
 }
