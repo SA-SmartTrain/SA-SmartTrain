@@ -112,10 +112,18 @@ h1{
     cursor: pointer;
 }
 .barra{
-    width: 390px;
+    width: 420px;
     height: 42px;
     background-color:rgb(242,211,124);
     position: relative;
     bottom: 56px;
     border-radius: 70px;
 }
+.circulo{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(242,211,124);
+}
+
