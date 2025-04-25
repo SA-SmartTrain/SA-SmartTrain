@@ -1,0 +1,33 @@
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+.container_amarelo {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: rgb(242, 211, 124);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+.modo_noturno {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.modo_noturno img {
+    width: 80%;
+    background-color:#f0f0f0;
+}
+.seta img {
+    width: 40%;
+    background-color:#f0f0f0;
+}
