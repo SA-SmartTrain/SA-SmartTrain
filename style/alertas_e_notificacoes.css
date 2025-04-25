@@ -1,24 +1,16 @@
 div {
-    padding: 30px;
-}
-.containerum{
-    text-align: top;
-    background-color: rgb(242, 211, 124);
-    padding-bottom: 5px; /* Espaço na base */
-    box-sizing: border-box;
-    display: flex;
-    margin-top: 50px;
-    max-width: 500px;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 10px;
-    margin-bottom: 100px; /* Espaço na base */
+    padding-bottom: 20px;
 }
 
-.container {
+.flex{
+    font-weight: bolder;
+    text-align:center;
+}
+
+.containerum {  
+    text-align:center;
     background-color: rgb(242, 211, 124);
-    padding-bottom: 10px; /* Espaço na base */
+    padding-bottom: 5px;
     box-sizing: border-box;
     display: flex;
     margin-top: 100px;
@@ -27,7 +19,43 @@ div {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
-    margin-bottom: 10px; /* Espaço na base */
+    margin-bottom: 50px; 
+    height: 50px;
+    
+}
+
+.containerum input {
+    height: 45px;
+    width: 500px;
+    background-color: rgb(242, 211, 124);
+    border: none;
+}
+
+
+.container {
+    background-color: rgb(242, 211, 124);
+    padding-bottom: 10px; 
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 100px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    height: 30px;
+    width: 60px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+.botao {
+background-color: rgb(242, 211, 124);
 }
 
 p{
@@ -59,13 +87,21 @@ img{
 }
 
 .lupa{
-   background-color: rgb(242, 211, 124); 
+   background-color: rgb(242, 211, 124);
+   width: 100%;
+   max-width: 50px;    
+    float: left;
+}
+
+.lupa img {
+
+    width: 100%;
+    height: auto;
 }
 
 #notificacao2 {
     align-items: center;
     background-color: rgb(242, 211, 124);
-    width: 100%;
 }
 
 #notificacao3 {
