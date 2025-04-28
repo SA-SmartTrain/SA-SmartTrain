@@ -71,3 +71,13 @@ img {
 .containerdois {
     background-color: rgb(242, 211, 124);
 }
+.flex {
+    display: flex;
+    background-color: rgb(242, 211, 124);
+}
+
+#topo {
+    justify-content: space-between;
+    display: flex;
+    background-color:#f0f0f0;
+}
