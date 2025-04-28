@@ -102,3 +102,12 @@ p {
     width: 100px;
     border-radius: 10px;
 }
+
+input[type="submit"] {
+    background-color:rgb(242, 211, 124);
+    color: black;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+}
+
