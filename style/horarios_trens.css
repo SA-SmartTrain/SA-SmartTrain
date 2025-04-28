@@ -1,17 +1,7 @@
 .container {
     max-width: 650px;
     margin: 0 auto;
-    background-color: #f0f0f0;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 10px;
-}
-
-.container_amarelo {
-    max-width: 650px;
-    margin: 0 auto;
-    background-color: rgb(242, 211, 124);
+    background-color:#f0f0f0;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -21,6 +11,7 @@
 .modo_noturno {
     max-width: 50px;
     max-height: 50px;
+    background-color:#f0f0f0;
 }
 
 .modo_noturno img {
@@ -57,11 +48,14 @@ img {
 
 .containerum input {
     height: 45px;
-    width: 500px;
+    width: 600px;
     background-color: rgb(242, 211, 124);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
+.containerdois {
+    background-color: rgb(242, 211, 124);
+}
 .flex {
     display: flex;
     background-color: rgb(242, 211, 124);
