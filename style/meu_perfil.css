@@ -142,3 +142,30 @@ background-color:#F0F0F0;
 border-radius: 70px;
 border: 1px rgb(242,211,124);
 }
+
+#ativo-desde{
+    border: none;
+    width: 220px;
+    height: 42px;
+    background-color:#F0F0F0;
+    border-radius: 70px;
+    border: 1px rgb(242,211,124);
+    } 
+
+#email{
+border: none;
+width: 380px;
+height: 42px;
+background-color:#F0F0F0;
+ border-radius: 70px;
+border: 1px rgb(242,211,124);
+ } 
+
+ #telefone{
+    border: none;
+width: 250px;
+height: 42px;
+background-color:#F0F0F0;
+ border-radius: 70px;
+border: 1px rgb(242,211,124);
+ }
