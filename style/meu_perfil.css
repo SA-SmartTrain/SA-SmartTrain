@@ -179,3 +179,8 @@ color: #948c8c;
     border: 1px rgb(242,211,124);
     color: #948c8c;
      }  
+
+.border img{
+    width: 150px;
+    border-radius: 70%;
+}
