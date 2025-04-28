@@ -78,6 +78,7 @@ h1{
     /*background-color: rgb(255, 0, 0);*/
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    right: 15px;
 }
 
 .sections-menu-bar {
@@ -126,7 +127,9 @@ h1{
     position: relative;
     top: 160px;
     position: relative;
-    border-radius: 7%;
+  border-top-right-radius: 7%;
+  border-top-left-radius: 7%;
+  right: 5px;
     
 }
 .second p{
