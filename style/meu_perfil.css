@@ -23,7 +23,7 @@ body {
 }
 
 .container-accessibility-buttons img {
-    margin-left: 30px;
+    margin-left:100px;
     width: 30px;
     height: 30px;
 }
@@ -113,10 +113,10 @@ h1{
 }
 .border{
     width: 110%;
-    height: 270px;
+    height: 280px;
     background-color: rgb(242,211,124);
     position: relative;
-    margin-bottom: 270px;
+    margin-bottom: 300px;
     
 }
 .second{
@@ -181,6 +181,6 @@ color: #948c8c;
      }  
 
 .border img{
-    width: 150px;
+    width: 180px;
     border-radius: 70%;
 }
