@@ -126,7 +126,9 @@ h1{
     position: relative;
     top: 160px;
     position: relative;
-    border-radius: 7%;
+  border-top-right-radius: 7%;
+  border-top-left-radius: 7%;
+  right: 5px;
     
 }
 .second p{
