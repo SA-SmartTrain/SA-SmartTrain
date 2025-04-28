@@ -57,11 +57,37 @@ img {
 }
 .flex {
     display: flex;
-    background-color: rgb(242, 211, 124);
+    background-color:#f0f0f0;
 }
 
 #topo {
     justify-content: space-between;
     display: flex;
     background-color:#f0f0f0;
+}
+
+.container_data {
+    display: flex;
+    max-width: 100px;
+    max-height: 30px;
+    margin: 0 auto;
+    background-color:#f0f0f0;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+.container_amarelo {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: rgb(242, 211, 124);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+p {
+    background-color:rgb(242, 211, 124);
 }
