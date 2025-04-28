@@ -102,3 +102,7 @@ p {
     width: 100px;
     border-radius: 10px;
 }
+
+label{
+    background-color: rgb(242, 211, 124);
+}
