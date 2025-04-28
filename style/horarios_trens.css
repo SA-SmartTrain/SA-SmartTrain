@@ -29,11 +29,6 @@ img {
     background-color:#f0f0f0;
 }
 
-.flex {
-    display: flex;
-    background-color:#f0f0f0;
-}
-
 .containerum {  
     text-align:center;
     background-color: rgb(242, 211, 124);
@@ -43,7 +38,6 @@ img {
     margin-top: 100px;
     max-width: 500px;
     margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
     margin-bottom: 50px; 
