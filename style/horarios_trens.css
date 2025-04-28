@@ -105,7 +105,7 @@ p {
     border-radius: 10px;
 }
 
-input[type="submit"] {
+input[type="submitum"] {
     background-color:rgb(242, 211, 124);
     color: black;
     border-radius: 5px;
@@ -113,6 +113,13 @@ input[type="submit"] {
     height: 30px;
 }
 
+input[type="submitdois"] {
+    background-color:white;
+    color: black;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+}
 
 label{
     background-color: rgb(242, 211, 124);
@@ -121,14 +128,17 @@ label{
 #hora {
     width: 50%;
     align-content: center;
+    background-color: rgb(242, 211, 124);
 }
 
 #amPM {
     width: 20%;
     align-content: center;
+    background-color: rgb(242, 211, 124);
 }
 
 #buscaHora {
     width: 30%;
     align-content: center;
+    background-color: rgb(242, 211, 124);
 }
