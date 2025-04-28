@@ -80,12 +80,14 @@ img {
 
 .container_amarelo {
     max-width: 450px;
+    width: 100%;
     margin: 0 auto;
     background-color: rgb(242, 211, 124);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
+    display: flex;
 }
 
 p {
@@ -98,8 +100,8 @@ p {
 
 .horaum input{
     background-color: white;
-    height: 50px;
-    width: 100px;
+    height: 100px;
+    width: 200px;
     border-radius: 10px;
 }
 
@@ -111,3 +113,22 @@ input[type="submit"] {
     height: 30px;
 }
 
+
+label{
+    background-color: rgb(242, 211, 124);
+}
+
+#hora {
+    width: 50%;
+    align-content: center;
+}
+
+#amPM {
+    width: 20%;
+    align-content: center;
+}
+
+#buscaHora {
+    width: 30%;
+    align-content: center;
+}
