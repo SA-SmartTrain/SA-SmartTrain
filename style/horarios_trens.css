@@ -91,3 +91,14 @@ img {
 p {
     background-color:rgb(242, 211, 124);
 }
+
+.horaum {
+    background-color: rgb(242, 211, 124);
+}
+
+.horaum input{
+    background-color: white;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+}
