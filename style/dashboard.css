@@ -164,6 +164,18 @@ h1 {
     background-color: rgb(242, 211, 124);
 }
 
+.section-double-right-img {
+    position: relative;
+    height: 170px;
+    bottom: 30px;
+    background-color: rgb(242, 211, 124);
+}
+
+.section-double-right-img img {
+    margin-left: 15px;
+    width: 80%;
+}
+
 .sections-main-bottom {
     position: relative;
     bottom: 220px;
