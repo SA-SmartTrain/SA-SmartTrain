@@ -97,11 +97,12 @@ body {
     position: relative;
     bottom: 270px;
     margin-left: 132px;
-    width: 370px;
+    width: 320px;
     height: 50px;
     background-color: rgb(242, 211, 124);
     border-radius: 21px;
     border: none;
+    padding-left: 60px;
     font-size: 15px;
 }
 
