@@ -42,3 +42,7 @@ img {
     display: flex;
     background-color:#f0f0f0;
 }
+
+.data{
+    background-color: rgb(242, 211, 124)
+}
