@@ -66,3 +66,15 @@ img {
     background-color: rgb(242, 211, 124);
     border-radius: 10px;
 }
+
+.flex {
+    display: flex;
+    background-color: rgb(242, 211, 124);
+}
+
+#topo {
+    justify-content: space-between;
+    display: flex;
+    background-color:#f0f0f0;
+}
+
