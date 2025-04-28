@@ -31,3 +31,14 @@
     width: 40%;
     background-color:#f0f0f0;
 }
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+    background-color:#f0f0f0;
+}
+
+.flex {
+    display: flex;
+    background-color:#f0f0f0;
+}
