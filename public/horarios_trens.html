@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     <main>
         <section>
             <div class="container">
-                <div class="flex">
+                <div id="topo" class="flex">
                     <div class="seta">
                         <img src="../src/assets/images/seta.png">
                     </div>
@@ -23,7 +23,50 @@
                         <img src="../src/assets/images/dark_and_white-mode.png">
                     </div>
                 </div>
-            </div>
+                <div id="abapesquisa">
+                    <div class="containerum">
+                        <input type="text" placeholder="Pesquise o seu horário de trem">
+                        <div class="lupa">
+                            <img src="../src/assets/images/lupa.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="container_data">
+                        <p>Jun 10, 2025</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="container_amarelo">
+                    <div id="hora">
+                        <p>Insira o horário</p>
+                        <div class="horaum">
+                            <input type="time">
+                        </div>
+                    </div>
+                    <div id="amPM">
+                        <input type="radio" id="op1" name="opcao" value="AM">
+                        <label for="op1">AM</label><br>
+                        <input type="radio" id="op2" name="opcao" value="PM">
+                        <label for="op2">PM</label><br>
+                    </div>
+                    <div id="buscaHora">
+                        <input type="submit" value="Procurar">
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <div class="container_amarelo">
+                    <p>Insira observações se necessário:</p>
+                    <div class="container">
+                        <input type="text" id="observacao" name="observacao_horario">
+                        <input type="submit" onclick="alert('Sua observação foi enviada!')" value="Enviar">
+                    </div>
+                </div>
+
+
             </div>
         </section>
 
