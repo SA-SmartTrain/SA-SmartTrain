@@ -1,7 +1,7 @@
 .container {
     max-width: 650px;
     margin: 0 auto;
-    background-color: #f0f0f0;
+    background-color:#f0f0f0;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -21,6 +21,7 @@
 .modo_noturno {
     max-width: 50px;
     max-height: 50px;
+    background-color:#f0f0f0;
 }
 
 .modo_noturno img {
@@ -43,11 +44,6 @@ img {
     background-color:#f0f0f0;
 }
 
-<<<<<<< HEAD
-.data{
-    background-color: rgb(242, 211, 124)
-}
-=======
 .containerum {  
     text-align:center;
     background-color: rgb(242, 211, 124);
@@ -67,8 +63,11 @@ img {
 
 .containerum input {
     height: 45px;
-    width: 500px;
+    width: 600px;
     background-color: rgb(242, 211, 124);
-    border-radius: 10px;
+    border-radius: 5px;
 }
->>>>>>> 905fa864ecd22811cdb131d503ff214f787576b0
+
+.containerdois {
+    background-color: rgb(242, 211, 124);
+}
