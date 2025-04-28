@@ -43,6 +43,32 @@ img {
     background-color:#f0f0f0;
 }
 
+<<<<<<< HEAD
 .data{
     background-color: rgb(242, 211, 124)
 }
+=======
+.containerum {  
+    text-align:center;
+    background-color: rgb(242, 211, 124);
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 100px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    margin-bottom: 50px; 
+    height: 50px;
+    
+}
+
+.containerum input {
+    height: 45px;
+    width: 500px;
+    background-color: rgb(242, 211, 124);
+    border-radius: 10px;
+}
+>>>>>>> 905fa864ecd22811cdb131d503ff214f787576b0
