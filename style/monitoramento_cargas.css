@@ -3,23 +3,19 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
     background-color: #F0F0F0;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .container-accessibility-buttons {
     display: flex;
     position: relative;
-    top: 23px;
-    margin-left: 250px;
+    top: 50px;
+    margin-left: 1700px;
     width: 100px;
     height: 30px;
     gap: 1px;
-    z-index: 3;
+    z-index: 1;
 }
 
 .container-accessibility-buttons img {
@@ -27,54 +23,48 @@ body {
     width: 30px;
     height: 30px;
 }
-
+ 
 #funcionarios {
     position: relative;
     left: 20px;
 }
 
 h1{
-    position: relative;
-    left: 0px;
-    bottom: 17px;
+    margin-left: 35px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 21px;
+    font-size: 26px;
     font-weight: bold;
-    z-index: 2;
 }
 
 #map {
-    width: 380px;
-    height: 760px;
+    width: 2000px;
+    height: 750px;
     z-index: 1;
 }
 
 .api-maps {
     position: relative;
-    bottom: 25px;
-    width: 380px;
-    height: 760px;
+    bottom: 20px;
+    width: 2000px;
+    height: 750px;
     z-index: 1;
     border-radius: 5px;
 }
 
 .container-menu-bar {
-    display: flex;
     position: relative;
-    bottom: 25px;
-    right: 15px;
-    width: 400px;
+    left: 5px;
+    margin-top: 0.5%;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
     height: 60px;
-    gap: 29px;
-    /*background-color: rgb(255, 0, 0);*/
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    z-index: 1;
+    gap: 350px;
 }
 
 .sections-menu-bar {
     position: relative;
-    left: 20px;
+    left: 6px;
     width: 50px;
     height: 50px;
     margin-left: 10px;
@@ -102,4 +92,36 @@ h1{
 
 #notifications:hover {
     cursor: pointer;
+}
+
+@media(max-height: 866px) {
+    
+    h1 {
+        position: relative;
+        right: 23px;
+    }
+    
+    .container-accessibility-buttons {
+        position: relative;
+        right: 1400px;
+    }
+
+    .container-menu-bar {
+        position: relative;
+        left: -30px;
+        bottom: 36px;
+        gap: 55px;
+        z-index: 1;
+
+    }
+
+    #map {
+        margin-top: 45px;
+        width: 450px;
+        height: 680px;
+        z-index: 1;
+    }
+    
+ 
+    
 }
