@@ -33,3 +33,42 @@ map.on('dblclick', function() {
     userPolylines = [];
     clickPoints = [];
 });
+
+async function buscarEndereco(endereco) {
+    const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(endereco)}`);
+    const data = await response.json();
+    if (data.length > 0) {
+        const { lat, lon } = data[0];
+        return L.latLng(lat, lon);
+    } else {
+        alert(`Endereço não encontrado: ${endereco}`);
+        return null;
+    }
+}
+
+async function localizarDestino(inputId) {
+    const endereco = document.getElementById(inputId).value;
+    if (!endereco) return;
+
+    const latlng = await buscarEndereco(endereco);
+    if (latlng) {
+        const marker = L.marker(latlng).addTo(map);
+        userMarkers.push(marker);
+        clickPoints.push(latlng);
+
+        map.setView(latlng, 15);
+
+        if (clickPoints.length === 2) {
+            const line = L.polyline(clickPoints, { color: 'rgb(242,211,124)' }).addTo(map);
+            userPolylines.push(line);
+            clickPoints = [];
+        }
+    }
+}
+
+document.getElementById('destinoStart').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') localizarDestino('destinoStart');
+});
+document.getElementById('destinoFinal').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') localizarDestino('destinoFinal');
+});
