@@ -109,7 +109,9 @@ h1{
     cursor: pointer;
 }
 
-@media(max-height: 866px) {
+/*width : 476*/
+
+@media(max-width: 866px) {
     
     .container-accessibility-buttons {
         position: relative;
@@ -118,7 +120,7 @@ h1{
 
     .container-sections hr {
         position: relative;
-        right: 35px;
+        right: 25px;
     }
 
     .container-menu-bar {
