@@ -2,20 +2,33 @@
     color: #2C2C2C;
 }
 
+h3 {
+    position: relative;
+    left: 1385px;
+    bottom: 570px;
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
     background-color: #F0F0F0;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+
+.container-back {
+    position: relative;
+    top: 12px;
+    width: 30px;
+    height: 30px;
+}
+
+.container-back img {
+    width: 100%;
 }
 
 .container-accessibility-buttons {
     display: flex;
     position: relative;
-    bottom: 28px;
-    margin-left: 260px;
+    top: 50px;
+    margin-left: 1700px;
     width: 100px;
     height: 30px;
     gap: 1px;
@@ -36,29 +49,28 @@ body {
 
 h1 {
     position: relative;
-    left: 15px;
-    bottom: 80px;
+    left: 35px;
+    bottom: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
     font-weight: bold;
 }
 
 
-
 .container-menu-bar {
+    position: relative;
+    bottom: 35px;
+    margin-top: 7.2%;
     display: flex;
-    margin-top: 10px;
-    width: 400px;
+    justify-content: center;
+    width: 100vw;
     height: 60px;
-    gap: 29px;
-    /*background-color: rgb(255, 0, 0);*/
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+    gap: 350px;
 }
 
 .sections-menu-bar {
     position: relative;
-    left: 20px;
+    left: 6px;
     width: 50px;
     height: 50px;
     margin-left: 10px;
@@ -80,13 +92,19 @@ h1 {
     width: 100%;
 }
 
-#press-effect:hover {
+#funcionarios {
+    position: relative;
+    left: 20px;
+}
+
+#press-effect:hover{
     opacity: 1;
 }
 
 #notifications:hover {
     cursor: pointer;
 }
+
 
 .container-main-sections {
     position: relative;
@@ -96,7 +114,10 @@ h1 {
 }
 
 .sections-main {
-    width: 390px;
+    position: relative;
+    top: 50px;
+    left: 35px;
+    width: 690px; /*390 por 170*/
     height: 170px;
     background-color: rgb(242, 211, 124);
     border-radius: 8px;
@@ -104,8 +125,11 @@ h1 {
 }
 
 .sections-double-left {
+    position: relative;
+    top: 50px;
+    left: 35px;
     margin-top: 10px;
-    width: 189px;
+    width: 330px; /*189 por 200*/
     height: 200px;
     background-color: rgb(242, 211, 124);
     border-radius: 8px;
@@ -121,6 +145,7 @@ h1 {
     padding: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: rgb(242, 211, 124);
+    
 }
 
 .section-double-left-img {
@@ -136,10 +161,9 @@ h1 {
 
 .section-double-left-img img {
     position: relative;
-    background-color: rgb(242, 211, 124);
-    width: 140%;
-    right: 20px;
-    bottom: 20px;
+    width: 160%;
+    left: 45px;
+    bottom: 50px;
 }
 
 .sections-double-right a {
@@ -148,9 +172,9 @@ h1 {
 
 .sections-double-right {
     position: relative;
-    bottom: 216px;
-    left: 210px;
-    width: 180px;
+    bottom: 165px;
+    left: 395px; /*180 por 200*/
+    width: 330px;
     height: 200px;
     background-color: rgb(242, 211, 124);
     border-radius: 8px;
@@ -167,21 +191,23 @@ h1 {
 .section-double-right-img {
     position: relative;
     height: 170px;
-    bottom: 30px;
-    background-color: rgb(242, 211, 124);
+    bottom: 37px;
+    left: 65px;
+    
 }
 
 .section-double-right-img img {
     margin-left: 15px;
-    width: 80%;
-    background-color: rgb(242, 211, 124);
+    width: 50%;
+    
 }
 
 .sections-main-bottom {
     position: relative;
-    bottom: 220px;
-    width: 390px;
-    height: 250px;
+    bottom: 160px;
+    width: 690px; /*390 por 250*/
+    height: 290px;
+    left: 35px;
     background-color: rgb(242, 211, 124);
     border-radius: 8px;
     box-shadow: 0px 7px 16px 1px rgba(0, 0, 0, 0.2);
@@ -192,4 +218,90 @@ h1 {
     padding: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: rgb(242, 211, 124);
+}
+
+@media(max-width: 866px) {
+    
+    h1 {
+        position: relative;
+        right: 23px;
+        top: 0px;
+    }
+    
+    .container-accessibility-buttons {
+        position: relative;
+        right: 1400px;
+    }
+
+    .container-menu-bar {
+        position: relative;
+        left: -30px;
+        bottom: 2px;
+        gap: 55px;
+        z-index: 1;
+
+    }
+
+    .sections-main {
+        position: relative;
+        top: 50px;
+        left: 35px;
+        width: 390px; /*390 por 170*/
+        height: 170px;
+    }
+
+    .sections-double-left {
+        position: relative;
+        top: 50px;
+        left: 35px;
+        margin-top: 10px;
+        width: 189px; /*189 por 200*/
+        height: 200px;
+ 
+    }
+
+    .section-double-left-img img {
+        position: relative;
+        width: 160%;
+        left: -30px;
+        bottom: 50px;
+    }
+    
+    .sections-double-right {
+        position: relative;
+        bottom: 165px;
+        left: 245px; /*180 por 200*/
+        width: 180px;
+        height: 200px;
+       
+    }
+    
+    .section-double-right-img {
+        position: relative;
+        height: 170px;
+        bottom: 37px;
+        left: 4px;
+        
+    }
+    
+    .section-double-right-img img {
+        width: 90%;
+        
+    }
+    
+    .sections-main-bottom {
+        position: relative;
+        bottom: 160px;
+        width: 390px; /*390 por 250*/
+        height: 290px;
+        left: 35px;
+       
+    }
+
+    .container-back {
+        position: relative;
+        top: 50px;
+       
+    }
+    
 }

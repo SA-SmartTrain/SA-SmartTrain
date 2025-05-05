@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style/global.css">
     <link rel="stylesheet" href="../style/monitoramento_cargas.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -21,14 +20,12 @@
                     <img src="/src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
                 </div>
                 <h1>Monitoramento de Cargas</h1>
-                <div class="api-maps" id="map">
-
-                </div>
+                <div class="api-maps" id="map"></div>
                 <div class="container-menu-bar">
                     <div class="sections-menu-bar" id="press-effect">
                         <img src="/src/assets/images/inicio-bar.png" alt="">
                         <div id="incio">
-                            <a href="/public/pagina_inicial.html"><span>Inicío</span></a>
+                            <a href="/public/pagina_inicial.html"><span>Início</span></a>
                         </div>
                     </div>
                     <div class="sections-menu-bar" id="press-effect">
@@ -42,6 +39,16 @@
                     <div class="sections-menu-bar" id="press-effect">
                         <div id="funcionarios"><img src="/src/assets/images/funcionarios-bar.png" alt=""></div>
                         <a href="#"><span>Funcionários</span></a>
+                    </div>
+                </div>
+                <div class="container-search-maps">
+                    <div class="search-group">
+                        <input type="text" id="destinoStart">
+                        <img class="search-icon" src="../src/assets/images/lupa-monitoramento.png" alt="">
+                    </div>
+                    <div class="search-group">
+                        <input type="text" id="destinoFinal">
+                        <img class="search-icon" src="../src/assets/images/lupa-monitoramento.png" alt="">
                     </div>
                 </div>
             </div>

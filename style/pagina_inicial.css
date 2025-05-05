@@ -3,19 +3,15 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
     background-color: #F0F0F0;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .container-accessibility-buttons {
     display: flex;
     position: relative;
-    bottom: 28px;
-    margin-left: 250px;
+    top: 50px;
+    margin-left: 1700px;
     width: 100px;
     height: 30px;
     gap: 1px;
@@ -28,15 +24,9 @@ body {
     height: 30px;
 }
 
-#funcionarios {
-    position: relative;
-    left: 20px;
-}
 
 h1{
-    position: relative;
-    left: 15px;
-    bottom: 80px;
+    margin-left: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
     font-weight: bold;
@@ -44,8 +34,8 @@ h1{
 
 .container-sections {
     position: relative;
-    bottom: 80px;
-    margin-left: 10px;
+    top: 30px;
+    margin-left: 35px;
 }
 
 .container-sections p {
@@ -56,6 +46,8 @@ h1{
 }
 
 .container-sections hr{
+    position: relative;
+    right: 1480px;
     width: 270px;
     height: 1px;
     border: 1px;
@@ -70,14 +62,14 @@ h1{
 }
 
 .container-menu-bar {
+    position: relative;
+    bottom: 35px;
+    margin-top: 9%;
     display: flex;
-    margin-top: 40px;
-    width: 400px;
+    justify-content: center;
+    width: 100vw;
     height: 60px;
-    gap: 29px;
-    /*background-color: rgb(255, 0, 0);*/
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+    gap: 350px;
 }
 
 .sections-menu-bar {
@@ -104,10 +96,39 @@ h1{
     width: 100%;
 }
 
+#funcionarios {
+    position: relative;
+    left: 20px;
+}
+
 #press-effect:hover{
     opacity: 1;
 }
 
 #notifications:hover {
     cursor: pointer;
+}
+
+/*width : 476*/
+
+@media(max-width: 866px) {
+    
+    .container-accessibility-buttons {
+        position: relative;
+        right: 1400px;
+    }
+
+    .container-sections hr {
+        position: relative;
+        right: 25px;
+    }
+
+    .container-menu-bar {
+        position: relative;
+        top: 30px;
+        gap: 55px;
+        right: 30px;
+    }
+
+    
 }
