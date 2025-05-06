@@ -12,7 +12,9 @@ let clickPoints = [];
 let userMarkers = [];
 let userPolylines = [];
 
-map.on('click', function(e) {
+const apiKey = '5b3ce3597851110001cf62486b3fdc2f343b45e2bf0bdcfb17af56bc'; 
+
+map.on('click', async function(e) {
     const latlng = e.latlng;
     clickPoints.push(latlng);
 
@@ -20,8 +22,7 @@ map.on('click', function(e) {
     userMarkers.push(marker);
 
     if (clickPoints.length === 2) {
-        const line = L.polyline(clickPoints, { color: 'rgb(242,211,124)' }).addTo(map);
-        userPolylines.push(line);
+        await desenharRota(clickPoints[0], clickPoints[1]);
         clickPoints = [];
     }
 });
@@ -59,11 +60,39 @@ async function localizarDestino(inputId) {
         map.setView(latlng, 15);
 
         if (clickPoints.length === 2) {
-            const line = L.polyline(clickPoints, { color: 'rgb(242,211,124)' }).addTo(map);
-            userPolylines.push(line);
+            await desenharRota(clickPoints[0], clickPoints[1]);
             clickPoints = [];
         }
     }
+}
+
+async function desenharRota(pontoA, pontoB) {
+    const response = await fetch('https://api.openrouteservice.org/v2/directions/driving-car/geojson', {
+        method: 'POST',
+        headers: {
+            'Authorization': apiKey,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            coordinates: [
+                [pontoA.lng, pontoA.lat],
+                [pontoB.lng, pontoB.lat]
+            ]
+        })
+    });
+
+    if (!response.ok) {
+        alert("Erro ao buscar rota.");
+        return;
+    }
+
+    const data = await response.json();
+
+    const rota = L.geoJSON(data, {
+        style: { color: 'rgb(242,211,124)', weight: 4 }
+    }).addTo(map);
+
+    userPolylines.push(rota);
 }
 
 document.getElementById('destinoStart').addEventListener('keydown', function(e) {
