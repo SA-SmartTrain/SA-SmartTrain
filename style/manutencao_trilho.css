@@ -53,10 +53,7 @@ img {
 }
 
 
-.flex {
-    display: flex;
-    background-color:#f0f0f0;
-}
+
 
 #topo {
     justify-content: space-between;
@@ -65,14 +62,14 @@ img {
 }
 
 .container_data {
-    display: flex;
-    margin: 0 auto;
+
     background-color:#f0f0f0;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 10px;
-    margin-left: 820px;
+    width: 100px;
+    margin-left: 800px;
 }
 
 .container_amarelo {
@@ -114,14 +111,16 @@ p {
     height: 100px;
     width: 200px;
     border-radius: 10px;
+    text-align: center;
 }
 
 input[type="submitum"] {
     background-color:rgb(242, 211, 124);
-    color: black;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     width: 60px;
     height: 30px;
+    text-align: center;
 }
 
 input[type="submitdois"] {
@@ -163,7 +162,7 @@ label{
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     right: 15px;
-    justify-content:right;
+    margin-left: 630px;
 }
 
 .sections-menu-bar {
@@ -198,4 +197,13 @@ label{
 #funcionarios {
     position: relative;
     left: 20px;
+}
+
+.container{
+    border-radius: 10px;
+}
+
+h1{
+    text-align: center;
+    margin-right: -1000px;
 }
