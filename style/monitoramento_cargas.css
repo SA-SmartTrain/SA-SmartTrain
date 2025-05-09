@@ -58,8 +58,8 @@ h1{
 
 .container-menu-bar {
     position: relative;
-    left: 5px;
-    bottom: 25px;
+    right: 3px;
+    bottom: 18px;
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -69,10 +69,9 @@ h1{
 
 .sections-menu-bar {
     position: relative;
-    left: 6px;
     width: 50px;
     height: 50px;
-    margin-left: 10px;
+    margin-left: 8px;
     opacity: 0.3;
 }
 
