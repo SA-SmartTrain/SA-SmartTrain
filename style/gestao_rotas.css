@@ -96,9 +96,11 @@ img {
     margin-left: 600px;
 }
 
+.seta{
+}
 
 .seta img {
-    width: 40%;
+    width: 40px;
     background-color:#f0f0f0;
 }
 
