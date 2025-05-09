@@ -1,133 +1,80 @@
-* {
-    color: #2C2C2C;
-}
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Arial, sans-serif;
     margin: 0px;
-    background-color: #F0F0F0;
+    background-color: #afafaf;
     overflow-y: hidden;
 }
 
-.container-accessibility-buttons {
-    display: flex;
-    position: relative;
-    bottom: 205px;
-    margin-left: 270px;
-    width: 30px;
-    height: 30px;
-    gap: 1px;
-    z-index: 1;
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
 }
 
-.container-accessibility-buttons img {
-    margin-left: 70px;
-    width: 30px;
-    height: 30px;
+.container_dados {
+    max-width: 400px;
+    max-height: 20px;
+    margin: 0 auto;
+    background-color:#f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
 }
 
-#funcionarios {
-    position: relative;
-    left: 20px;
+
+.modo_noturno {
+    max-width: 50px;
+    max-height: 50px;
 }
 
-h1{
-    position: relative;
-    width: 290px;
-    left: 25px;
-    bottom: 255px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
+.modo_noturno img {
+    width: 80%;
+    background-color:#f0f0f0;
+}
+.seta img {
+    width: 40%;
+    background-color:#f0f0f0;
 }
 
-.container-sections {
-    position: relative;
-    bottom: 10px;
-    margin-left: 10px;
+.estatistica {
+    max-width: 50px;
+    max-height: 50px;
 }
 
-.container-menu-bar {
-    position: relative;
-    top: 150px;
-    right: 10px;
-    display: flex;
-    margin-top: 40px;
-    width: 400px;
-    height: 60px;
-    gap: 29px;
-    /*background-color: rgb(255, 0, 0);*/
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-.sections-menu-bar {
-    position: relative;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-    opacity: 0.3;
-}
-
-.sections-menu-bar span {
-    position: relative;
-    left: 5px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
-}
-
-.sections-menu-bar a {
-    text-decoration: none;
-}
-
-.container-menu-bar img {
+.estatistica img {
     width: 100%;
+    background-color:#f0f0f0;
 }
 
-#press-effect:hover{
-    opacity: 1;
-}
-
-#notifications:hover {
-    cursor: pointer;
-}
-.barra input{
-    border: none;
-    width: 380px;
-    height: 42px;
-    background-color:rgb(242,211,124);
-    position: relative;
-    bottom: 210px;
-    border-radius: 70px;
+#topo {
+    justify-content: space-between;
     display: flex;
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:#f0f0f0;
 }
-.circulo{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display:inline-block;
-    background-color: rgb(242,211,124);
-    position: relative;
-    bottom: 210px;
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+    background-color: rgb(242, 211, 124);
+}
+
+.flex {
     display: flex;
-    align-items: center;
-    font-weight: bold;
-    justify-content: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.circulo-text {
-    position: relative;
-    bottom: 235px;
-    display: flex; 
-    left: 50px;
-    font-size: 17px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:#f0f0f0;
 }
 
-
+.container_amarelo {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: rgb(242, 211, 124);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
 
