@@ -93,6 +93,7 @@ img {
 .modo_noturno img {
     width: 80%;
     background-color:#f0f0f0;
+    margin-left: 600px;
 }
 .seta img {
     width: 40%;
