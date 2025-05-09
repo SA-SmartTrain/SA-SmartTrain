@@ -56,9 +56,6 @@ body {
     text-align: center;
 }
 
-h1 {
-    background-color: #f0f0f0;
-}
 
 h2 {
     background-color: rgb(242, 211, 124);
@@ -97,6 +94,8 @@ img {
 }
 
 .seta{
+    position: relative;
+    right: 600px;
 }
 
 .seta img {
