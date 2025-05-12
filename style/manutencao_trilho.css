@@ -99,6 +99,11 @@ img {
 
 p {
     background-color:rgb(242, 211, 124);
+    font-weight: bolder;
+}
+
+p1 {
+    font-weight: bolder;
 }
 
 
