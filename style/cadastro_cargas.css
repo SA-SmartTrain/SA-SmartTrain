@@ -10,7 +10,6 @@ body {
 
 h1 {
     position: relative;
-    top: 20px;
     margin-left: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
@@ -118,7 +117,7 @@ img {
 .container-accessibility-buttons {
     display: flex;
     position: relative;
-    top: 60px;
+    top: 55px;
     margin-left: 1000px;
     width: 100px;
     height: 30px;
@@ -130,4 +129,10 @@ img {
     margin-left: 30px;
     width: 30px;
     height: 30px;
+}
+
+input {
+    top: 60px;
+    right: 400px;
+    position: relative;
 }
