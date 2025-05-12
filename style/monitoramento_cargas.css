@@ -59,12 +59,13 @@ h1{
 .container-menu-bar {
     position: relative;
     left: 4px;
-    bottom: 20px;
+    bottom: 30px;
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 60px;
     gap: 350px;
+    z-index: 1;
 }
 
 .sections-menu-bar {
