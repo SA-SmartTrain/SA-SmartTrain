@@ -4,7 +4,6 @@
 }
 
 body {
-    background-color: #f0f0f0;
     overflow-x: hidden;
 }
 
@@ -135,4 +134,19 @@ input {
     top: 60px;
     right: 400px;
     position: relative;
+}
+
+#carga {
+    background-color: rgb(242,211,124);
+}
+
+#tamanho{
+   background-color: rgb(242,211,124);  
+}
+
+#destino{
+   background-color: rgb(242,211,124);  
+}
+#partida{
+   background-color: rgb(242,211,124);  
 }
