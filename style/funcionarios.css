@@ -1,5 +1,6 @@
 * {
     color: #2C2C2C;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -23,11 +24,7 @@ body {
     width: 30px;
     height: 30px;
 }
- 
-#funcionarios {
-    position: relative;
-    left: 20px;
-}
+
 
 h1{
     margin-left: 35px;
@@ -36,43 +33,51 @@ h1{
     font-weight: bold;
 }
 
-#map {
-    width: 2000px;
-    height: 750px;
-    z-index: 1;
+.container-sections {
+    position: relative;
+    top: 30px;
+    margin-left: 35px;
 }
 
-#funcionarios {
+.container-sections p {
     position: relative;
-    left: 20px;
+    top: 20px;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.api-maps {
+.container-sections hr{
     position: relative;
-    bottom: 20px;
-    width: 2000px;
-    height: 750px;
-    z-index: 1;
-    border-radius: 5px;
+    right: 1480px;
+    width: 270px;
+    height: 1px;
+    border: 1px;
+    border-top: 3px solid rgb(242,211,124);
+    background-color: rgb(242,211,124);
+    border-radius: 80px;
+    margin-right: 120px;
+}
+
+.container-sections a {
+    text-decoration: none;
 }
 
 .container-menu-bar {
     position: relative;
-    left: 4px;
-    bottom: 30px;
+    margin-top: 7%;
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 60px;
     gap: 350px;
-    z-index: 1;
 }
 
 .sections-menu-bar {
     position: relative;
+    left: -300px;
     width: 50px;
     height: 50px;
-    margin-left: 8px;
+    margin-left: 10px;
     opacity: 0.3;
 }
 
@@ -91,6 +96,11 @@ h1{
     width: 100%;
 }
 
+#funcionarios {
+    position: relative;
+    left: 20px;
+}
+
 #press-effect:hover{
     opacity: 1;
 }
@@ -99,77 +109,52 @@ h1{
     cursor: pointer;
 }
 
-.container-search-maps input {
-    position: relative;
-    left: 670px;
-    bottom: 790px;
-    width: 550px;
-    height: 40px;
-    border: none;
-    border-radius: 50px;
-    background-color:  rgb(242,211,124);
-    z-index: 1;
+.container-func{
+ display: flex;
+}
+
+.container-amarelo{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(242,211,124);
+    margin-left: 35px;
+    gap: 25px;
     text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
 }
 
-.search-icon {
-    position: relative;
-    left: 620px;
-    bottom: 780px;
-    width: 30px;
-    height: 30px;
-    z-index: 2;
-}
+.container-amarelo img{
+width: 300px;
+height: 300px;
+position: relative;
+right: 25px;
+bottom: 45px;
 
-.search-icon img {
-    width: 100%;
 }
 
 
-.container-search-maps input:hover {
-    opacity: 0.5;
-}
 
-@media(max-height: 866px){
-    
-    h1 {
-        position: relative;
-        right: 23px;
-    }
+/*width : 476*/
+
+@media screen and (max-width: 960px) {
     
     .container-accessibility-buttons {
         position: relative;
         right: 1400px;
     }
 
+    .container-sections hr {
+        position: relative;
+        right: 25px;
+    }
+
     .container-menu-bar {
         position: relative;
-        left: -30px;
-        bottom: 36px;
+        top: 30px;
         gap: 55px;
-        z-index: 1;
-
+        right: 30px;
     }
 
-    #map {
-        margin-top: 45px;
-        width: 450px;
-        height: 680px;
-        z-index: 1;
-    }
-    
-    .container-search-maps input {
-        position: relative;
-        margin-top: 35px;
-        width: 320px;
-        left: 75px;
-        z-index: 1;
-    }
-
-    .search-icon {
-        position: relative;
-        left: 25px;
-    }
- 
     
 }

@@ -110,7 +110,7 @@ h1{
 
 /*width : 476*/
 
-@media screen and (max-width: 867px) {
+@media screen and (max-width: 960px) {
     
     .container-accessibility-buttons {
         position: relative;
