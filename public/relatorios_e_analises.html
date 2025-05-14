@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style/global.css">
     <link rel="stylesheet" href="../style/relatorios_e_analises.css">
     <title>SmartTrain - Relatórios e Análises</title>
 </head>
@@ -14,14 +13,15 @@
     <main>
         <section>
             <div class="container">
+                <div class="container-accessibility-buttons">
+                    <img src="/src/assets/images/notifications.png" id="notifications">
+                    <img src="/src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+                </div>
                 <div id="topo" class="flex">
-                    <div class="seta">
-                        <img src="../src/assets/images/seta.png">
-                    </div>
                     <h1>SmartTrain - Relatórios e Análises</h1>
-                    <div class="modo_noturno">
+                    <!--<div class="modo_noturno">
                         <img src="../src/assets/images/dark_and_white-mode.png">
-                    </div>
+                    </div>-->
                 </div>
                 <br>
                 <div class="flex">
@@ -132,32 +132,28 @@
                     </div>
                 </div>
                 <br>
-                <div class="flex">
-                    <div class="container_dados">
-                        <p>Cereais</p>
-                    </div>
-                    <div class="container_dados">
-                        <input type="date">
-                    </div>
-                    <div class="container_dados">
-                        <p>28 T</p>
-                    </div>
-                </div>
-                <br>
-                <div class="flex">
-                    <div class="container_dados">
-                        <p>Petróleo</p>
-                    </div>
-                    <div class="container_dados">
-                        <input type="date">
-                    </div>
-                    <div class="container_dados">
-                        <p>1.310 m³</p>
-                    </div>
-                </div>
-
             </div>
         </section>
+        <div class="container-menu-bar">
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="/src/assets/images/inicio-bar.png" alt="">
+                <div id="incio">
+                    <a href="/public/pagina_inicial.html"><span>Inicío</span></a>
+                </div>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="/src/assets/images/menu-bar.png" alt="">
+                <a href="#"><span>Menu</span></a>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="/src/assets/images/estoque-bar.png" alt="">
+                <a href="#"><span>Estoque</span></a>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <div id="funcionarios"><img src="/src/assets/images/funcionarios-bar.png" alt=""></div>
+                <a href="#"><span>Funcionários</span></a>
+            </div>
+        </div>
     </main>
 </body>
 
