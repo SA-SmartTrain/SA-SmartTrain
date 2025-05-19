@@ -187,12 +187,11 @@ color: #948c8c;
     border-radius: 70%;
 }
 .imagem{
-    background-color: aquamarine;
     max-width: 100%;
     width: 120px;
     height: 120px;
     align-items:center;
     border-radius:70px;
-    margin-left: 145px;
+    margin-left: 120px;
    
 }
