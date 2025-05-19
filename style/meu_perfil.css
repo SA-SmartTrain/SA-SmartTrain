@@ -129,7 +129,6 @@ h1{
     position: relative;
   border-top-right-radius: 7%;
   border-top-left-radius: 7%;
-  right: 5px;
     
 }
 .second p{
@@ -186,4 +185,13 @@ color: #948c8c;
 .border img{
     width: 180px;
     border-radius: 70%;
+}
+.imagem{
+    max-width: 100%;
+    width: 120px;
+    height: 120px;
+    align-items:center;
+    border-radius:70px;
+    margin-left: 120px;
+   
 }
