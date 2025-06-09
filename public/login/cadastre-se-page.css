@@ -108,6 +108,12 @@ body {
     font-size: 15px;
 }
 
+button {
+    border: none;
+    background-color: rgb(242, 211, 124);
+
+}
+
 .container-icon {
     position: relative;
     bottom: 225px;
