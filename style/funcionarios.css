@@ -33,6 +33,10 @@ h1{
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container-sections {
     position: relative;
     top: 30px;
@@ -64,7 +68,7 @@ h1{
 
 .container-menu-bar {
     position: relative;
-    margin-top: 7%;
+    margin-top: 25%;
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -74,7 +78,7 @@ h1{
 
 .sections-menu-bar {
     position: relative;
-    left: -300px;
+    left: -170px;
     width: 50px;
     height: 50px;
     margin-left: 10px;
