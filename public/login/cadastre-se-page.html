@@ -41,14 +41,17 @@
                     <a href="/public/login/cadastro-se-dados.html"><span>Não possui uma conta?</span></a>
                 </div>
                 <div class="container-login-profile">
-                    <button type="submit" onclick="loginAdmin()"><a href="/public/pagina_inicial.html"><span>Login</span></a></button>
+                    <button type="submit" onclick="loginAdmin()"><a
+                            href="/public/pagina_inicial.html"><span>Login</span></a></button>
                 </div>
                 <div class="container-social-media">
                     <div class="social-media">
                         <img src="/src/assets/images/social-media/facebook.png" alt="">
                     </div>
                     <div class="social-media">
-                        <a href="https://accounts.google.com/AddSession/signinchooser?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=pt_BR&authuser=0&ddm=1&flowName=GlifWebSignIn&flowEntry=AddSession"><img src="/src/assets/images/social-media/google.png" alt=""></a>
+                        <a
+                            href="https://accounts.google.com/AddSession/signinchooser?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=pt_BR&authuser=0&ddm=1&flowName=GlifWebSignIn&flowEntry=AddSession"><img
+                                src="/src/assets/images/social-media/google.png" alt=""></a>
                     </div>
                     <div class="social-media">
                         <img src="/src/assets/images/social-media/linkdin.png" alt="">
@@ -61,5 +64,17 @@
         </section>
     </main>
 </body>
+<script>
+function loginAdmin() {
+    const username = document.getElementById('username').value.trim().toLowerCase();
+
+    if (username === 'admin') {
+        alert('Bem-vindo à SmartTrain | Admin');
+        window.location.href = '.../public/pagina_inicial.html';
+    } else {
+        alert('Bem-vindo à SmartTrain');
+    }
+}
+</script>
 
 </html>

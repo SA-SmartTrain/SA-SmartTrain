@@ -219,35 +219,47 @@ h1 {
     background-color: rgb(242, 211, 124);
 }
 
-
-
-
-@media(max-width: 866px) {
+@media screen and (max-width: 480px) {
     
     h1 {
         position: relative;
-        right: 23px;
-        top: 0px;
+        left: 14px;
+        bottom: 25px;
+        font-size: 22px;
     }
     
     .container-accessibility-buttons {
         position: relative;
-        right: 1400px;
+        right: 1380px;
+        top: 23px;
+        gap: 16px;
     }
+
+      .container-accessibility-buttons img {
+    margin-left: 0;
+    width: 26px;
+    height: 26px;
+  }
 
     .container-menu-bar {
         position: relative;
-        left: -30px;
-        bottom: 2px;
-        gap: 55px;
+        left: -38px;
+        top: 50px;
+        gap: 40px;
         z-index: 1;
 
     }
 
+  .container-menu-bar img {
+    left: 5px;
+    width: 46px;
+    height: 46px;
+  }
+
     .sections-main {
         position: relative;
         top: 50px;
-        left: 35px;
+        left: 0px;
         width: 390px; /*390 por 170*/
         height: 170px;
     }
@@ -255,7 +267,7 @@ h1 {
     .sections-double-left {
         position: relative;
         top: 50px;
-        left: 35px;
+        left: 0px;
         margin-top: 10px;
         width: 189px; /*189 por 200*/
         height: 200px;
@@ -272,7 +284,7 @@ h1 {
     .sections-double-right {
         position: relative;
         bottom: 165px;
-        left: 245px; /*180 por 200*/
+        left: 205px; /*180 por 200*/
         width: 180px;
         height: 200px;
        
@@ -296,7 +308,7 @@ h1 {
         bottom: 160px;
         width: 390px; /*390 por 250*/
         height: 290px;
-        left: 35px;
+        left: 0px;
        
     }
 
