@@ -174,12 +174,12 @@ h1{
     font-size: 22px;
     margin-bottom: 0;
     margin-top: 28px;
-    font-weight: 500;
+    font-weight: 400;
     text-align: left;
   }
   .container-sections hr {
     right: 0;
-    width: 100%;
+    width: 90%;
     margin: 4px 0 0 0;
     border: none;
     border-top: 3px solid rgb(242,211,124);
