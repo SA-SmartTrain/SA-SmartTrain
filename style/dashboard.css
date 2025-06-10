@@ -220,7 +220,7 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
-    
+
     h1 {
         position: relative;
         left: 14px;
@@ -307,7 +307,7 @@ h1 {
         position: relative;
         bottom: 160px;
         width: 390px; /*390 por 250*/
-        height: 290px;
+        height: 250px;
         left: 0px;
        
     }
