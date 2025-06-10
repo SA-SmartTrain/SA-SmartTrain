@@ -12,6 +12,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .info p {
@@ -26,7 +27,8 @@ body {
     flex-direction: column;
     max-width: 100%;
     position: relative;
-    padding-bottom: 60px; /* Space for bottom nav */
+    padding-bottom: 60px;
+    /* Space for bottom nav */
 }
 
 .banner {
@@ -167,7 +169,8 @@ body {
     font-size: 12px;
 }
 
-.info-section, .action-section {
+.info-section,
+.action-section {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     margin: 8px 16px;
@@ -292,10 +295,76 @@ body {
     left: 20px;
 }
 
-#press-effect:hover{
+#press-effect:hover {
     opacity: 1;
 }
 
 #notifications:hover {
     cursor: pointer;
+}
+
+h1 {
+    position: relative;
+    left: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    top: 20px;
+    z-index: 1;
+}
+
+
+.container-accessibility-buttons {
+    display: flex;
+    position: relative;
+    top: 53px;
+    margin-left: 1760px;
+    width: 100px;
+    height: 30px;
+    gap: 1px;
+    z-index: 1;
+}
+
+.container-accessibility-buttons img {
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        position: relative;
+        left: 14px;
+        top: 0px;
+        font-size: 22px;
+    }
+
+    .container-accessibility-buttons {
+        position: relative;
+        right: 1420px;
+        top: 27px;
+        gap: 16px;
+    }
+
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
+    }
+
+    .container-menu-bar {
+        position: relative;
+        left: -30px;
+        bottom: 65px;
+        gap: 40px;
+        z-index: 1;
+
+    }
+
+    .container-menu-bar img {
+        left: 5px;
+        width: 46px;
+        height: 46px;
+    }
 }

@@ -23,13 +23,13 @@ body {
     width: 30px;
     height: 30px;
 }
- 
+
 #funcionarios {
     position: relative;
     left: 20px;
 }
 
-h1{
+h1 {
     margin-left: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
@@ -91,7 +91,7 @@ h1{
     width: 100%;
 }
 
-#press-effect:hover{
+#press-effect:hover {
     opacity: 1;
 }
 
@@ -107,7 +107,7 @@ h1{
     height: 40px;
     border: none;
     border-radius: 50px;
-    background-color:  rgb(242,211,124);
+    background-color: rgb(242, 211, 124);
     z-index: 1;
     text-align: center;
 }
@@ -130,46 +130,41 @@ h1{
     opacity: 0.5;
 }
 
-@media(max-height: 866px){
-    
+@media screen and (max-width: 480px) {
+
     h1 {
         position: relative;
-        right: 23px;
+        right: 30px;
+        bottom: 25px;
+        font-size: 22px;
     }
-    
+
     .container-accessibility-buttons {
         position: relative;
-        right: 1400px;
+        right: 1380px;
+        top: 23px;
+        gap: 16px;
+    }
+
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
     }
 
     .container-menu-bar {
         position: relative;
-        left: -30px;
-        bottom: 36px;
-        gap: 55px;
+        left: -35px;
+        bottom: 80px;
+        gap: 40px;
         z-index: 1;
 
     }
 
-    #map {
-        margin-top: 45px;
-        width: 450px;
-        height: 680px;
-        z-index: 1;
-    }
-    
-    .container-search-maps input {
-        position: relative;
-        margin-top: 35px;
-        width: 320px;
-        left: 75px;
-        z-index: 1;
+    .container-menu-bar img {
+        left: 5px;
+        width: 46px;
+        height: 46px;
     }
 
-    .search-icon {
-        position: relative;
-        left: 25px;
-    }
- 
-    
 }
