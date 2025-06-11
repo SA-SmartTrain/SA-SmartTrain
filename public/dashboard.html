@@ -24,21 +24,34 @@
                 <h1>Dashboard Geral</h1>
                 <div class="container-main-sections">
                     <div class="sections-main">
-                        <div class="api"></div>
+                        <div class="api">
+                            <div class="weather-card" id="weather-card">
+                                <div class="concentric"></div>
+                                <h1 id="temp">--°</h1>
+                                <div class="location" id="location">Joinville</div>
+                                <div class="date" id="date">--</div>
+                                <div class="details">
+                                    <span id="maxmin">-- / --</span> |
+                                    Feels like <span id="feels">--</span>
+                                </div>
+                                <div class="icon" id="icon"></div>
+                            </div>
+                        </div>
                     </div>
                     <a href="#linkar-page">
                         <div class="sections-double-left">
                             <p>Meu perfil</p>
                             <div class="section-double-left-img">
-                                <a href="../public/meu_perfil_beta.html"> <img src="../src/assets/images/profile-login.png"
-                                        alt=""></a>
+                                <a href="../public/meu_perfil_beta.html"> <img
+                                        src="../src/assets/images/profile-login.png" alt=""></a>
                             </div>
                     </a>
                 </div>
                 <div class="sections-double-right">
                     <p>Documentações</p>
                     <div class="section-double-right-img">
-                       <a href="../public/documentacoes.html"><img src="../src/assets/images/documentacao-sem-png.png" alt=""></a>
+                        <a href="../public/documentacoes.html"><img src="../src/assets/images/documentacao-sem-png.png"
+                                alt=""></a>
                     </div>
                 </div>
                 <div class="sections-main-bottom">
@@ -70,6 +83,7 @@
             </div>
         </section>
     </main>
+    <script src="../src/api_clima_dashboard.js"></script>
     <script src="../src/api_clima_dashboard.js"></script>
 </body>
 

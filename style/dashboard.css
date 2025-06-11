@@ -1,5 +1,6 @@
 * {
     color: #2C2C2C;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h3 {
@@ -96,7 +97,7 @@ h1 {
     left: 20px;
 }
 
-#press-effect:hover{
+#press-effect:hover {
     opacity: 1;
 }
 
@@ -116,7 +117,8 @@ h1 {
     position: relative;
     top: 50px;
     left: 35px;
-    width: 690px; /*390 por 170*/
+    width: 690px;
+    /*390 por 170*/
     height: 170px;
     background-color: rgb(242, 211, 124);
     border-radius: 8px;
@@ -128,7 +130,8 @@ h1 {
     top: 50px;
     left: 35px;
     margin-top: 10px;
-    width: 330px; /*189 por 200*/
+    width: 330px;
+    /*189 por 200*/
     height: 200px;
     background-color: rgb(242, 211, 124);
     border-radius: 8px;
@@ -144,7 +147,7 @@ h1 {
     padding: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: rgb(242, 211, 124);
-    
+
 }
 
 .section-double-left-img {
@@ -172,7 +175,8 @@ h1 {
 .sections-double-right {
     position: relative;
     bottom: 165px;
-    left: 395px; /*180 por 200*/
+    left: 395px;
+    /*180 por 200*/
     width: 330px;
     height: 200px;
     background-color: rgb(242, 211, 124);
@@ -192,19 +196,20 @@ h1 {
     height: 170px;
     bottom: 37px;
     left: 65px;
-    
+
 }
 
 .section-double-right-img img {
     margin-left: 15px;
     width: 50%;
-    
+
 }
 
 .sections-main-bottom {
     position: relative;
     bottom: 160px;
-    width: 690px; /*390 por 250*/
+    width: 690px;
+    /*390 por 250*/
     height: 290px;
     left: 35px;
     background-color: rgb(242, 211, 124);
@@ -219,6 +224,61 @@ h1 {
     background-color: rgb(242, 211, 124);
 }
 
+.weather-card {
+    border-radius: 15px;
+    padding: 25px;
+    width: 320px;
+    height: 170px;
+    position: relative;
+    color: #1a1a1a;
+}
+
+.weather-card h1 {
+    position: relative;
+    left: 0px;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.weather-card .location {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.weather-card .date {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.weather-card .details {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.weather-card .icon {
+    position: absolute;
+    left: 600px;
+    bottom: 50px;
+}
+
+.weather-card .concentric {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    border-radius: 15px;
+    z-index: 0;
+}
+
+.weather-card *:not(.concentric) {
+    z-index: 1;
+    position: relative;
+}
+
 @media screen and (max-width: 480px) {
 
     h1 {
@@ -227,7 +287,7 @@ h1 {
         bottom: 25px;
         font-size: 22px;
     }
-    
+
     .container-accessibility-buttons {
         position: relative;
         right: 1380px;
@@ -235,11 +295,11 @@ h1 {
         gap: 16px;
     }
 
-      .container-accessibility-buttons img {
-    margin-left: 0;
-    width: 26px;
-    height: 26px;
-  }
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
+    }
 
     .container-menu-bar {
         position: relative;
@@ -250,17 +310,18 @@ h1 {
 
     }
 
-  .container-menu-bar img {
-    left: 5px;
-    width: 46px;
-    height: 46px;
-  }
+    .container-menu-bar img {
+        left: 5px;
+        width: 46px;
+        height: 46px;
+    }
 
     .sections-main {
         position: relative;
         top: 50px;
         left: 0px;
-        width: 390px; /*390 por 170*/
+        width: 390px;
+        /*390 por 170*/
         height: 170px;
     }
 
@@ -269,9 +330,10 @@ h1 {
         top: 50px;
         left: 0px;
         margin-top: 10px;
-        width: 189px; /*189 por 200*/
+        width: 189px;
+        /*189 por 200*/
         height: 200px;
- 
+
     }
 
     .section-double-left-img img {
@@ -280,42 +342,58 @@ h1 {
         left: -30px;
         bottom: 50px;
     }
-    
+
     .sections-double-right {
         position: relative;
         bottom: 165px;
-        left: 205px; /*180 por 200*/
+        left: 205px;
+        /*180 por 200*/
         width: 180px;
         height: 200px;
-       
+
     }
-    
+
     .section-double-right-img {
         position: relative;
         height: 170px;
         bottom: 37px;
         left: 4px;
-        
+
     }
-    
+
     .section-double-right-img img {
         width: 90%;
-        
+
     }
-    
+
     .sections-main-bottom {
         position: relative;
         bottom: 160px;
-        width: 390px; /*390 por 250*/
+        width: 390px;
+        /*390 por 250*/
         height: 250px;
         left: 0px;
-       
+
     }
 
     .container-back {
         position: relative;
         top: 50px;
-       
+
     }
-    
+
+    .weather-card .icon {
+    position: absolute;
+    left: 320px;
+    bottom: 50px;
+}
+
+.weather-card h1 {
+    position: relative;
+    left: 0px;
+    top: 1px;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
 }
