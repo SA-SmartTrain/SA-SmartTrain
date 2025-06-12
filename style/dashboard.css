@@ -295,15 +295,20 @@ h1 {
 
     h1 {
         position: relative;
-        left: 14px;
+        left: 8px;
         bottom: -21px;
         font-size: 22px;
+    }
+
+    #title {
+        position: relative;
+        top: -60px;
     }
 
     .container-accessibility-buttons {
         position: relative;
         right: 1380px;
-        top: 23px;
+        top: -10px;
         gap: 16px;
     }
 
