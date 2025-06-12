@@ -279,6 +279,15 @@ h1 {
     position: relative;
 }
 
+.container-right-calendar {
+    position: relative;
+    bottom: 790px;
+    left: 750px;
+    width: 1150px;
+    height: 590px;
+    background-color: red;
+}
+
 @media screen and (max-width: 480px) {
 
     h1 {
