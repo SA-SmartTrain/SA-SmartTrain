@@ -28,7 +28,7 @@ body {
 .container-accessibility-buttons {
     display: flex;
     position: relative;
-    top: 53px;
+    top: 15px;
     margin-left: 1700px;
     width: 100px;
     height: 30px;
@@ -53,13 +53,18 @@ h1 {
     left: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
+    bottom: 0px;
     font-weight: bold;
 }
 
+#title {
+    position: relative;
+    bottom: 40px;
+}
 
 .container-menu-bar {
     position: relative;
-    bottom: 10px;
+    bottom: 45px;
     margin-top: 7.4%;
     display: flex;
     justify-content: center;
@@ -70,7 +75,7 @@ h1 {
 
 .sections-menu-bar {
     position: relative;
-    left: 6px;
+    left: 12px;
     width: 50px;
     height: 50px;
     margin-left: 10px;
@@ -279,21 +284,19 @@ h1 {
     position: relative;
 }
 
-.container-right-calendar {
-    position: relative;
-    bottom: 790px;
-    left: 750px;
-    width: 1150px;
-    height: 590px;
-    background-color: red;
-}
+
 
 @media screen and (max-width: 480px) {
+
+    body{
+        position: relative;
+        left: 703px;
+    }
 
     h1 {
         position: relative;
         left: 14px;
-        bottom: 25px;
+        bottom: -21px;
         font-size: 22px;
     }
 
@@ -312,8 +315,8 @@ h1 {
 
     .container-menu-bar {
         position: relative;
-        left: -38px;
-        top: 52px;
+        left: -48px;
+        top: -55px;
         gap: 40px;
         z-index: 1;
 
