@@ -385,8 +385,15 @@ h1 {
     .weather-card .icon {
     position: absolute;
     left: 320px;
-    bottom: 50px;
+    bottom: 120px;
 }
+
+.details span {
+    position: relative;
+    left: 200px;
+    bottom: 27px;
+}
+
 
 .weather-card h1 {
     position: relative;
