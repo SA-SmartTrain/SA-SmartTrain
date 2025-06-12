@@ -191,3 +191,14 @@ button {
 .social-media img {
     width: 100%;
 }
+
+
+@media screen and (max-width: 960px) {
+
+    .container {
+        position: relative;
+        right: 2px;
+    }
+
+
+}

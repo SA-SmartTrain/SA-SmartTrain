@@ -183,3 +183,30 @@ body {
 .social-media img {
     width: 100%;
 }
+
+@media screen and (max-width: 960px) {
+
+    .container {
+        position: relative;
+        right: 2px;
+    }
+
+    .container-box-login input {
+    position: relative;
+    bottom: 210px;
+    margin-left: 132px;
+    width: 350px;
+    height: 50px;
+    background-color: rgb(242, 211, 124);
+    border-radius: 21px;
+    border: none;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+    #possui-uma-conta span {
+        position: relative;
+        right: 52px;
+    }
+
+}
