@@ -8,7 +8,7 @@
 O aplicativo nomeado SmartTrain deve atender algumas funcionalidades:
 - [x] Adequação a Formatação escolhida;
 - [x] Utilização de funcionalidades específicas;
-- [x] Possibilidade de Modificação de Dadoos.
+- [x] Possibilidade de Modificação de Dados.
 
 
 
