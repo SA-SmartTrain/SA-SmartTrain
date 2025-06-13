@@ -146,3 +146,18 @@ h1 {
 #notifications:hover {
     cursor: pointer;
 }
+
+.button{
+    font-size: 11px;
+    padding: 2px 2px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #000000;
+    background-color:rgb(242, 211, 124); 
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    bottom: 20px;
+}
+
