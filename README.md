@@ -1,4 +1,4 @@
-# Meu Portfólio Pessoal
+# Situação de Aprendizagem- SmartTrain
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/BeatrizCercal/README-template?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/BeatrizCercal/README-template?style=for-the-badge)
@@ -8,22 +8,21 @@
 
 <img src="/assests/img/foto1.png"  alt="Portfólio Pessoal">
 
-> Este Portfólio Pessoal foi desenvolvido durante o Curso de Qualificação nomeado Fábrica de Software.
+> Esta Situação de Aprendizagem foi desenvolvida durante o componente curricular nomeado Programação de Aplicativos. 
 
 ### Ajustes
 
-Meu projeto ainda está em desenvolvimento, e deve ser aprimorado durante a realização do Curso de Qualificação. O mesmo já atende a algumas tarefas específicas:
-- [x] Adequação a linguagem escolhida;
+O aplicativo nomeado SmartTrain deve atender algumas funcionalidades:
+- [x] Adequação a Formatação escolhida;
 - [x] Utilização de funcionalidades específicas;
-- [x] Inserção de dados pessoais;
-- [ ] Projetos Pessoais.
+- [x] Possibilidade de Modificação de Dadoos.
 
 
 
 ## 🤝 Colaboradores
 
-O Projeto foi desenvolvido inteiramente pela estudante Beatriz Cercal Cachoeira, que através de
-aprofundamentos teóricos e práticos desenvolveu as necessárias competências para atender as demandas
+O Projeto foi desenvolvido inteiramente pelos estudantes descritos abaixo, que através de
+aprofundamentos teóricos e práticos desenvolveram as necessárias competências para atender as demandas
 necessárias:
 
 <table>
@@ -37,4 +36,16 @@ necessárias:
         </sub>
       </a>
     </td>
+
+  <td align="center">
+      <a href="#" title="Fotografia Pessoal">
+        <img src="c:\Users\beatriz_cachoeira\Downloads\image.png" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
+       
+        <sub>
+          <b>Miguel Rocha Xavier</b>
+        </sub>
+      </a>
+    </td>
+
+  
 
