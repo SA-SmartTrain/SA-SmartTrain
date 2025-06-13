@@ -153,3 +153,7 @@ input {
 #partida{
    background-color: rgb(242,211,124);  
 }
+
+#dia{
+    border-right: 500px;
+}

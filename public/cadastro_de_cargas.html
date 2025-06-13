@@ -14,15 +14,15 @@
     <section>
         <div class="container">
             <div class="container-accessibility-buttons">
-                    <img src="../src/assets/images/notifications.png" id="notifications">
-                    <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
-                </div>
+                <img src="../src/assets/images/notifications.png" id="notifications">
+                <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
-            <div class="containerdois flex">
-                <div>
-                    <h1>Cadastro de Cargas</h1>
-                </div>
+        </div>
+        <div class="containerdois flex">
+            <div>
+                <h1>Cadastro de Cargas</h1>
             </div>
+        </div>
     </section>
 
     <section class="seletores">
@@ -88,13 +88,16 @@
         </select>
 
         <h3>Selecione a data de Envio:</h3>
-            <select id="destino" name="pontodestino" form="ponto_destino">
-            <option value="opcão">Selecione o destino...</option>
-            <option value="Mafra">Mafra</option>
-        </select>
+        <form>
+            <div>
+                <label for="dia">Informe a data do seu aniversário:</label>
+                <input type="date" id="dia" name="dia" />
+            </div>
+        </form>
+
 
         <h3>Selecione a data de Chegada:</h3>
-            <select id="destino" name="pontodestino" form="ponto_destino">
+        <select id="destino" name="pontodestino" form="ponto_destino">
             <option value="opcão">Selecione o destino...</option>
             <option value="Mafra">Mafra</option>
         </select>
@@ -102,26 +105,26 @@
         <input type="button" value="Enviar">
 
         <div class="container-menu-bar">
-                    <div class="sections-menu-bar" id="press-effect">
-                        <img src="/src/assets/images/inicio-bar.png" alt="">
-                        <div id="incio">
-                            <a href="/public/pagina_inicial.html"><span>Inicío</span></a>
-                        </div>
-                    </div>
-                    <div class="sections-menu-bar" id="press-effect">
-                        <img src="/src/assets/images/menu-bar.png" alt="">
-                        <a href="#"><span>Menu</span></a>
-                    </div>
-                    <div class="sections-menu-bar" id="press-effect">
-                        <img src="/src/assets/images/estoque-bar.png" alt="">
-                        <a href="#"><span>Estoque</span></a>
-                    </div>
-                    <div class="sections-menu-bar" id="press-effect">
-                    <div id="funcionarios"><img src="/src/assets/images/funcionarios-bar.png" alt=""></div>
-                    <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="/src/assets/images/inicio-bar.png" alt="">
+                <div id="incio">
+                    <a href="/public/pagina_inicial.html"><span>Inicío</span></a>
                 </div>
-                </div>
-        
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="/src/assets/images/menu-bar.png" alt="">
+                <a href="#"><span>Menu</span></a>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="/src/assets/images/estoque-bar.png" alt="">
+                <a href="#"><span>Estoque</span></a>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <div id="funcionarios"><img src="/src/assets/images/funcionarios-bar.png" alt=""></div>
+                <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+            </div>
+        </div>
+
     </section>
 
 </body>
