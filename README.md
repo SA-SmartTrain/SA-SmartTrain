@@ -1,11 +1,5 @@
 # Situação de Aprendizagem- SmartTrain
 
-![GitHub repo size](https://img.shields.io/github/repo-size/SA-SmartTrain/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/SA-SmartTrain/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/SA-SmartTrain/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/SA-SmartTrain/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/SA-SmartTrain/README-template?style=for-the-badge)
-
 
 > Esta Situação de Aprendizagem foi desenvolvida durante o componente curricular nomeado Programação de Aplicativos. 
 
