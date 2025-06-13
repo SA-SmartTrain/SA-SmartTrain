@@ -1,7 +1,40 @@
-#SA-SmartTrain
+# Meu Portfólio Pessoal
 
- Esta Situação de Aprendizagem foi desenvolvida pelos estudantes Beatriz Cercal Cachoeira, Beatriz Crispim Oliveira, Iasmin Rabelo e Miguel Rocha Xavier, estudantes de Desenvolvimento de Sistemas, 24 M6, durante o componente curricular nomeado Programação de Aplicativos.
- A utilização de ferrovias é um assunto periodicamente discutido em âmbitos estudantis e sociais. Durante a realização desta Situação de Aprendizagem, os alunos adquiriram capacidade na interpretação de funcionamento, organização e logística de Ferrovias que especificamente transportam mercadorias, de modo fictício.
-Anteriormente, através da Plataforma FIGMA, foram desenvolvidos os projetos iniciais de representação visual do Aplicativo proposto, que foi nomeado estrategicamente como SmartTrain, demonstrando toda tecnologia envolvida em sua formulação. Partindo deste princípio, e baseando-se nos Mockups representados, o aplicativo foi implementado.
-Foram utilizadas Boas Práticas, visando a garantia de adequação visual ao usuário, bem como diversas adaptabilidades estrategicamente inseridas, buscando um total aproveiamento acerca da iniciativa proposta.
+![GitHub repo size](https://img.shields.io/github/repo-size/BeatrizCercal/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/BeatrizCercal/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/BeatrizCercal/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/BeatrizCercal/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/BeatrizCercal/README-template?style=for-the-badge)
+
+<img src="/assests/img/foto1.png"  alt="Portfólio Pessoal">
+
+> Este Portfólio Pessoal foi desenvolvido durante o Curso de Qualificação nomeado Fábrica de Software.
+
+### Ajustes
+
+Meu projeto ainda está em desenvolvimento, e deve ser aprimorado durante a realização do Curso de Qualificação. O mesmo já atende a algumas tarefas específicas:
+- [x] Adequação a linguagem escolhida;
+- [x] Utilização de funcionalidades específicas;
+- [x] Inserção de dados pessoais;
+- [ ] Projetos Pessoais.
+
+
+
+## 🤝 Colaboradores
+
+O Projeto foi desenvolvido inteiramente pela estudante Beatriz Cercal Cachoeira, que através de
+aprofundamentos teóricos e práticos desenvolveu as necessárias competências para atender as demandas
+necessárias:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#" title="Fotografia Pessoal">
+        <img src="/assests/img/Foto1.png" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
+       
+        <sub>
+          <b>Beatriz Cercal Cachoeira</b>
+        </sub>
+      </a>
+    </td>
 
