@@ -39,7 +39,7 @@ necessárias:
 
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="c:\Users\beatriz_cachoeira\Downloads\image.png" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
+        <img src="c:\Users\beatriz_cachoeira\Downloads\image (1).png" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
        
         <sub>
           <b>Miguel Rocha Xavier</b>
@@ -47,5 +47,24 @@ necessárias:
       </a>
     </td>
 
-  
+  <td align="center">
+      <a href="#" title="Fotografia Pessoal">
+        <img src="/assests/img/Foto1.png" width="100px;" alt="Foto de Beatriz Crispim de Oliveira"/><br>
+       
+        <sub>
+          <b>Beatriz Crispim Oliveira</b>
+        </sub>
+      </a>
+    </td>
+
+<td align="center">
+      <a href="#" title="Fotografia Pessoal">
+        <img src="/assests/img/Foto1.png" width="100px;" alt="Foto de Iasmin Rabelo"/><br>
+       
+        <sub>
+          <b>Iasmin Rabelo</b>
+        </sub>
+      </a>
+    </td>
+
 
