@@ -23,20 +23,15 @@ necessárias:
     <td align="center">
       <a href="#" title="Fotografia Pessoal">
         <img src="/src/assets/images/readme/beatrizcc.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
-       
-
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
         <img src="/src/assets/images/readme/miguel.jpg" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
+    <td align="center">
+      <a href="#" title="Fotografia Pessoal">
+        <img src="/src/assets/images/readme/beatrizcc.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
+            <td align="center">
+      <a href="#" title="Fotografia Pessoal">
+        <img src="/src/assets/images/readme/beatrizcc.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
       
 
-  <td align="center">
-      <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/beatrizco.jpg" width="100px;" alt="Foto de Beatriz Crispim de Oliveira"/><br>
-       
-
-<td align="center">
-      <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/iasmin.jpg" width="100px;" alt="Foto de Iasmin Rabelo"/><br>
-  
 
