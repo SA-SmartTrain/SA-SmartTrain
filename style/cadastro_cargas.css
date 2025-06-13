@@ -157,3 +157,7 @@ input {
 #dia{
     border-right: 500px;
 }
+
+#date{
+    border: none;
+}
