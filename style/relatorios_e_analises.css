@@ -51,6 +51,12 @@ h1 {
     text-align: center;
 }
 
+.container_dados p{
+    align-items: center;
+    position: relative;
+    bottom: 25px;
+}
+
 .modo_noturno {
     max-width: 50px;
     max-height: 50px;
