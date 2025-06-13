@@ -8,12 +8,16 @@ body {
 }
 
 .container {
+    position: relative;
+    top: 310px;
     max-width: 650px;
     margin: 0;
     padding: 20px;
+    left: 610px;
 }
 
 .container-wave-yellow {
+    display: none;
     position: relative;
     left: 120px;
     bottom: 20px;
@@ -108,7 +112,7 @@ body {
 
 .container-icon {
     position: relative;
-    bottom: 225px;
+    bottom: 165px;
     margin-left: 150px;
     width: 40px;
     height: 40px;
@@ -184,25 +188,55 @@ body {
     width: 100%;
 }
 
+.container-bar-yellow {
+    position: relative;
+    width: 100vw;
+    height: 90px;
+    background-color: rgb(242, 211, 124);
+}
+
 @media screen and (max-width: 960px) {
+
+    .container-bar-yellow {
+    display: none;
+}
 
     .container {
         position: relative;
+        top: 0px;
         right: 2px;
+        left: 0;
+    }
+
+    .container-wave-yellow {
+        display: block;
     }
 
     .container-box-login input {
-    position: relative;
-    bottom: 210px;
-    margin-left: 132px;
-    width: 350px;
-    height: 50px;
-    background-color: rgb(242, 211, 124);
-    border-radius: 21px;
-    border: none;
-    padding-left: 10px;
-    font-size: 15px;
-}
+        position: relative;
+        bottom: 270px;
+        margin-left: 132px;
+        width: 330px;
+        height: 50px;
+        background-color: rgb(242, 211, 124);
+        border-radius: 21px;
+        border: none;
+        padding-left: 60px;
+        font-size: 15px;
+    }
+
+    .container-box-login input {
+        position: relative;
+        bottom: 210px;
+        margin-left: 132px;
+        width: 350px;
+        height: 50px;
+        background-color: rgb(242, 211, 124);
+        border-radius: 21px;
+        border: none;
+        padding-left: 10px;
+        font-size: 15px;
+    }
 
     #possui-uma-conta span {
         position: relative;
