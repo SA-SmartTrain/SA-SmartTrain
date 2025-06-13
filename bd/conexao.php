@@ -1,9 +1,9 @@
 <?php 
-
+    /*Adicionar o it php em casa no db*/
     $dbHost = 'localhost'; 
     $dbUsername = 'root'; 
     $dbPassword = 'root'; 
-    $dbName = 'db_smartrain'; 
+    $dbName = 'smarttrain'; 
     $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName); 
 
     if($conexao->connect_errno) {
