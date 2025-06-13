@@ -29,7 +29,7 @@ necessárias:
   <tr>
     <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/assests/img/Foto1.png" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
+        <img src="/src/assets/images/readme/beatrizcc.png" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
        
         <sub>
           <b>Beatriz Cercal Cachoeira</b>
@@ -39,7 +39,7 @@ necessárias:
 
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="c:\Users\beatriz_cachoeira\Downloads\image (1).png" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
+        <img src="/src/assets/images/readme/miguel.png" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
        
         <sub>
           <b>Miguel Rocha Xavier</b>
@@ -49,7 +49,7 @@ necessárias:
 
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/assests/img/Foto1.png" width="100px;" alt="Foto de Beatriz Crispim de Oliveira"/><br>
+        <img src="/src/assets/images/readme/beatrizco.jpg" width="100px;" alt="Foto de Beatriz Crispim de Oliveira"/><br>
        
         <sub>
           <b>Beatriz Crispim Oliveira</b>
@@ -59,7 +59,7 @@ necessárias:
 
 <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/assests/img/Foto1.png" width="100px;" alt="Foto de Iasmin Rabelo"/><br>
+        <img src="/src/assets/images/readme/iasmin.jpg" width="100px;" alt="Foto de Iasmin Rabelo"/><br>
        
         <sub>
           <b>Iasmin Rabelo</b>
