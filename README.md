@@ -31,40 +31,19 @@ necessárias:
       <a href="#" title="Fotografia Pessoal">
         <img src="/src/assets/images/readme/beatrizcc.png" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
        
-        <sub>
-          <b>Beatriz Cercal Cachoeira</b>
-        </sub>
-      </a>
-    </td>
 
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
         <img src="/src/assets/images/readme/miguel.png" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
-       
-        <sub>
-          <b>Miguel Rocha Xavier</b>
-        </sub>
-      </a>
-    </td>
+      
 
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
         <img src="/src/assets/images/readme/beatrizco.jpg" width="100px;" alt="Foto de Beatriz Crispim de Oliveira"/><br>
        
-        <sub>
-          <b>Beatriz Crispim Oliveira</b>
-        </sub>
-      </a>
-    </td>
 
 <td align="center">
       <a href="#" title="Fotografia Pessoal">
         <img src="/src/assets/images/readme/iasmin.jpg" width="100px;" alt="Foto de Iasmin Rabelo"/><br>
-       
-        <sub>
-          <b>Iasmin Rabelo</b>
-        </sub>
-      </a>
-    </td>
-
+  
 
