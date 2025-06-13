@@ -21,31 +21,35 @@
                     </div>
                     <div class="container-text-cadastre-se">
                         <h2>Seja Bem Vindo!</h2>
-                        <span style="position: relative; right: 110px;">Insira Nome de Usuário, Email, CPF e Senha para prosseguir:</span>
+                        <span style="position: relative; right: 110px;">Insira Nome de Usuário, Email, CPF e Senha para
+                            prosseguir:</span>
                     </div>
-                    <div class="container-box-login">
-                        <input type="username" name="username" id="usuario"required>
-                    </div>
-                    <br>
-                    <div class="container-box-login">
-                        <input type="username" name="username" id="email" required>
-                    </div>
-                    <br>
-                    <div class="container-box-login">
-                        <input type="CPF" name="CPF" id="cpf" required>
-                    </div>
-                    <br>
-                    <div class="container-box-login">
-                        <input type="password" name="password" id="senha" required>
-                    </div>
-                    <div class="container-forgotten-password">
-                        <input type="checkbox" name="esqueceu_senha" id="esqueceu_senha">
-                        <span>Salvar Senha</span>
-                        <a href="/public/login/cadastre-se-page.html" id="possui-uma-conta"><span>Ja possui uma conta?</span></a>
-                    </div>
-                    <div class="container-login-profile">
-                        <a href="/public/login/cadastre-se-page.html"><span>Cadastre-se aqui</span></a>
-                    </div>
+                    <form action="" method="POST" id="">
+                        <div class="container-box-login">
+                            <input type="username" name="username" id="usuario" required>
+                        </div>
+                        <br>
+                        <div class="container-box-login">
+                            <input type="username" name="username" id="email" required>
+                        </div>
+                        <br>
+                        <div class="container-box-login">
+                            <input type="CPF" name="CPF" id="cpf" required>
+                        </div>
+                        <br>
+                        <div class="container-box-login">
+                            <input type="password" name="password" id="senha" required>
+                        </div>
+                        <div class="container-forgotten-password">
+                            <input type="checkbox" name="esqueceu_senha" id="esqueceu_senha">
+                            <span>Salvar Senha</span>
+                            <a href="/public/login/cadastre-se-page.html" id="possui-uma-conta"><span>Ja possui uma
+                                    conta?</span></a>
+                        </div>
+                        <div class="container-login-profile">
+                            <a href="#" type="submit"><span>Cadastre-se aqui</span></a>
+                        </div>
+                    </form>
                     <div class="container-social-media">
                         <div class="social-media">
                             <img src="/src/assets/images/social-media/facebook.png" alt="">
