@@ -29,12 +29,12 @@ necessárias:
   <tr>
     <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/beatrizcc.png" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
+        <img src="/src/assets/images/readme/beatrizcc.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
        
 
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/miguel.png" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
+        <img src="/src/assets/images/readme/miguel.jpg" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
       
 
   <td align="center">
