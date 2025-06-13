@@ -168,3 +168,9 @@ h1 {
     border: none;
     background-color: #F0F0F0;
 }
+
+#date{
+    border: none;
+    align-items: center;
+    background-color: #F0F0F0;
+}
