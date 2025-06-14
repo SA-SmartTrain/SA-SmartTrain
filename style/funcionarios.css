@@ -26,7 +26,7 @@ body {
 }
 
 
-h1{
+h1 {
     margin-left: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
@@ -50,14 +50,14 @@ a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.container-sections hr{
+.container-sections hr {
     position: relative;
     right: 1480px;
     width: 270px;
     height: 1px;
     border: 1px;
-    border-top: 3px solid rgb(242,211,124);
-    background-color: rgb(242,211,124);
+    border-top: 3px solid rgb(242, 211, 124);
+    background-color: rgb(242, 211, 124);
     border-radius: 80px;
     margin-right: 120px;
 }
@@ -105,7 +105,7 @@ a {
     left: 20px;
 }
 
-#press-effect:hover{
+#press-effect:hover {
     opacity: 1;
 }
 
@@ -113,14 +113,14 @@ a {
     cursor: pointer;
 }
 
-.container-func{
- display: flex;
+.container-func {
+    display: flex;
 }
 
-.container-amarelo{
+.container-amarelo {
     width: 250px;
     height: 250px;
-    background-color: rgb(242,211,124);
+    background-color: rgb(242, 211, 124);
     margin-left: 35px;
     gap: 25px;
     text-align: center;
@@ -128,12 +128,12 @@ a {
     border-radius: 12px;
 }
 
-.container-amarelo img{
-width: 300px;
-height: 300px;
-position: relative;
-right: 25px;
-bottom: 45px;
+.container-amarelo img {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    right: 25px;
+    bottom: 45px;
 
 }
 
@@ -141,24 +141,68 @@ bottom: 45px;
 
 /*width : 476*/
 
-@media screen and (max-width: 960px) {
-    
-    .container-accessibility-buttons {
+@media screen and (max-width: 480px) {
+
+    h1 {
         position: relative;
-        right: 1400px;
+        left: -28px;
+        bottom: -21px;
+        font-size: 22px;
     }
 
-    .container-sections hr {
+    #title {
         position: relative;
-        right: 25px;
+        top: -20px;
+    }
+
+    .container-accessibility-buttons {
+        position: relative;
+        right: 1380px;
+        top: 27px;
+        gap: 16px;
+    }
+
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
     }
 
     .container-menu-bar {
-        position: relative;
-        top: 30px;
-        gap: 55px;
-        right: 30px;
+        position: fixed;
+        left: 145px;
+        top: 660px;
+        gap: 40px;
+        z-index: 999;
+
     }
 
-    
+    .container-menu-bar img {
+        left: 5px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .container-func {
+        position: relative;
+        right: 35px;
+        display: inline-block;
+    }
+
+    .container-amarelo {
+        width: 180px;
+        height: 180px;
+        background-color: rgb(242, 211, 124);
+        margin-left: 35px;
+        gap: 25px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .container-amarelo img {
+        width: 130%;
+        height: 130%;
+    }
 }

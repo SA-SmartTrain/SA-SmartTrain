@@ -2,6 +2,7 @@ body {
     margin: 0px;
     background-color: #F0F0F0;
     color: #2C2C2C;
+    overflow: hidden;
 }
 
 .container-accessibility-buttons {
@@ -42,7 +43,7 @@ h1 {
     width: 100px;
     height: 15px;
     margin: 0 auto;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -51,7 +52,7 @@ h1 {
     text-align: center;
 }
 
-.container_dados p{
+.container_dados p {
     align-items: center;
     position: relative;
     bottom: 25px;
@@ -64,26 +65,26 @@ h1 {
 
 .modo_noturno img {
     width: 80%;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     margin-left: 600px;
 }
 
 .seta img {
     width: 40%;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
 
 
 #topo {
     justify-content: space-between;
     display: flex;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
 
 
 .flex {
     display: flex;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .container_amarelo {
@@ -105,6 +106,8 @@ h1 {
     display: flex;
     justify-content: center;
     width: 100vw;
+    bottom: 10px;
+    left: 20px;
     height: 60px;
     gap: 350px;
 }
@@ -139,7 +142,7 @@ h1 {
     left: 20px;
 }
 
-#press-effect:hover{
+#press-effect:hover {
     opacity: 1;
 }
 
@@ -147,14 +150,14 @@ h1 {
     cursor: pointer;
 }
 
-.button{
+.button {
     font-size: 11px;
     padding: 2px 2px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: #000000;
-    background-color:rgb(242, 211, 124); 
+    background-color: rgb(242, 211, 124);
     border: none;
     border-radius: 10px;
     position: relative;
@@ -169,8 +172,80 @@ h1 {
     background-color: #F0F0F0;
 }
 
-#date{
+#date {
     border: none;
     align-items: center;
     background-color: #F0F0F0;
+}
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        position: relative;
+        left: 4px;
+        bottom: 0px;
+        font-size: 22px;
+    }
+
+    .container-accessibility-buttons {
+        position: relative;
+        right: 1380px;
+        top: -10px;
+        gap: 16px;
+    }
+
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
+    }
+
+    .flex {
+        position: relative;
+        bottom: 30px;
+        gap: 10px;
+    }
+
+    #cargas {
+        position: relative;
+        width: 70px;
+        bottom: 15px;
+        border: none;
+        background-color: #F0F0F0;
+    }
+
+    #date {
+        border: none;
+        align-items: center;
+        background-color: #F0F0F0;
+    }
+
+    #qttd {
+        position: relative;
+        left: 10px;
+        width: 70px;
+        text-align: center;
+    }
+
+    .container_amarelo p {
+        position: relative;
+        bottom: 17px;
+        right: 6px;
+    }
+
+
+    .container-menu-bar {
+        position: fixed;
+        left: -30px;
+        top: 773px;
+        gap: 40px;
+        z-index: 999;
+
+    }
+
+    .container-menu-bar img {
+        left: 5px;
+        width: 46px;
+        height: 46px;
+    }
 }

@@ -1,16 +1,26 @@
 body {
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     color: #2c2c2c;
     overflow-x: hidden;
 }
 
 .container {
-    background-color:#f0f0f0;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f0f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+#title {
+    position: relative;
+    right: 1270px;
+}
 
-h1{
+#h2h2 {
+    position: relative;
+    left: 50px;
+    font-weight: 400;
+}
+
+h1 {
     margin-top: 30px;
     margin-left: 35px;
     font-family: Arial, Helvetica, sans-serif;
@@ -21,27 +31,28 @@ h1{
 .modo_noturno {
     max-width: 50px;
     max-height: 50px;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .modo_noturno img {
     width: 80%;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     margin-left: 1200px;
 }
+
 .seta img {
     width: 40%;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
 
 img {
     max-width: 100px;
     max-height: 100px;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
 
-.containerum {  
-    text-align:center;
+.containerum {
+    text-align: center;
     background-color: rgb(242, 211, 124);
     padding-bottom: 5px;
     box-sizing: border-box;
@@ -51,9 +62,9 @@ img {
     margin: 0 auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 10px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
     height: 50px;
-    
+
 }
 
 .containerum input {
@@ -70,12 +81,12 @@ img {
 #topo {
     justify-content: space-between;
     display: flex;
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .container_data {
 
-    background-color:#f0f0f0;
+    background-color: #f0f0f0;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -91,7 +102,7 @@ img {
     background-color: rgb(242, 211, 124);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 30px;
     display: flex;
     margin-left: 680px;
@@ -110,7 +121,7 @@ img {
 }
 
 p {
-    background-color:rgb(242, 211, 124);
+    background-color: rgb(242, 211, 124);
     font-weight: bolder;
 }
 
@@ -123,7 +134,7 @@ p1 {
     background-color: rgb(242, 211, 124);
 }
 
-.horaum input{
+.horaum input {
     background-color: white;
     height: 100px;
     width: 200px;
@@ -132,7 +143,7 @@ p1 {
 }
 
 input[type="submitum"] {
-    background-color:rgb(242, 211, 124);
+    background-color: rgb(242, 211, 124);
     color: rgb(0, 0, 0);
     border-radius: 5px;
     width: 60px;
@@ -141,14 +152,14 @@ input[type="submitum"] {
 }
 
 input[type="submitdois"] {
-    background-color:white;
+    background-color: white;
     color: black;
     border-radius: 5px;
     width: 60px;
     height: 30px;
 }
 
-label{
+label {
     background-color: rgb(242, 211, 124);
 }
 
@@ -171,11 +182,11 @@ label{
 }
 
 
-.container{
+.container {
     border-radius: 10px;
 }
 
-h1{
+h1 {
     text-align: center;
     margin-right: -1000px;
 }
@@ -184,7 +195,7 @@ h1{
 .container-menu-bar {
     position: relative;
     bottom: 10px;
-    margin-top: 13.8%;
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -222,7 +233,7 @@ h1{
     left: 20px;
 }
 
-#press-effect:hover{
+#press-effect:hover {
     opacity: 1;
 }
 
@@ -245,4 +256,106 @@ h1{
     margin-left: 30px;
     width: 30px;
     height: 30px;
+}
+
+@media screen and (max-width: 480px) {
+
+    #title {
+        position: relative;
+        left: -580px;
+        bottom: 30px;
+    }
+
+    #h2h2 {
+        position: relative;
+        left: 10px;
+        font-weight: 400;
+        bottom: 30px;
+    }
+
+    h1 {
+        margin-top: 30px;
+        margin-left: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .container-accessibility-buttons {
+        position: relative;
+        right: 1380px;
+        top: 30px;
+        gap: 16px;
+    }
+
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
+    }
+
+    .container_data {
+        position: relative;
+        background-color: #f0f0f0;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-radius: 10px;
+        width: 100px;
+        bottom: 60px;
+        margin-left: 140px;
+    }
+
+    .container_amarelo {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: rgb(242, 211, 124);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-radius: 30px;
+        display: flex;
+        position: relative;
+        bottom: 60px;
+        margin-left: 0px;
+    }
+
+    .horaum input {
+        background-color: white;
+        height: 50px;
+        width: 150px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .container_amarelo2 {
+        max-width: 350px;
+        height: 80px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: rgb(242, 211, 124);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-radius: 30px;
+        position: relative;
+        bottom: 60px;
+        margin-left: 0px;
+    }
+
+    .container-menu-bar {
+        position: fixed;
+        left: -33px;
+        top: 690px;
+        gap: 40px;
+        z-index: 999;
+
+    }
+
+    .container-menu-bar img {
+        left: 5px;
+        width: 46px;
+        height: 46px;
+    }
 }

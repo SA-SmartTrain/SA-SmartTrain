@@ -291,6 +291,7 @@ h1 {
     body{
         position: relative;
         left: 703px;
+        overflow-y: hidden;
     }
 
     h1 {
@@ -319,11 +320,11 @@ h1 {
     }
 
     .container-menu-bar {
-        position: relative;
-        left: -48px;
-        top: -55px;
+        position: fixed;
+        left: -36px;
+        top: 650px;
         gap: 40px;
-        z-index: 1;
+        z-index: 999;
 
     }
 

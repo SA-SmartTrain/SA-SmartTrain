@@ -193,3 +193,14 @@
         position: absolute;
         background-color: rgba(0, 0, 0, 0.8);
     }
+
+@media screen and (max-width: 480px) {
+        .container-right-calendar {
+        position: relative;
+        bottom: -130px;
+        left: -150px;
+        width: 150px;
+        height: 590px;
+    }
+
+}

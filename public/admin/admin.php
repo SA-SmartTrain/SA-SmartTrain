@@ -28,21 +28,21 @@
         </div>
         <div class="container-menu-bar">
             <div class="sections-menu-bar" id="press-effect">
-                <img src="/src/assets/images/inicio-bar.png" alt="">
+                <img src="../src/assets/images/inicio-bar.png" alt="">
                 <div id="incio">
                     <a href="/public/pagina_inicial.html"><span>Inicío</span></a>
                 </div>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <img src="/src/assets/images/menu-bar.png" alt="">
+                <img src="../src/assets/images/menu-bar.png" alt="">
                 <a href="../public/documentacoes.html"><span>Menu</span></a>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <img src="/src/assets/images/estoque-bar.png" alt="">
+                <img src="../src/assets/images/estoque-bar.png" alt="">
                 <a href="#"><span>Estoque</span></a>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <div id="funcionarios"><img src="/src/assets/images/funcionarios-bar.png" alt=""></div>
+                <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
                 <a href="../public/funcionarios.html"><span>Funcionários</span></a>
             </div>
         </div>
