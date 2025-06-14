@@ -1,25 +1,35 @@
 <?php
-// Verificar os dados que irão para a tabela BD [Útil para fazer uma agenda em PHP]
-if (isset($_POST['submit'])) {
-    print_r($_POST['usuario']); // Printar na tela com o id html
-    print_r('<br>'); // Quebrando linha
-    print_r($_POST['email']);
-    print_r('<br>');
-    print_r($_POST['cpf']);
-    print_r('<br>');
-    print_r($_POST['senha']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    include_once('/bd/conexao.php'); // Incluindo conexão
+    $ini_array = parse_ini_file('../../bd/config.ini', true); // Ajuste o caminho
+    $dbHost = $ini_array["database"]["host"];
+    $dbUser = 'smarttrain';
+    $dbPass = $ini_array["database"]["password"];
+    $dbName = 'smarttrain';
+    $dbPort = 6306;
 
-    // Declarando as variáveis para a tabela BD
-    $nome = $_POST['usuario'];
-    $cpf = $_POST['email'];
+    $conexao = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName, $dbPort);
+
+    // Verifica a conexão
+    if (!$conexao) {
+        die("Erro de conexão: " . mysqli_connect_error());
+    }
+
+    // Pegando os valores corretos dos campos
+    $usuario = $_POST['username'];
+    $email = $_POST['email'];
     $cpf = $_POST['cpf'];
-    $senha = $_POST['senha'];
+    $senha = $_POST['password'];
 
-    // Result = Levar todos os dados do PHP para a tabela no BD
-    $result = mysqli_query($conexao, "INSERT INTO cadastro_usuario(usuario, email, cpf, senha) 
-    VALUES ('$usuario', '$email', '$cpf', '$senha')");
+    // Insere no banco
+    $result = mysqli_query($conexao, "INSERT INTO cadastro_usuario (usuario, email, cpf, senha) 
+              VALUES ('$usuario', '$email', '$cpf', '$senha')");
+
+    if ($result) {
+        echo "Cadastro realizado com sucesso!";
+    } 
+
+    mysqli_close($conexao);
 }
 ?>
 
@@ -50,17 +60,17 @@ if (isset($_POST['submit'])) {
                         <span style="position: relative; right: 110px;">Insira Nome de Usuário, Email, CPF e Senha para
                             prosseguir:</span>
                     </div>
-                    <form action="/public/login/cadastro-se-dados.php" method="POST" id="">
+                    <form action="/SA-SmartTrain/public/login/cadastro-se-dados.php" method="POST">
                         <div class="container-box-login">
                             <input type="username" name="username" id="usuario" required>
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="username" name="username" id="email" required>
+                            <input type="username" name="email" id="email" required>
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="CPF" name="CPF" id="cpf" required>
+                            <input type="CPF" name="cpf" id="cpf" required>
                         </div>
                         <br>
                         <div class="container-box-login">
@@ -73,7 +83,7 @@ if (isset($_POST['submit'])) {
                                     conta?</span></a>
                         </div>
                         <div class="container-login-profile">
-                           <button type="submit" id="cadastre-se">Cadastre-se aqui</button>
+                            <button type="submit" id="iii">Cadastre-se aqui</button>
                         </div>
                     </form>
                     <div class="container-social-media">

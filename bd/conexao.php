@@ -1,6 +1,7 @@
 <?php
 
-$ini_array = parse_ini_file(__DIR__ . '/../bd/config.ini', true);
+$inipath = php_ini_loaded_file();
+$ini_array = parse_ini_file($inipath, true)["PHP"];
 
 $dbUsername = 'smarttrain';
 $dbHost     = $ini_array['database']['host'];
