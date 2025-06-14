@@ -16,9 +16,16 @@
             <div class="container-size-mobile">
                 <div class="container">
                     <div class="container-accessibility-buttons">
-                        <a href="../public/login/cadastre-se-page.html">
-                            <img src="/src/assets/images/sair.png" alt="exit">
+                        <a onclick="abrirModal()">
+                            <img src="/src/assets/images/sair.png" alt="exit" style="cursor: pointer;">
                         </a>
+                        <div id="modalOverlay" class="overlay" onclick="fecharModal()">
+                            <div class="modal" onclick="event.stopPropagation()">
+                                <p><strong>Nome:</strong> Nome Teste</p>
+                                <p><a href="../public/admin/admin.php" style="color: rgb(242, 211, 124);">Admin</a></p>
+                                <p><a href="../public/login/cadastre-se-page.html" style="color: rgb(242, 211, 124);">Desconectar</a></p>
+                            </div>
+                        </div>
                         <img src="/src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
                         <img src="/src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
                     </div>
@@ -81,9 +88,31 @@
 </body>
 
 <style>
-    @media screen and (max-width: 768px) {
-        
-}
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal {
+        background-color: #fff;
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        min-width: 250px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
 </style>
 <script src="../src/template_notificacao.js"></script>
+<script src="../src/logout.js"></script>
+
 </html>
