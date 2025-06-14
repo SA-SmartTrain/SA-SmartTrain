@@ -20,7 +20,7 @@
         </div>
         <div class="containerdois flex">
             <div>
-                <h1>Cadastro de Cargas</h1>
+                <a href="./pagina_inicial.html" style=" text-decoration: none;"><h1 id="title">Cadastro de Cargas</h1></a>
             </div>
         </div>
     </section>
@@ -88,20 +88,18 @@
         </select>
 
         <h3>Selecione a data de Envio:</h3>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-
-
-        <input type="text" id="datepicker">
-
-
+        <select id="destino" name="pontodestino" form="ponto_destino">
+            <option value="opcão">Selecione o data de envio...</option>
+            <option value="Mafra">Mafra</option>
+        </select>
+        
         <h3>Selecione a data de Chegada:</h3>
         <select id="destino" name="pontodestino" form="ponto_destino">
-            <option value="opcão">Selecione o destino...</option>
+            <option value="opcão">Selecione o data de entrega...</option>
             <option value="Mafra">Mafra</option>
         </select>
 
-        <input type="button" value="Enviar">
+        <input type="button" value="Enviar" id="eee">
 
         <div class="container-menu-bar">
             <div class="sections-menu-bar" id="press-effect">

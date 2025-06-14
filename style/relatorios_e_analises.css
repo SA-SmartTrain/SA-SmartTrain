@@ -2,7 +2,7 @@ body {
     margin: 0px;
     background-color: #F0F0F0;
     color: #2C2C2C;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container-accessibility-buttons {

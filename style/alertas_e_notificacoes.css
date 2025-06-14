@@ -3,12 +3,12 @@ body {
     overflow-y: hidden;
 }
 
-.flex{
+.flex {
     font-weight: bolder;
-    text-align:center;
+    text-align: center;
 }
 
-.containerum {  
+.containerum {
     background-color: rgb(242, 211, 124);
     padding-bottom: 5px;
     box-sizing: border-box;
@@ -16,12 +16,12 @@ body {
     max-width: 500px;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 10px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
     height: 50px;
-     margin-left: 20px;
-    
+    margin-left: 20px;
+
 }
 
 #dark_and_white-mode {
@@ -45,7 +45,7 @@ body {
 
 .container {
     background-color: rgb(242, 211, 124);
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
     box-sizing: border-box;
     display: flex;
     margin-top: 100px;
@@ -68,10 +68,10 @@ button {
 }
 
 .botao {
-background-color: rgb(242, 211, 124);
+    background-color: rgb(242, 211, 124);
 }
 
-p{
+p {
     color: black;
     background-color: rgb(242, 211, 124);
     margin: 0;
@@ -88,26 +88,30 @@ h3 {
 
 #notificacao1 {
     width: 100%;
-    background-color: rgb(242, 211, 124) ;
+    background-color: rgb(242, 211, 124);
 }
 
-img{
+img {
     max-width: 50px;
     max-height: 100px;
     padding: 0px;
 }
-#notificacao1 img{
-    background-color:rgb(242, 211, 124) ;
+
+#notificacao1 img {
+    background-color: rgb(242, 211, 124);
 }
 
-h1{
+h1 {
     margin-left: -1600px;
+    font-size: 26px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-h3{
+
+h3 {
     color: black;
 }
-p{
+
+p {
     color: black;
 }
 
@@ -131,7 +135,7 @@ p{
 
 .container-menu-bar {
     position: relative;
-    bottom: 35px;
+    bottom: 42px;
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -168,10 +172,69 @@ p{
     left: 20px;
 }
 
-#press-effect:hover{
+#press-effect:hover {
     opacity: 1;
 }
 
 #notifications:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        position: relative;
+        right: 130px;
+    }
+
+    h1 {
+        position: relative;
+        left: 8px;
+        bottom: -21px;
+        font-size: 22px;
+    }
+
+
+    .container-center {
+        width: 350px;
+        height: 650px;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .container-menu-bar {
+        position: relative;
+        bottom: 45px;
+        margin-top: 14%;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 60px;
+        gap: 40px;
+        left: 90px;
+    }
+
+    .sections-menu-bar {
+        position: relative;
+        left: 12px;
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        opacity: 0.3;
+    }
+
+        .container-accessibility-buttons {
+        position: relative;
+        right: 1210px;
+        top: 20px;
+        gap: 6px;
+    }
+
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
+    }
+
+
 }
