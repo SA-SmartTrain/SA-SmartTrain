@@ -1,11 +1,11 @@
 <?php
 // Incluir o arquivo de conexão
-include_once('/bd/conexao.php');
+include_once('../bd/conexao.php');
 
 $ini_array = parse_ini_file('../../bd/config.ini', true); // Ajuste o caminho
-$dbHost = $ini_array["database"]["host"];
+$dbHost = $ini_array['database']['host'];
 $dbUser = 'smarttrain';
-$dbPass = $ini_array["database"]["password"];
+$dbPass = $ini_array['database']['password'];
 $dbName = 'smarttrain';
 $dbPort = 6306;
 
