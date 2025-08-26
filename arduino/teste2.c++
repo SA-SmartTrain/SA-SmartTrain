@@ -22,4 +22,13 @@ void loop() {
 “média” se > 50 e <100;
 “perto” se < 10;
 
+if (distancia > 100) {
+  Printls("Longe");
+ } else 
+
+“média” se > 50 e <100;
+“perto” se < 10;
+
+}
+
 }
