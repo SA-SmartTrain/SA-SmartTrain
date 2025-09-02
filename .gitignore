@@ -2,4 +2,4 @@
 
 *.ini
 
-bd/config.ini
+db  /config.ini
