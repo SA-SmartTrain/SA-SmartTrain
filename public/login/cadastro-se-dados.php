@@ -1,36 +1,43 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+require_once '../../db/conn.php';
 
-    $ini_array = parse_ini_file('../../bd/config.ini', true); // Ajuste o caminho
-    $dbHost = $ini_array["database"]["host"];
-    $dbUser = 'smarttrain';
-    $dbPass = $ini_array["database"]["password"];
-    $dbName = 'smarttrain';
-    $dbPort = 6306;
+session_start();
 
-    $conexao = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName, $dbPort);
+$error = '';
 
-    // Verifica a conexão
-    if (!$conexao) {
-        die("Erro de conexão: " . mysqli_connect_error());
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $cpf = substr(preg_replace('/\D/', '', $_POST['cpf']), 0, 14); // Only digits, max 14 chars
+    $password = $_POST['password'];
+
+    // Verifica se o email ou CPF já estão cadastrados
+    $stmt = $conn->prepare("SELECT idusuarios FROM usuarios WHERE email_usuarios = ? OR cpf_usuarios = ?");
+    $stmt->bind_param("ss", $email, $cpf);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows > 0) {
+        $error = 'Email ou CPF já cadastrado.';
+    } else {
+        // Insere o novo usuário no banco de dados
+        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+        $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, cpf_usuarios, senha_usuarios) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $username, $email, $cpf, $hashedPassword);
+
+        if ($stmt->execute()) {
+            // Registro bem-sucedido, redireciona para a página de login
+            header('Location: public/login/cadastre-se-page.php');
+            exit();
+        } else {
+            $error = 'Erro ao cadastrar. Tente novamente.';
+        }
     }
 
-    // Pegando os valores corretos dos campos
-    $usuario = $_POST['username'];
-    $email = $_POST['email'];
-    $cpf = $_POST['cpf'];
-    $senha = $_POST['password'];
-
-    // Insere no banco
-    $result = mysqli_query($conexao, "INSERT INTO cadastro_usuario (usuario, email, cpf, senha) 
-              VALUES ('$usuario', '$email', '$cpf', '$senha')");
-
-    if ($result) {
-        echo "Cadastro realizado com sucesso!";
-    } 
-
-    mysqli_close($conexao);
+    $stmt->close();
 }
+$conn->close();
+
 ?>
 
 
@@ -70,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="CPF" name="cpf" id="cpf" required>
+                            <input type="text" name="cpf" id="cpf" maxlength="14" pattern="\d{11,14}" required>
                         </div>
                         <br>
                         <div class="container-box-login">

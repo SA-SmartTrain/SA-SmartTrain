@@ -1,3 +1,42 @@
+<?php
+require_once '../../db/conn.php';
+
+session_start();
+
+if (isset($_SESSION["email_usuarios"])) { // Verifica se o usuário já está logado
+    header('Location: ../public/pagina_inicial.html'); // Redireciona para a página inicial
+    exit;
+}
+
+$error = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Verifica se o usuário existe no banco de dados
+    $stmt = $conn->prepare("SELECT idusuarios, senha_usuarios FROM usuarios WHERE nome_usuarios = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->store_result();
+    $stmt->bind_result($id, $hashedPassword);
+    $stmt->fetch();
+
+    if ($stmt->num_rows > 0 && password_verify($password, $hashedPassword)) {
+        // Login bem-sucedido, inicia a sessão
+        $_SESSION["email_usuarios"] = $username;
+        $_SESSION["idusuarios"] = $id;
+        header('Location: ../public/pagina_inicial.html'); // Redireciona para a página inicial
+        exit();
+    } else {
+        $error = 'Nome de usuário ou senha incorretos.';
+    }
+
+    $stmt->close();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +81,7 @@
                 </div>
                 <div class="container-login-profile">
                     <button type="submit" onclick="loginAdmin()"><a
-                            href="/public/pagina_inicial.html"><span>Login</span></a></button>
+                            href=""><span>Login</span></a></button>
                 </div>
                 <div class="container-social-media">
                     <div class="social-media">
