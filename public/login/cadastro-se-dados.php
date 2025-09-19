@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="password" name="password" id="senha" placeholder="Senha" required>
                         </div>
                         <div class="container-box-login">
-                            <input type="password" name="confirm_password" id="confirm_password" required>
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirme a senha" required>
                         </div>
                         <div class="container-forgotten-password">
                             <input type="checkbox" name="esqueceu_senha" id="esqueceu_senha">
