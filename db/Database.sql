@@ -4,8 +4,9 @@ USE `smarttrain`;
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
     `idusuarios` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `nome_usuaruis` VARCHAR(87) NOT NULL,
+    `nome_usuarios` VARCHAR(87) NOT NULL,
     `email_usuarios` VARCHAR(87) NOT NULL UNIQUE,
     `senha_usuarios` VARCHAR(87) NOT NULL,
-    `cpf_usuarios` CHAR(11) NOT NULL
+    `cpf_usuarios` CHAR(11) NOT NULL,
+    `perfil` ENUM('gestor', 'usuario', 'administrador') NOT NULL DEFAULT 'usuario'
 );

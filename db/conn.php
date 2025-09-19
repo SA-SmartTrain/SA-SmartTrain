@@ -5,10 +5,10 @@ $ini_array = parse_ini_file($inipath, true)["PHP"];
 
 $dbHost     = 'localhost';
 $dbUsername = 'root';
-$dbPassword = 'root';
+$dbPassword = '';
 $dbName     = 'smarttrain';
 
-$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName, $dbPort);
+$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
 if ($conn->connect_errno) {
     die("Falha na conexão: " . $conn->connect_error);
