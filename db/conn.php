@@ -9,8 +9,10 @@ $dbPassword = $ini_array['database']['password'];
 $dbName     = 'smarttrain';
 $dbPort     = 6306;
 
-$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName, $dbPort);
+$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName, $dbPort);
 
-if ($conexao->connect_errno) {
-    die("Falha na conexão: " . $conexao->connect_error);
+if ($conn->connect_errno) {
+    die("Falha na conexão: " . $conn->connect_error);
 }
+
+$conn->set_charset("utf8mb4");
