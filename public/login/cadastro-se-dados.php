@@ -8,21 +8,19 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $cpf = substr(preg_replace('\D/', '', $_POST['cpf']), 0, 14); // Only digits, max 14 chars
+    $cpf = substr(preg_replace('/\D/', '', $_POST['cpf']), 0, 14);
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm_password'];
 
     $passwordError = "";
 
     // Validação de senha
-    if ($password !== $confirmPassword) {
+    if ($password != $confirmPassword) {
         $passwordError .= "As senhas não coincidem.\n";
     }
     else if (strlen($password) < 8) {
         $passwordError .= "A senha deve ter no mínimo 8 caracteres.\n";
-    }
-    // Se houver erro de senha, interrompe o processo
-    else if (!empty($passwordError)) {
+    } else if (!empty($passwordError)) {
         echo nl2br($passwordError); // Exibe os erros formatados
     } else {
 
@@ -37,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // Insere o novo usuário no banco de dados
             $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-            $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, cpf_usuarios, senha_usuarios) VALUES (?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuaruis, email_usuarios, cpf_usuarios, senha_usuarios) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("ssss", $username, $email, $cpf, $hashedPassword);
 
             if ($stmt->execute()) {
@@ -97,6 +95,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <br>
                         <div class="container-box-login">
                             <input type="password" name="password" id="senha" required>
+                        </div>
+                        <div class="container-box-login">
+                            <input type="password" name="confirm_password" id="confirm_password" required>
                         </div>
                         <div class="container-forgotten-password">
                             <input type="checkbox" name="esqueceu_senha" id="esqueceu_senha">
