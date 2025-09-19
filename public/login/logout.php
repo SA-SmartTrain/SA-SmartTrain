@@ -3,10 +3,10 @@
     require_once '../../db/conn.php';
 
     session_start();
-    if (isset($_SESSION["email"])) {
+    if (isset($_SESSION["email_usuarios"])) {
         session_destroy();
         echo "<h2>Você saiu com sucesso!</h2>";
-        echo '<a href="login.php">Clique aqui para fazer login novamente.</a>';
+        echo '<a href="cadastre-se-page.php">Clique aqui para fazer login novamente.</a>';
     } else {
         echo "<h2>Você não está logado.</h2>";
         echo '<a href="cadastre-se-page.php">Clique aqui para fazer login.</a>';
