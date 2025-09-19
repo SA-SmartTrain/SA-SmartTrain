@@ -82,19 +82,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <form action="/SA-SmartTrain/public/login/cadastro-se-dados.php" method="POST">
                         <div class="container-box-login">
-                            <input type="username" name="username" id="usuario" required>
+                            <input type="username" name="username" id="usuario" placeholder="Nome" required>
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="username" name="email" id="email" required>
+                            <input type="username" name="email" id="email" placeholder="Email" required>
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="text" name="cpf" id="cpf" maxlength="14" pattern="\d{11,14}" required>
+                            <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="14" pattern="\d{11,14}" required>
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="password" name="password" id="senha" required>
+                            <input type="password" name="password" id="senha" placeholder="Senha" required>
                         </div>
                         <div class="container-box-login">
                             <input type="password" name="confirm_password" id="confirm_password" required>
@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="container-forgotten-password">
                             <input type="checkbox" name="esqueceu_senha" id="esqueceu_senha">
                             <span>Salvar Senha</span>
-                            <a href="/public/login/cadastre-se-page.html" id="possui-uma-conta"><span>Ja possui uma
+                            <a href="/public/login/cadastre-se-page.html" id="possui-uma-conta"><span>Já possui uma
                                     conta?</span></a>
                         </div>
                         <div class="container-login-profile">
