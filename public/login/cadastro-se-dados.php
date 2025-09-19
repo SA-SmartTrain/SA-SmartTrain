@@ -8,36 +8,51 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $cpf = substr(preg_replace('/\D/', '', $_POST['cpf']), 0, 14); // Only digits, max 14 chars
+    $cpf = substr(preg_replace('\D/', '', $_POST['cpf']), 0, 14); // Only digits, max 14 chars
     $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm_password'];
 
-    // Verifica se o email ou CPF já estão cadastrados
-    $stmt = $conn->prepare("SELECT idusuarios FROM usuarios WHERE email_usuarios = ? OR cpf_usuarios = ?");
-    $stmt->bind_param("ss", $email, $cpf);
-    $stmt->execute();
-    $stmt->store_result();
+    $passwordError = "";
 
-    if ($stmt->num_rows > 0) {
-        $error = 'Email ou CPF já cadastrado.';
-    } else {
-        // Insere o novo usuário no banco de dados
-        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-        $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, cpf_usuarios, senha_usuarios) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $username, $email, $cpf, $hashedPassword);
-
-        if ($stmt->execute()) {
-            // Registro bem-sucedido, redireciona para a página de login
-            header('Location: public/login/cadastre-se-page.php');
-            exit();
-        } else {
-            $error = 'Erro ao cadastrar. Tente novamente.';
-        }
+    // Validação de senha
+    if ($password !== $confirmPassword) {
+        $passwordError .= "As senhas não coincidem.\n";
     }
+    else if (strlen($password) < 8) {
+        $passwordError .= "A senha deve ter no mínimo 8 caracteres.\n";
+    }
+    // Se houver erro de senha, interrompe o processo
+    else if (!empty($passwordError)) {
+        echo nl2br($passwordError); // Exibe os erros formatados
+    } else {
 
-    $stmt->close();
+        // Verifica se o email ou CPF já estão cadastrados
+        $stmt = $conn->prepare("SELECT idusuarios FROM usuarios WHERE email_usuarios = ? OR cpf_usuarios = ?");
+        $stmt->bind_param("ss", $email, $cpf);
+        $stmt->execute();
+        $stmt->store_result();
+
+        if ($stmt->num_rows > 0) {
+            $error = 'Email ou CPF já cadastrado.';
+        } else {
+            // Insere o novo usuário no banco de dados
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, cpf_usuarios, senha_usuarios) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $username, $email, $cpf, $hashedPassword);
+
+            if ($stmt->execute()) {
+                // Registro bem-sucedido, redireciona para a página de login
+                header('Location: public/login/cadastre-se-page.php');
+                exit();
+            } else {
+                $error = 'Erro ao cadastrar. Tente novamente.';
+            }
+        }
+
+        $stmt->close();
+    }
+    $conn->close();
 }
-$conn->close();
-
 ?>
 
 
