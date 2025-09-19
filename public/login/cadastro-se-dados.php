@@ -1,35 +1,55 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+require_once '../../db/conn.php';
 
-    $ini_array = parse_ini_file('../../bd/config.ini', true); // Ajuste o caminho
-    $dbHost = $ini_array["database"]["host"];
-    $dbUser = 'smarttrain';
-    $dbPass = $ini_array["database"]["password"];
-    $dbName = 'smarttrain';
-    $dbPort = 6306;
+session_start();
 
-    $conexao = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName, $dbPort);
+$error = '';
 
-    // Verifica a conexão
-    if (!$conexao) {
-        die("Erro de conexão: " . mysqli_connect_error());
-    }
-
-    // Pegando os valores corretos dos campos
-    $usuario = $_POST['username'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
     $email = $_POST['email'];
-    $cpf = $_POST['cpf'];
-    $senha = $_POST['password'];
+    $cpf = substr(preg_replace('/\D/', '', $_POST['cpf']), 0, 14);
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm_password'];
 
-    // Insere no banco
-    $result = mysqli_query($conexao, "INSERT INTO cadastro_usuario (usuario, email, cpf, senha) 
-              VALUES ('$usuario', '$email', '$cpf', '$senha')");
+    $passwordError = "";
 
-    if ($result) {
-        echo "Cadastro realizado com sucesso!";
-    } 
+    // Validação de senha
+    if ($password != $confirmPassword) {
+        $passwordError .= "As senhas não coincidem.\n";
+    }
+    else if (strlen($password) < 8) {
+        $passwordError .= "A senha deve ter no mínimo 8 caracteres.\n";
+    } else if (!empty($passwordError)) {
+        echo nl2br($passwordError); // Exibe os erros formatados
+    } else {
 
-    mysqli_close($conexao);
+        // Verifica se o email ou CPF já estão cadastrados
+        $stmt = $conn->prepare("SELECT idusuarios FROM usuarios WHERE email_usuarios = ? OR cpf_usuarios = ?");
+        $stmt->bind_param("ss", $email, $cpf);
+        $stmt->execute();
+        $stmt->store_result();
+
+        if ($stmt->num_rows > 0) {
+            $error = 'Email ou CPF já cadastrado.';
+        } else {
+            // Insere o novo usuário no banco de dados
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuaruis, email_usuarios, cpf_usuarios, senha_usuarios) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $username, $email, $cpf, $hashedPassword);
+
+            if ($stmt->execute()) {
+                // Registro bem-sucedido, redireciona para a página de login
+                header('Location: public/login/cadastre-se-page.php');
+                exit();
+            } else {
+                $error = 'Erro ao cadastrar. Tente novamente.';
+            }
+        }
+
+        $stmt->close();
+    }
+    $conn->close();
 }
 ?>
 
@@ -62,24 +82,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <form action="/SA-SmartTrain/public/login/cadastro-se-dados.php" method="POST">
                         <div class="container-box-login">
-                            <input type="username" name="username" id="usuario" required>
+                            <input type="username" name="username" id="usuario" placeholder="Nome" required>
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="username" name="email" id="email" required>
+                            <input type="username" name="email" id="email" placeholder="Email" required>
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="CPF" name="cpf" id="cpf" required>
+                            <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="14" pattern="\d{11,14}" required>
                         </div>
                         <br>
                         <div class="container-box-login">
-                            <input type="password" name="password" id="senha" required>
+                            <input type="password" name="password" id="senha" placeholder="Senha" required>
+                        </div>
+                        <br>
+                        <div class="container-box-login">
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirme a senha" required>
                         </div>
                         <div class="container-forgotten-password">
                             <input type="checkbox" name="esqueceu_senha" id="esqueceu_senha">
                             <span>Salvar Senha</span>
-                            <a href="/public/login/cadastre-se-page.html" id="possui-uma-conta"><span>Ja possui uma
+                            <a href="/public/login/cadastre-se-page.html" id="possui-uma-conta"><span>Já possui uma
                                     conta?</span></a>
                         </div>
                         <div class="container-login-profile">
