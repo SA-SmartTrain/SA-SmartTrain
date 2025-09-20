@@ -1,0 +1,22 @@
+INSERT INTO `usuarios` (`nome_usuarios`, `email_usuarios`, `senha_usuarios`, `cpf_usuarios`, `perfil`)
+VALUES
+('Beatriz Cercal', 'beatriz@gmail.com', '123456', '20628481705', 'administrador'),
+('Lucas Silva', 'lucas@gmail.com', 'senha123', '12345678901', 'gestor'),
+('Ana Souza', 'ana@gmail.com', 'abc123', '98765432100', 'usuario'),
+('Pedro Almeida', 'pedro@gmail.com', 'pedro2025', '45678912300', 'usuario'),
+('Carla Mendes', 'carla@gmail.com', 'carla321', '32165498700', 'gestor'),
+('Rafael Costa', 'rafael@gmail.com', 'rafael@1', '14725836900', 'usuario'),
+('Mariana Lima', 'mariana@gmail.com', 'mariana!23', '25836914700', 'gestor'),
+('Fernando Oliveira', 'fernando@gmail.com', 'fer123', '36914725800', 'usuario'),
+('Juliana Ribeiro', 'juliana@gmail.com', 'juliana@456', '15975348620', 'administrador'),
+('Gustavo Martins', 'gustavo@gmail.com', 'gustavo789', '75395185200', 'usuario'),
+('Patrícia Santos', 'patricia@gmail.com', 'patricia1', '85245696300', 'gestor'),
+('Bruno Ferreira', 'bruno@gmail.com', 'bruno2025', '96325874100', 'usuario'),
+('Camila Andrade', 'camila@gmail.com', 'camila123', '74185296300', 'usuario'),
+('Thiago Gomes', 'thiago@gmail.com', 'thiago!23', '36985214700', 'gestor'),
+('Renata Dias', 'renata@gmail.com', 'renata456', '25814796300', 'usuario'),
+('Daniela Rocha', 'daniela@gmail.com', 'daniela@1', '14796325800', 'usuario'),
+('Eduardo Lima', 'eduardo@gmail.com', 'eduardo123', '36974125800', 'gestor'),
+('Sofia Nunes', 'sofia@gmail.com', 'sofia!2025', '85296314700', 'usuario'),
+('Carlos Pinto', 'carlos@gmail.com', 'carlos456', '96314785200', 'usuario'),
+('Larissa Teixeira', 'larissa@gmail.com', 'larissa789', '74136985200', 'gestor');
