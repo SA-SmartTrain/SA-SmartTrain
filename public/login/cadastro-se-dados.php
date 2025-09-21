@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
             </div>
 
             <div class="mb-2">
-                <label for="disabledTextInput" class="form-label">Email:</label>
+                <label for="disabledTextInput" class="form-label">Email:</label> 
                 <input type="email" id="email" class="form-control" name="email" required>
             </div>
 
