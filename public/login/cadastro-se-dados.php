@@ -16,6 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
 
         // Criptografa a senha antes de salvar
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        if (strlen($password) < 8) {
+            $error = "A senha deve ter no mínimo 8 caracteres.";
+        }
 
         // Verifica se o email já está cadastrado
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email_usuarios = ?");
