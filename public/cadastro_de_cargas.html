@@ -14,8 +14,10 @@
     <section>
         <div class="container">
             <div class="container-accessibility-buttons">
-                 <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741085445947564/notifications.png?ex=68cf3919&is=68cde799&hm=57ad55419d3e97736524f36b679b66d50383d3e22853551556bcff3bb49701ae&=&format=webp&quality=lossless " onclick="pushNot()" id="notifications">
-                        <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741085810725007/dark_and_white-mode.png?ex=68cf3919&is=68cde799&hm=3d6e6cd190dd89d7cb184d2bed95aed35ba18d3866819a9aba94cf927012ff4f&=&format=webp&quality=lossless" id="dark_and_white-mode">
+                <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741085445947564/notifications.png?ex=68cf3919&is=68cde799&hm=57ad55419d3e97736524f36b679b66d50383d3e22853551556bcff3bb49701ae&=&format=webp&quality=lossless "
+                    onclick="pushNot()" id="notifications">
+                <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741085810725007/dark_and_white-mode.png?ex=68cf3919&is=68cde799&hm=3d6e6cd190dd89d7cb184d2bed95aed35ba18d3866819a9aba94cf927012ff4f&=&format=webp&quality=lossless"
+                    id="dark_and_white-mode">
             </div>
         </div>
         <div class="containerdois flex">
@@ -90,16 +92,27 @@
         </select>
 
         <h3>Selecione a data de Envio:</h3>
-        <select id="destino" name="pontodestino" form="ponto_destino">
-            <option value="opcão">Selecione o data de envio...</option>
-            <option value="Mafra">Mafra</option>
-        </select>
+        <form>
+            <div class="container">
+                <div class="flex">
+                    <div class="container_dados">
+                        <input type="date" name="date" id="dataTeste">
+                    </div>
+                </div>
+            </div>
+        </form>
 
         <h3>Selecione a data de Chegada:</h3>
-        <select id="destino" name="pontodestino" form="ponto_destino">
-            <option value="opcão">Selecione o data de entrega...</option>
-            <option value="Mafra">Mafra</option>
-        </select>
+        <form>
+            <div class="container">
+                <div class="flex">
+                    <div class="container_dados">
+                        <input type="date" name="date" id="dataTeste">
+                    </div>
+                </div>
+            </div>
+        </form>
+
 
         <input type="button" value="Enviar" id="eee">
 
