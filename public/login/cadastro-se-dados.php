@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
     } else {
         // Criptografa a senha antes de salvar
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+       
 
         // Verifica se o email já está cadastrado
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email_usuarios = ?");
@@ -37,9 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
         if ($resultado->num_rows > 0) {
             $error = "Email já cadastrado.";
         } else if ($resultado2->num_rows > 0) {
-            $error = "CPF já cadastrado.";
+            $error = "CPF já cadastrado."; // Mensagem de erro
         } else {
-            // Insere o novo usuário no banco
+            // Insere o novo usuário no banco de dados
             $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, senha_usuarios, cpf_usuarios, perfil) VALUES (?, ?, ?, ?, ?)");
             $stmt->bind_param("sssss", $nome, $email, $passwordHash, $cpf, $perfil);
 
