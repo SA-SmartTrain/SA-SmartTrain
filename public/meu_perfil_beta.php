@@ -4,13 +4,13 @@ require_once(__DIR__ . '/../db/conn.php');
 session_start();
 
 // Verifica se o usuário já está logado
-if (!isset($_SESSION["email"])) {
+if (!isset($_SESSION["email_usuarios"])) {
     header('Location: ../login/cadastro-se-dados.php');
     exit;
 }
 
 // Pega o email da sessão
-$email = $_SESSION["email"];
+$email = $_SESSION["email_usuarios"];
 
 // Busca o nome no banco
 $stmt = $conn->prepare("SELECT nome_usuarios FROM usuarios WHERE email_usuarios = ?");

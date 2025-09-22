@@ -23,8 +23,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
         $stmt->execute();
         $resultado = $stmt->get_result();
 
+        // Verifica se o cfp já está cadastrado
+        $stmt = $conn->prepare("SELECT * FROM usuarios WHERE cpf_usuarios = ?");
+        $stmt->bind_param("s", $cpf);
+        $stmt->execute();
+        $resultado2 = $stmt->get_result();
+
         if ($resultado->num_rows > 0) {
             $error = "Email já cadastrado."; // Mensagem de erro
+        } else if ($resultado2->num_rows > 0) {
+            $error = "CPF já cadastrado."; // Mensagem de erro
         } else {
             // Insere o novo usuário no banco de dados
             $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, senha_usuarios, cpf_usuarios, perfil) VALUES (?, ?, ?, ?, ?)");
@@ -81,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
             </div>
 
             <div class="mb-2">
-                <label for="disabledTextInput" class="form-label">Email:</label> 
+                <label for="disabledTextInput" class="form-label">Email:</label>
                 <input type="email" id="email" class="form-control" name="email" required>
             </div>
 
