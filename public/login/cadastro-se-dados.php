@@ -16,9 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
 
         // Criptografa a senha antes de salvar
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-        if (strlen($password) < 8) {
-            $error = "A senha deve ter no mínimo 8 caracteres.";
-        }
+       
 
         // Verifica se o email já está cadastrado
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email_usuarios = ?");
@@ -36,7 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
             $error = "Email já cadastrado."; // Mensagem de erro
         } else if ($resultado2->num_rows > 0) {
             $error = "CPF já cadastrado."; // Mensagem de erro
-        } else {
+        } else if (strlen($password) < 8) {
+            $error = "A senha deve ter no mínimo 8 caracteres.";
+    
+        }
+        else {
             // Insere o novo usuário no banco de dados
             $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, senha_usuarios, cpf_usuarios, perfil) VALUES (?, ?, ?, ?, ?)");
             $stmt->bind_param("sssss", $nome, $email, $passwordHash, $cpf, $perfil);
