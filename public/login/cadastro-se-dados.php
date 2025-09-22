@@ -13,9 +13,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
         $password = trim($_POST["password"] ?? ""); // Pega a senha do formulário
         $cpf = trim($_POST["cpf"] ?? "");
         $perfil = trim($_POST["perfil"] ?? "");
+    }
 
+    // Verifica tamanho mínimo da senha
+    if (strlen($password) < 8) {
+        $error = "A senha deve ter pelo menos 8 caracteres.";
+    } else {
         // Criptografa a senha antes de salvar
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+       
 
         // Verifica se o email já está cadastrado
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email_usuarios = ?");
@@ -23,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
         $stmt->execute();
         $resultado = $stmt->get_result();
 
-        // Verifica se o cfp já está cadastrado
+        // Verifica se o cpf já está cadastrado
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE cpf_usuarios = ?");
         $stmt->bind_param("s", $cpf);
         $stmt->execute();
         $resultado2 = $stmt->get_result();
 
         if ($resultado->num_rows > 0) {
-            $error = "Email já cadastrado."; // Mensagem de erro
+            $error = "Email já cadastrado.";
         } else if ($resultado2->num_rows > 0) {
             $error = "CPF já cadastrado."; // Mensagem de erro
         } else {
@@ -39,17 +45,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
             $stmt->bind_param("sssss", $nome, $email, $passwordHash, $cpf, $perfil);
 
             if ($stmt->execute()) {
-                $_SESSION["email"] = $email; // Armazena o email na sessão
-                $_SESSION["name"] = $nome; // Armazena o nome na sessão
-                header('Location: cadastre-se-page.php'); // Redireciona para a página inicial
+                $_SESSION["email"] = $email;
+                $_SESSION["name"] = $nome;
+                header('Location: cadastre-se-page.php');
                 exit;
             } else {
-                $error = "Erro ao cadastrar. Tente novamente."; // Mensagem de erro
+                $error = "Erro ao cadastrar. Tente novamente.";
             }
         }
     }
 }
-
 
 ?>
 
@@ -101,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
             <div class="mb-3">
                 <label for="password" class="form-label">Password:</label>
                 <div class="input-group">
-                    <input type="password" id="password" class="form-control" name="password" required>
+                    <input type="password" id="password" class="form-control" name="password" required minlength="8">
                     <button class="btn btn-outline-secondary" type="button" id="togglePassword" tabindex="-1">
                         <span id="eyeIcon">&#128065;</span>
                     </button>
