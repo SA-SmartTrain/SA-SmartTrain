@@ -5,7 +5,7 @@ $ini_array = parse_ini_file($inipath, true)["PHP"];
 
 $dbHost     = 'localhost';
 $dbUsername = 'root';
-$dbPassword = '';
+$dbPassword = 'root';
 $dbName     = 'smarttrain';
 
 $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
