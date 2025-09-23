@@ -15,13 +15,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
         $perfil = trim($_POST["perfil"] ?? "");
     }
 
-    // Verifica tamanho mínimo da senha
     if (strlen($password) < 8) {
         $error = "A senha deve ter pelo menos 8 caracteres.";
+    } elseif (!preg_match('/[A-Z]/', $password)) {
+        $error = "A senha deve conter pelo menos uma letra maiúscula.";
+    } elseif (!preg_match('/[a-z]/', $password)) {
+        $error = "A senha deve conter pelo menos uma letra minúscula.";
+    } elseif (!preg_match('/[0-9]/', $password)) {
+        $error = "A senha deve conter pelo menos um número.";
+    } elseif (!preg_match('/[\W_]/', $password)) {
+        $error = "A senha deve conter pelo menos um caractere especial (ex: @, #, $, %).";
     } else {
         // Criptografa a senha antes de salvar
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-       
 
         // Verifica se o email já está cadastrado
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email_usuarios = ?");
@@ -37,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
 
         if ($resultado->num_rows > 0) {
             $error = "Email já cadastrado.";
-        } else if ($resultado2->num_rows > 0) {
+        } elseif ($resultado2->num_rows > 0) {
             $error = "CPF já cadastrado."; // Mensagem de erro
         } else {
             // Insere o novo usuário no banco de dados
@@ -55,8 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
         }
     }
 }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
