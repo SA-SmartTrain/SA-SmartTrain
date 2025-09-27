@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
         $password = trim($_POST["password"] ?? ""); // Pega a senha do formulário
         $cpf = trim($_POST["cpf"] ?? "");
         $perfil = trim($_POST["perfil"] ?? "");
+        $foto_usuarios = '../src/assets/images/profile-login.png'; // Define a foto padrão
     }
 
     if (strlen($password) < 8) {
@@ -47,8 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
             $error = "CPF já cadastrado."; // Mensagem de erro
         } else {
             // Insere o novo usuário no banco de dados
-            $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, senha_usuarios, cpf_usuarios, perfil) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssss", $nome, $email, $passwordHash, $cpf, $perfil);
+            $stmt = $conn->prepare("INSERT INTO usuarios (nome_usuarios, email_usuarios, senha_usuarios, cpf_usuarios, perfil, foto_usuarios) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("ssssss", $nome, $email, $passwordHash, $cpf, $perfil, $foto_usuarios);
+
 
             if ($stmt->execute()) {
                 $_SESSION["email"] = $email;
