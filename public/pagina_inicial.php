@@ -44,7 +44,7 @@ $nome_usuarios = $dados["nome_usuarios"];
                 <div class="container">
                     <div class="container-accessibility-buttons">
                         <a onclick="abrirModal()">
-                            <img src="https://cdn.discordapp.com/attachments/1418730196617396327/1418742328616681587/sair.png?ex=68cf3a42&is=68cde8c2&hm=be7fb52615b3150743b8ad3bbbba53ded769598e8c6ae22d0e9559067696a99e&" alt="exit" style="cursor: pointer;">
+                            <img src="../src/assets/images/sair.png" alt="exit" style="cursor: pointer;">
                         </a>
                         <div id="modalOverlay" class="overlay" onclick="fecharModal()">
                             <div class="modal" onclick="event.stopPropagation()">

@@ -72,6 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="shortcut icon" href=".../src/assets/logo/favicon.ico" type="image/x-icon">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <title>SmartTrain - Cadastro</title>
 </head>
@@ -82,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
 
     <div class="row">
         <div class="col-md-6">
-            <img src="https://media.discordapp.net/attachments/1418730196617396327/1418730281581674567/logo-smarttrain-semfundo.PNG?ex=68cf2f09&is=68cddd89&hm=46e6531f94ad218b05052ed12db44eb3ae8071d16df7317f45653ce7b427f00f&=&format=webp&quality=lossless" alt="Imagem de Cadastro" class="img-fluid">
+            <img src="../../src/assets/images/logo-smarttrain.png" alt="Imagem de Cadastro" class="img-fluid">
         </div>
         <div class="col-md-6">
             <h3>Cadastre-se</h3>
@@ -127,6 +128,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
                     <option value="administrador">Administrador</option>
                 </select>
             </div>
+
+             <div class="mb-3" style=background-color: #F0F0F0;>
+                <div class="g-recaptcha" data-sitekey="6Lft5tYrAAAAAB4P6uSdIptR_pXn7fkO0HH04Xtk"></div>
+             </div>
 
             <div class="mb-2">
                 <div class="form-check">
