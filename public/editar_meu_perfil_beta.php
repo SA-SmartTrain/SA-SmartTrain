@@ -20,8 +20,8 @@ $stmt->execute();
 $resultado = $stmt->get_result();
 $dados = $resultado->fetch_assoc();
 
-$nome_usuarios   = $dados["nome_usuarios"] ?? "";
-$foto_usuarios   = $dados["foto_usuarios"] ?? "";
+$nome_usuarios    = $dados["nome_usuarios"] ?? "";
+$foto_usuarios    = $dados["foto_usuarios"] ?? "";
 $telefone_usuario = $dados["telefone_usuario"] ?? "";
 $endereco_usuario = $dados["endereco_usuario"] ?? "";
 ?>
@@ -52,9 +52,9 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
         <div class="profile-picture-container">
             <div class="profile-picture">
                 <?php if (!empty($foto_usuarios)): ?>
-                    <img src="<?php echo htmlspecialchars($foto_usuarios); ?>" alt="Profile Picture" id="foto_usuarios">
+                    <img src="<?php echo htmlspecialchars('./uploads/' . $foto_usuarios); ?>" alt="Profile Picture" id="profile-photo">
                 <?php else: ?>
-                    <img src="../src/assets/images/profile-login.png" alt="Profile Picture" id="foto_usuarios">
+                    <img src="../src/assets/images/profile-login.png" alt="Profile Picture" id="foto_preview">
                 <?php endif; ?>
             </div>
         </div>
@@ -73,7 +73,7 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
         </div>
 
         <!-- Formulário corrigido -->
-        <form action="editar_dados_perfil.php" method="post">
+        <form action="editar_dados_perfil.php" method="post" enctype="multipart/form-data">
 
             <div class="info-section">
                 <div class="section-title">Nome</div>
@@ -110,10 +110,13 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
             <div class="info-section">
                 <div class="section-title">Imagem de Perfil</div>
                 <div class="section-content">
-                    <label for="foto_usuarios" style="cursor: pointer;">
+                    <!-- Label vinculado ao input -->
+                    <label for="foto_input" style="cursor: pointer; display: inline-block;">
                         <i class="fa-solid fa-camera"></i> Clique para enviar
                     </label>
-                    <input type="file" id="foto_usuarios" name="foto_usuarios" accept="image/*" style="display: none;">
+
+                    <!-- Input escondido -->
+                    <input type="file" id="foto_input" name="foto_usuarios" accept="image/*" style="display: none;">
                 </div>
             </div>
 
@@ -143,7 +146,21 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
             <a href="../public/funcionarios.html"><span>Funcionários</span></a>
         </div>
     </div>
+
+    <script>
+    // Preview da imagem antes de enviar
+    document.getElementById("foto_input").addEventListener("change", function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById("foto_preview").src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+    </script>
+
     <script src="../src/trocar_foto_meuperfil.js"></script>
 </body>
-
 </html>

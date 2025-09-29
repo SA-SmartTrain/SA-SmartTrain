@@ -61,7 +61,7 @@ $conn->close();
         <div class="profile-picture-container">
             <div class="profile-picture">
                 <?php if (!empty($foto_usuarios)): ?> <!-- Verifica se há uma foto de perfil definida -->
-                    <img src="<?php echo htmlspecialchars($foto_usuarios); ?>" alt="Profile Picture" id="profile-photo">
+                    <img src="<?php echo htmlspecialchars('./uploads/' . $foto_usuarios); ?>" alt="Profile Picture" id="profile-photo">
                 <?php else: ?>
                     <img src="../src/assets/images/profile-login.png" alt="Profile Picture" id="profile-photo">
                 <?php endif; ?>
