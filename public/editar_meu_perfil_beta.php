@@ -40,7 +40,7 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
 <body>
     <div class="container-accessibility-buttons">
         <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
-                        <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+        <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
     </div>
 
     <a href="./meu_perfil_beta.php" style=" text-decoration: none;">
@@ -52,9 +52,9 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
         <div class="profile-picture-container">
             <div class="profile-picture">
                 <?php if (!empty($foto_usuarios)): ?>
-                    <img src="<?php echo htmlspecialchars($foto_usuarios); ?>" alt="Profile Picture" id="profile-photo">
+                    <img src="<?php echo htmlspecialchars($foto_usuarios); ?>" alt="Profile Picture" id="foto_usuarios">
                 <?php else: ?>
-                    <img src="../src/assets/images/profile-login.png" alt="Profile Picture" id="profile-photo">
+                    <img src="../src/assets/images/profile-login.png" alt="Profile Picture" id="foto_usuarios">
                 <?php endif; ?>
             </div>
         </div>
@@ -107,6 +107,16 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
                 </div>
             </div>
 
+            <div class="info-section">
+                <div class="section-title">Imagem de Perfil</div>
+                <div class="section-content">
+                    <label for="foto_usuarios" style="cursor: pointer;">
+                        <i class="fa-solid fa-camera"></i> Clique para enviar
+                    </label>
+                    <input type="file" id="foto_usuarios" name="foto_usuarios" accept="image/*" style="display: none;">
+                </div>
+            </div>
+
             <button class="edit-profile" type="submit">
                 <i class="fas fa-pencil-alt"></i> Salvar mudanças
             </button>
@@ -135,4 +145,5 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
     </div>
     <script src="../src/trocar_foto_meuperfil.js"></script>
 </body>
+
 </html>
