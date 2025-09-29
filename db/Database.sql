@@ -11,3 +11,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
     `perfil` ENUM('gestor', 'usuario', 'administrador') NOT NULL DEFAULT 'usuario',
     `foto_usuarios` VARCHAR(255) DEFAULT NULL
 );
+
+ALTER TABLE usuarios 
+ADD COLUMN telefone_usuario VARCHAR(20) NULL,
+ADD COLUMN endereco_usuario VARCHAR(255) NULL;
