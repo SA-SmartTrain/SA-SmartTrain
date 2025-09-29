@@ -33,7 +33,6 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "Não definido";
 $perfil           = $dados["perfil"] ?? "Não definido";
 
 $stmt->close();
-
 $conn->close();
 ?>
 
@@ -51,8 +50,8 @@ $conn->close();
 
 <body>
     <div class="container-accessibility-buttons">
-        <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741085445947564/notifications.png?ex=68cf3919&is=68cde799&hm=57ad55419d3e97736524f36b679b66d50383d3e22853551556bcff3bb49701ae&=&format=webp&quality=lossless " onclick="pushNot()" id="notifications">
-        <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741085810725007/dark_and_white-mode.png?ex=68cf3919&is=68cde799&hm=3d6e6cd190dd89d7cb184d2bed95aed35ba18d3866819a9aba94cf927012ff4f&=&format=webp&quality=lossless" id="dark_and_white-mode">
+        <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
+        <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
     </div>
     <a href="./dashboard.html" style=" text-decoration: none;">
         <h1 id="title">Meu Perfil</h1>
@@ -80,6 +79,16 @@ $conn->close();
 
         <button class="edit-profile" type="submit" onclick="mudarFoto()" style="cursor: pointer;">
             <i class="fas fa-pencil-alt"></i> <a href="editar_meu_perfil_beta.php" style="text-decoration: none;"">Editar perfil</a>
+            <form action=" excluir_dados_perfil.php" method="post"
+                onsubmit="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita?');"
+                style="text-align:center; margin-top:10px;">
+                <button type="submit"
+                    style="background-color:#f0f0f0; color:black; border:none; padding:8px 12px; 
+                   border-radius:5px; cursor:pointer; font-size:13px; display:flex; 
+                   align-items:center; justify-content:center; gap:5px;">
+                    <i class="fas fa-trash"></i> Excluir perfil
+                </button>
+                </form>
         </button>
 
         <div class="info">
@@ -121,26 +130,26 @@ $conn->close();
             </div>
         </div>
     </div>
-    <div class="container-menu-bar">
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/inicio-bar.png" alt="">
-                            <div id="incio">
-                                <a href="../public/pagina_inicial.php"><span>Início</span></a>
-                            </div>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/menu-bar.png" alt="">
-                            <a href="../public/documentacoes.html"><span>Menu</span></a>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/estoque-bar.png" alt="">
-                            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-                            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
-                        </div>
-                    </div>
+    <div class="container-menu-bar" style="position: relative; bottom: 69px;">
+        <div class="sections-menu-bar" id="press-effect">
+            <img src="../src/assets/images/inicio-bar.png" alt="">
+            <div id="incio">
+                <a href="../public/pagina_inicial.php"><span>Início</span></a>
+            </div>
+        </div>
+        <div class="sections-menu-bar" id="press-effect">
+            <img src="../src/assets/images/menu-bar.png" alt="">
+            <a href="../public/documentacoes.html"><span>Menu</span></a>
+        </div>
+        <div class="sections-menu-bar" id="press-effect">
+            <img src="../src/assets/images/estoque-bar.png" alt="">
+            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
+        </div>
+        <div class="sections-menu-bar" id="press-effect">
+            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
+            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+        </div>
+    </div>
     <script src="../src/trocar_foto_meuperfil.js"></script>
 </body>
 

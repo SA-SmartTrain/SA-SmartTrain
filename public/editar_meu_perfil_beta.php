@@ -39,8 +39,8 @@ $endereco_usuario = $dados["endereco_usuario"] ?? "";
 
 <body>
     <div class="container-accessibility-buttons">
-        <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741085445947564/notifications.png" onclick="pushNot()" id="notifications">
-        <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741085810725007/dark_and_white-mode.png" id="dark_and_white-mode">
+        <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
+                        <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
     </div>
 
     <a href="./meu_perfil_beta.php" style=" text-decoration: none;">

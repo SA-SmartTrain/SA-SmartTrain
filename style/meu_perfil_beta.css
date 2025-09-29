@@ -258,7 +258,7 @@ body {
 
 .container-menu-bar {
     position: relative;
-    bottom: 50px;
+    bottom: 65px;
     display: flex;
     justify-content: center;
     width: 100vw;
