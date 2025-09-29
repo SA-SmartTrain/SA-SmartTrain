@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
     `email_usuarios` VARCHAR(87) NOT NULL UNIQUE,
     `senha_usuarios` VARCHAR(87) NOT NULL,
     `cpf_usuarios` CHAR(11) NOT NULL,
-    `perfil` ENUM('gestor', 'usuario', 'administrador') NOT NULL DEFAULT 'usuario',
+    `perfil` ENUM('Gestor', 'Usuario', 'Administrador') NOT NULL DEFAULT 'usuario',
     `foto_usuarios` VARCHAR(255) DEFAULT NULL
 );
 
