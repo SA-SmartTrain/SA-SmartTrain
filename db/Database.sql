@@ -52,3 +52,9 @@ CREATE TABLE IF NOT EXISTS 'cargas' (
     FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios)
 
 );
+
+CREATE TABLE IF NOT EXISTS 'sensores' (
+    idsensores INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+   tipo_sensor VARCHAR(87) NOT NULL,
+   local_sensor VARCHAR(87) NOT NULL,
+);
