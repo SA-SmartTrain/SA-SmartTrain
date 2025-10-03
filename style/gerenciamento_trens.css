@@ -1,0 +1,259 @@
+* {
+    color: #2C2C2C;
+    background-color: #F0F0F0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    position: relative;
+    margin-left: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+h2 {
+    position: relative;
+    margin-left: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.flex {
+    gap: 30px;
+    display: flex;
+}
+
+
+.container_dados {
+    width: 100px;
+    height: 15px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+#data{
+    border: none;
+    align-items: center;
+    background-color: #F0F0F0;
+}
+
+
+h1 {
+    position: relative;
+    margin-left: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+#carga {
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+}
+
+#tamanho {
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+}
+
+#partida {
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+}
+
+#destino {
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+}
+
+/**/
+
+.container-menu-bar {
+    position: relative;
+    margin-top: 13%;
+    display: flex;
+    right: 35px;
+    justify-content: center;
+    width: 100vw;
+    height: 60px;
+    gap: 350px;
+}
+
+.sections-menu-bar {
+    position: relative;
+    left: 6px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    opacity: 0.3;
+}
+
+.sections-menu-bar span {
+    position: relative;
+    left: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+.sections-menu-bar a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-menu-bar img {
+    width: 100%;
+}
+
+#funcionarios {
+    position: relative;
+    left: 20px;
+}
+
+#press-effect:hover {
+    opacity: 1;
+}
+
+#notifications:hover {
+    cursor: pointer;
+}
+
+.container-accessibility-buttons {
+    display: flex;
+    position: relative;
+    top: 55px;
+    margin-left: 1000px;
+    width: 100px;
+    height: 30px;
+    gap: 1px;
+    z-index: 1;
+}
+
+.container-accessibility-buttons img {
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+input {
+    top: 50px;
+    right: 1px;
+    position: relative;
+}
+
+#dataTeste {
+    top: 3px;
+    right:10px;
+    position: relative;
+}
+
+#carga {
+    background-color: rgb(242, 211, 124);
+}
+
+#tamanho {
+    background-color: rgb(242, 211, 124);
+}
+
+#destino {
+    background-color: rgb(242, 211, 124);
+}
+
+#partida {
+    background-color: rgb(242, 211, 124);
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        position: relative;
+        left: -20px;
+        font-size: 22px;
+    }
+
+    #title {
+        position: relative;
+        top: -20px;
+    }
+
+    .container-accessibility-buttons {
+        position: relative;
+        right: 670px;
+        top: 25px;
+        gap: 16px;
+    }
+
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
+    }
+
+    h3 {
+        position: relative;
+        right: 20px;
+        font-size: 18px;
+    }
+
+    select {
+        position: relative;
+        right: 20px;
+        max-width: 300px;
+    }
+
+        .container-menu-bar {
+        position: fixed;
+        left: -30px;
+        top: 715px;
+        gap: 40px;
+        z-index: 999;
+
+    }
+
+    .container-menu-bar img {
+        left: 5px;
+        width: 46px;
+        height: 46px;
+    }
+
+    input {
+    top: 13px;
+    right: 0px;
+    position: relative;
+}
+}
