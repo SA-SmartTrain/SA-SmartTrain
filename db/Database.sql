@@ -15,3 +15,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ALTER TABLE usuarios 
 ADD COLUMN telefone_usuario VARCHAR(20) NULL,
 ADD COLUMN endereco_usuario VARCHAR(255) NULL;
+
+CREATE TABLE IF NOT EXISTS `notificacoes` (
+    idnotificacoes INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    observacao_notificacoes VARCHAR(255) NOT NULL
+);
