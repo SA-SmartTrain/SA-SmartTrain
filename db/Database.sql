@@ -57,4 +57,6 @@ CREATE TABLE IF NOT EXISTS 'sensores' (
     idsensores INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
    tipo_sensor VARCHAR(87) NOT NULL,
    local_sensor VARCHAR(87) NOT NULL,
+   data_sensor DATE NOT NULL,
+   observacao_sensor VARCHAR(87) NOT NULL,
 );
