@@ -20,3 +20,12 @@ CREATE TABLE IF NOT EXISTS `notificacoes` (
     idnotificacoes INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     observacao_notificacoes VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS 'relatorios' (
+    idrelatorios INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    carga_relatorio VARCHAR(85) NOT NULL,
+    data_relatorio DATE NOT NULL,
+    quantidade_relatorio INT NOT NULL,
+    FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios)
+
+);
