@@ -26,6 +26,29 @@ CREATE TABLE IF NOT EXISTS 'relatorios' (
     carga_relatorio VARCHAR(85) NOT NULL,
     data_relatorio DATE NOT NULL,
     quantidade_relatorio INT NOT NULL,
+    idusuarios INT NOT NULL,
+    FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios)
+
+);
+
+CREATE TABLE IF NOT EXISTS 'manutencao' (
+    idmanutencao INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    horario_manutencao DECIMAL (10,2) NOT NULL,
+    observacao_manutencao VARCHAR(255) NOT NULL,
+    linha_manutencao INT NOT NULL,
+    idusuarios INT NOT NULL,
+    FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios)
+);
+
+CREATE TABLE IF NOT EXISTS 'cargas' (
+    idcargas INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    tipo_carga VARCHAR(87) NOT NULL,
+    tamanho_carga INT NOT NULL,
+    partida_cargas VARCHAR(87) NOT NULL,
+    destino_cargas VARCHAR(87) NOT NULL,
+    envio_cargas DATE NOT NULL,
+    chegada_cargas DATE NOT NULL,
+    idusuarios INT NOT NULL,
     FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios)
 
 );
