@@ -59,9 +59,7 @@
         <form>
             <div class="container">
                 <div class="flex">
-                    <div class="container_dados">
                         <input type="date" name="date" id="dataTeste">
-                    </div>
                 </div>
             </div>
         </form>
@@ -70,13 +68,11 @@
         <form>
             <div class="container">
                 <div class="flex">
-                    <div class="container_dados">
                         <input type="date" name="date" id="dataTeste">
-                    </div>
                 </div>
             </div>
             <h3>Descreva o procedimento:</h3>
-            <input type="text" name="Observacoes">
+            <input type="text" name="Observacoes" id="observacoes" placeholder="Descreva o procedimento...">
 
         </form>
         <br><br>
