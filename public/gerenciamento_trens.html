@@ -30,7 +30,7 @@
 
     <section class="seletores">
         <h3>Informe o código do trem:</h3>
-                        <input type="text" id="codigo" name="codigo_trem">
+                        <input type="text" id="codigo" placeholder="Ex:08639" name="codigo_trem">
 
         <h3>Informe a carga que o trem transportará:</h3>
         <select id="carga" name="tipocarga" form="tipo_carga">
@@ -64,7 +64,7 @@
             <option value="peso11">Mais de 500 mil Toneladas</option>
         </select>
 
-        <h3>Quantidade de vagões:</h3>
+        <h3>Informe a quantidade de vagões:</h3>
         <select id="partida" name="pontopartida" form="ponto_partida">
             <option value="opcão">Selecione a quantidade...</option>
             <option value="10">10</option>
@@ -80,27 +80,25 @@
             <option value="60">60</option>
         </select>
 
-        <h3>Estado atual:</h3>
+        <h3>Informe o estado atual:</h3>
         <select id="destino" name="pontodestino" form="ponto_destino">
             <option value="opcão">Selecione o estado...</option>
             <option value="Parado">Parado</option>
+            <option value="Em rota">Em rota</option>
             <option value="Em manutenção">Em manutenção</option>
+            <option value="Em carregamento">Em carregamento</option>
             <option value="Aguardando carga">Aguardando carga</option>
             <option value="Chegou ao destino">Chegou ao destino</option>
-            <option value="Em rota">Em rota</option>
         </select>
 
-        <h3>Velocidade máxima:</h3>
+        <h3>Informe a velocidade máxima:</h3>
         <select id="velocidade" name="velocidade" form="velocidade_maxima">
-            <option value="opcão">Selecione o estado...</option>
-            <option value="Parado">Parado</option>
-            <option value="Em manutenção">Em manutenção</option>
-            <option value="Aguardando carga">Aguardando carga</option>
-            <option value="Chegou ao destino">Chegou ao destino</option>
-            <option value="Em rota">Em rota</option>
+            <option value="opcão">Selecione a velocidade...</option>
+             <option value="60km/h">60km/h</option>
+            <option value="80km/h">80km/h</option>
+            <option value="100km/h">100km/h</option>
+            <option value="120km/h">120km/h</option>
         </select>
-
-
         <div class="container-menu-bar">
                         <div class="sections-menu-bar" id="press-effect">
                             <img src="../src/assets/images/inicio-bar.png" alt="">
