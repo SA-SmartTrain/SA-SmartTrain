@@ -55,8 +55,9 @@ CREATE TABLE IF NOT EXISTS 'cargas' (
 
 CREATE TABLE IF NOT EXISTS 'sensores' (
     idsensores INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-   tipo_sensor VARCHAR(87) NOT NULL,
-   local_sensor VARCHAR(87) NOT NULL,
+    `tipo_sensor` ENUM('Ultrassonico', 'LDR (luminosidade)', 'Sensor DHT11') NOT NULL,
+    `localizacao_sensor` ENUM('Trilho 1-Sul', 'Trilho 1-Norte', 'Trilho 2-Sul', 'Trilho 2-Norte', 'Trilho 3-Sul', 'Trilho 3-Norte', 'Trilho 4-Sul', 'Trilho 4-Norte', 
+    'Trilho 5-Sul', 'Trilho 5-Norte', 'Trilho 6-Sul', 'Trilho 6-Norte')  NOT NULL,
    data_sensor DATE NOT NULL,
-   observacao_sensor VARCHAR(87) NOT NULL,
+   observacao_sensor VARCHAR(87) NOT NULL
 );
