@@ -42,10 +42,10 @@ CREATE TABLE IF NOT EXISTS 'manutencao' (
 
 CREATE TABLE IF NOT EXISTS 'cargas' (
     idcargas INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    tipo_carga VARCHAR(87) NOT NULL,
+    `tipo_carga` ENUM('Soja', 'Milho', 'Feijão', 'Ervilha', 'Carvão', 'Açucar','Barras de Aço', 'Minério', 'Cereais', 'Petróleo' ) NOT NULL,
     tamanho_carga INT NOT NULL,
-    partida_cargas VARCHAR(87) NOT NULL,
-    destino_cargas VARCHAR(87) NOT NULL,
+   `partida_carga` ENUM('Mafra', 'São Francisco do Sul', 'Guaramirim', 'Joinville', 'Araquari', 'Itapoá','Navegantes', 'Rio do Sul', 'Tubarão', 'Curitiba' ) NOT NULL,    
+   `destino_carga` ENUM('Mafra', 'São Francisco do Sul', 'Guaramirim', 'Joinville', 'Araquari', 'Itapoá','Navegantes', 'Rio do Sul', 'Tubarão', 'Curitiba' ) NOT NULL,    
     envio_cargas DATE NOT NULL,
     chegada_cargas DATE NOT NULL,
     idusuarios INT NOT NULL,
