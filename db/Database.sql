@@ -15,3 +15,48 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ALTER TABLE usuarios 
 ADD COLUMN telefone_usuario VARCHAR(20) NULL,
 ADD COLUMN endereco_usuario VARCHAR(255) NULL;
+
+CREATE TABLE IF NOT EXISTS `notificacoes` (
+    idnotificacoes INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    observacao_notificacoes VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS 'relatorios' (
+    idrelatorios INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    carga_relatorio VARCHAR(85) NOT NULL,
+    data_relatorio DATE NOT NULL,
+    quantidade_relatorio INT NOT NULL,
+    idusuarios INT NOT NULL,
+    FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios)
+
+);
+
+CREATE TABLE IF NOT EXISTS 'manutencao' (
+    idmanutencao INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    horario_manutencao DECIMAL (10,2) NOT NULL,
+    observacao_manutencao VARCHAR(255) NOT NULL,
+    linha_manutencao INT NOT NULL,
+    idusuarios INT NOT NULL,
+    FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios)
+);
+
+CREATE TABLE IF NOT EXISTS 'cargas' (
+    idcargas INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    tipo_carga VARCHAR(87) NOT NULL,
+    tamanho_carga INT NOT NULL,
+    partida_cargas VARCHAR(87) NOT NULL,
+    destino_cargas VARCHAR(87) NOT NULL,
+    envio_cargas DATE NOT NULL,
+    chegada_cargas DATE NOT NULL,
+    idusuarios INT NOT NULL,
+    FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios)
+
+);
+
+CREATE TABLE IF NOT EXISTS 'sensores' (
+    idsensores INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+   tipo_sensor VARCHAR(87) NOT NULL,
+   local_sensor VARCHAR(87) NOT NULL,
+   data_sensor DATE NOT NULL,
+   observacao_sensor VARCHAR(87) NOT NULL,
+);
