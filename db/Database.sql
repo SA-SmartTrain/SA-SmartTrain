@@ -41,7 +41,8 @@ CREATE TABLE IF NOT EXISTS manutencao (
 CREATE TABLE IF NOT EXISTS cargas (
     idcargas INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     `tipo_carga` ENUM('Soja', 'Milho', 'Feijão', 'Ervilha', 'Carvão', 'Açucar','Barras de Aço', 'Minério', 'Cereais', 'Petróleo' ) NOT NULL,
-    tamanho_carga INT NOT NULL,
+   `tamanho_carga` ENUM('1-50 Toneladas', '50-100 Toneladas', '100-500 Toneladas', '500-1.000 Toneladas', '1.000-5.000 Toneladas',
+    '5.000-10.000 Toneladas','10.000-15.000 Toneladas', 'Mais de 20 mil toneladas', 'Mais de 50 mil toneladas', 'Mais de 100 mil toneladas', 'Mais de 500 mil toneladas' ) NOT NULL,   
    `partida_carga` ENUM('Mafra', 'São Francisco do Sul', 'Guaramirim', 'Joinville', 'Araquari', 'Itapoá','Navegantes', 'Rio do Sul', 'Tubarão', 'Curitiba' ) NOT NULL,    
    `destino_carga` ENUM('Mafra', 'São Francisco do Sul', 'Guaramirim', 'Joinville', 'Araquari', 'Itapoá','Navegantes', 'Rio do Sul', 'Tubarão', 'Curitiba' ) NOT NULL,    
     envio_cargas DATE NOT NULL,
