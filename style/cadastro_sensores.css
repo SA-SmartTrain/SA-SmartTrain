@@ -173,7 +173,7 @@ h3 {
 
 #dataTeste {
     top: 3px;
-    right:10px;
+    right: 10px;
     position: relative;
 }
 
@@ -189,7 +189,7 @@ h3 {
 
 input {
     border-radius: 5px;
-     border-radius: 4px;
+    border-radius: 4px;
 }
 
 
@@ -200,6 +200,15 @@ input {
 #date {
     border: none;
 }
+
+#opc {
+    position: relative;
+    left: 30px;
+    font-weight: bold;
+    color: rgb(242, 211, 124);
+}
+
+
 
 @media screen and (max-width: 480px) {
 
@@ -241,7 +250,7 @@ input {
         max-width: 300px;
     }
 
-        .container-menu-bar {
+    .container-menu-bar {
         position: fixed;
         left: -30px;
         top: 715px;
@@ -257,8 +266,9 @@ input {
     }
 
     input {
-    top: 13px;
-    right: 0px;
-    position: relative;
-}
+        top: 13px;
+        right: 0px;
+        position: relative;
+    }
+
 }

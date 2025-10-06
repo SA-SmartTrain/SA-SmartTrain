@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/cadastro_sensores.css">
-    <title>Gerenciamento de Sensores</title>
+    <title>SmartTrain - Gerenciamento de Sensores</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         </div>
         <div class="containerdois flex">
             <div>
-                <a href="./pagina_inicial.html" style=" text-decoration: none;">
+                <a href="./gerenciamento_sensores.php" style=" text-decoration: none;">
                     <h1 id="title">Gerenciamento de Sensores</h1>
                 </a>
             </div>
