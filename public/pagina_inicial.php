@@ -86,6 +86,10 @@ $nome_usuarios = $dados["nome_usuarios"];
                             <p>Cadastro de Cargas</p>
                         </a>
                         <hr>
+                        <a href="../public/gerenciamento_sensores.php">
+                            <p>Gerenciamento de Sensores</p>
+                        </a>
+                        <hr>
                     </div>
                     <div class="container-menu-bar">
                         <div class="sections-menu-bar" id="press-effect">
