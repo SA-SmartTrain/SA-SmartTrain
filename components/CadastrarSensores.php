@@ -1,35 +1,38 @@
 <?php
-require_once '../../db/conn.php';
-
-session_start(); // Inicia a sessão
+require_once __DIR__ . '/../db/conn.php';
+session_start();
 
 $error = "";
 
-// Coleta e sanitiza os dados do formulário
-$tipocarga = trim($_POST["tipocarga"] ?? "");
-$tamanhocarga = trim($_POST["tamanhocarga"] ?? "");
-$dataIda = trim($_POST["dataIda"] ?? "");
-$dataVolta = trim($_POST["dataVolta"] ?? "");
-$observacoes = trim($_POST["observacoes"] ?? ""); // Corrigido: o campo deve ter o mesmo nome do form
+// Coleta os dados corretamente com os nomes do HTML
+$tipocarga   = isset($_POST["carga"]) ? trim($_POST["carga"]) : '';
+$tamanhocarga = isset($_POST["tamanho"]) ? trim($_POST["tamanho"]) : '';
+$dataIda     = isset($_POST["dataIda"]) ? trim($_POST["dataIda"]) : '';
+$observacoes = isset($_POST["observacoes"]) ? trim($_POST["observacoes"]) : '';
 
-// Verifica se os campos obrigatórios estão preenchidos
-if (empty($tipocarga) || empty($tamanhocarga) || empty($dataIda)) {
+// Validação de campos obrigatórios
+if ($tipocarga === '' || $tamanhocarga === '' || $dataIda === '' || $observacoes === '') {
     $error = "Preencha todos os campos obrigatórios.";
 } else {
-    // Prepara a query
+    if (!$conn) {
+        die("Erro de conexão com o banco de dados.");
+    }
+
+    // Query correta com 4 parâmetros
     $stmt = $conn->prepare("
-        INSERT INTO sensores (tipo_sensor, localizacao_sensor, data_sensor, data_sensor_volta, observacao_sensor)
-        VALUES (?, ?, ?, ?, ?)
+        INSERT INTO sensores 
+        (tipo_sensor, localizacao_sensor, data_sensor, observacao_sensor)
+        VALUES (?, ?, ?, ?)
     ");
 
     if ($stmt) {
-        $stmt->bind_param("sssss", $tipocarga, $tamanhocarga, $dataIda, $dataVolta, $observacoes);
+        $stmt->bind_param("ssss", $tipocarga, $tamanhocarga, $dataIda, $observacoes);
 
         if ($stmt->execute()) {
-            header("Location: ../gerenciamento_sensores.php");
+            header("Location: ../public/gerenciamento_sensores.php");
             exit;
         } else {
-            $error = "Erro ao cadastrar carga: " . htmlspecialchars($stmt->error);
+            $error = "Erro ao cadastrar sensor: " . htmlspecialchars($stmt->error);
         }
 
         $stmt->close();
@@ -38,6 +41,7 @@ if (empty($tipocarga) || empty($tamanhocarga) || empty($dataIda)) {
     }
 }
 
+// Mostra erro se houver
 if (!empty($error)) {
     echo "<p style='color:red;'>$error</p>";
 }

@@ -105,9 +105,9 @@ h3 {
 
 .container-menu-bar {
     position: relative;
-    margin-top: 13%;
+    margin-top: 22%;
     display: flex;
-    right: 35px;
+    right: 1px;
     justify-content: center;
     width: 100vw;
     height: 60px;
@@ -212,8 +212,6 @@ input[type="date"] {
     cursor: pointer;
 }
 
-
-
 #opc {
     position: relative;
     left: 30px;
@@ -281,7 +279,7 @@ input[type="date"] {
     .container-menu-bar {
         position: fixed;
         left: -30px;
-        top: 715px;
+        top: 660px;
         gap: 40px;
         z-index: 999;
 
@@ -297,6 +295,12 @@ input[type="date"] {
         top: 13px;
         right: 0px;
         position: relative;
+    }
+
+    .table {
+        position: relative;
+        right: 20px;
+        height: auto;
     }
 
 }

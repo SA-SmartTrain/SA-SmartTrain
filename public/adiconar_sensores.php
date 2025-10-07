@@ -28,60 +28,49 @@
 
     <h2>Informações</h2>
     <br>
-    <form action="components/CadastrarSensores.php" method="POST">
-        <section class="seletores">
-            <h3>Selecione o tipo de sensor:</h3>
-            <select id="carga" name="tipocarga" form="tipo_carga">
-                <option value="opcão">Selecione o tipo...</option>
-                <option value="Sensor Ultrassônico">Ultrassônico</option>
-                <option value="LDR">LDR (Luminosidade)</option>
-                <option value="DHt11">Sensor DHT11</option>
-            </select>
+<form action="../components/CadastrarSensores.php" method="POST">
+    <section class="seletores">
+        <h3>Selecione o tipo de sensor:</h3>
+        <select id="carga" name="carga" required>
+            <option value="">Selecione o tipo...</option>
+            <option value="Ultrassonico">Ultrassônico</option>
+            <option value="LDR (luminosidade)">LDR (Luminosidade)</option>
+            <option value="Sensor DHT11">Sensor DHT11</option>
+        </select>
 
-            <h3>Selecione onde o sensor se encontra:</h3>
-            <select id="tamanho" name="tamanhocarga" form="tamanho_carga">
-                <option value="opcão">Selecione o trilho...</option>
-                <option value="trilho1">Trilho 1- Sul</option>
-                <option value="trilho1">Trilho 1- Norte</option>
-                <option value="trilho2">Trilho 2- Sul</option>
-                <option value="trilho2">Trilho 2- Norte</option>
-                <option value="trilho3">Trilho 3- Sul</option>
-                <option value="trilho3">Trilho 3- Norte</option>
-                <option value="trilho4">Trilho 4- Sul</option>
-                <option value="trilho4">Trilho 4- Norte</option>
-                <option value="trilho5">Trilho 5- Sul</option>
-                <option value="trilho5">Trilho 5- Norte</option>
-                <option value="trilho6">Trilho 6- Sul</option>
-                <option value="trilho6">Trilho 6- Norte</option>
-            </select>
+        <h3>Selecione onde o sensor se encontra:</h3>
+        <select id="tamanho" name="tamanho" required>
+            <option value="">Selecione o trilho...</option>
+            <option value="Trilho 1-Sul">Trilho 1 - Sul</option>
+            <option value="Trilho 1-Norte">Trilho 1 - Norte</option>
+            <option value="Trilho 2-Sul">Trilho 2 - Sul</option>
+            <option value="Trilho 2-Norte">Trilho 2 - Norte</option>
+            <option value="Trilho 3-Sul">Trilho 3 - Sul</option>
+            <option value="Trilho 3-Norte">Trilho 3 - Norte</option>
+            <option value="Trilho 4-Sul">Trilho 4 - Sul</option>
+            <option value="Trilho 4-Norte">Trilho 4 - Norte</option>
+            <option value="Trilho 5-Sul">Trilho 5 - Sul</option>
+            <option value="Trilho 5-Norte">Trilho 5 - Norte</option>
+            <option value="Trilho 6-Sul">Trilho 6 - Sul</option>
+            <option value="Trilho 6-Norte">Trilho 6 - Norte</option>
+        </select>
 
-
-            <h3>Selecione a data da adição:</h3>
-            <form>
-                <div class="container">
-                    <div class="flex">
-                        <input type="date" name="dataIda" id="dataTeste">
-                    </div>
-                </div>
-            </form>
-
-            <h3>Selecione a data da remoção:</h3>
-
-            <div class="container">
-                <div class="flex">
-                    <input type="date" name="dataVolta" id="dataTeste">
-                </div>
+        <h3>Selecione a data da adição:</h3>
+        <div class="container">
+            <div class="flex">
+                <input type="date" name="dataIda" id="dataIda" required>
             </div>
-            <h3>Descreva o procedimento:</h3>
-            <input type="text" name="Observacoes" id="observacoes" placeholder="Descreva o procedimento...">
+        </div>
 
-            <button type="submit">Adicionar Sensor</button>
-    </form>
-    <br><br>
+        <h3>Descreva o procedimento:</h3>
+        <input type="text" name="observacoes" id="observacoes" placeholder="Descreva o procedimento..." maxlength="87" required style="margin-left: 20px;">
+
+        <button type="submit">Adicionar Sensor</button>
+    </section>
+</form>
 
 
-
-    <div class="container-menu-bar">
+     <div class="container-menu-bar" style="position: relative; margin-top: 90px;">
         <div class="sections-menu-bar" id="press-effect">
             <img src="../src/assets/images/inicio-bar.png" alt="">
             <div id="incio">
@@ -102,8 +91,6 @@
         </div>
     </div>
     </div>
-
-    </section>
 
 </body>
 
