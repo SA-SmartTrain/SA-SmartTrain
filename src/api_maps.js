@@ -14,6 +14,46 @@ let userPolylines = [];
 
 const apiKey = '5b3ce3597851110001cf62486b3fdc2f343b45e2bf0bdcfb17af56bc'; 
 
+// ======================
+// NOVO: FUNÇÃO PARA BUSCAR FERROVIAS NO OSM
+// ======================
+async function carregarFerrovias() {
+    const query = `
+        [out:json][timeout:25];
+        (
+            way["railway"="rail"](-26.40,-48.95,-26.20,-48.75); // área aproximada de Joinville
+        );
+        out body;
+        >;
+        out skel qt;
+    `;
+
+    try {
+        const response = await fetch('https://overpass-api.de/api/interpreter', {
+            method: 'POST',
+            body: query
+        });
+
+        if (!response.ok) throw new Error("Erro ao buscar ferrovias");
+
+        const data = await response.json();
+        const ferroviaLayer = osmtogeojson(data); // converte OSM → GeoJSON
+
+        L.geoJSON(ferroviaLayer, {
+            style: { color: 'brown', weight: 3 }
+        }).addTo(map);
+
+    } catch (error) {
+        console.error("Erro ao carregar ferrovias:", error);
+    }
+}
+
+// Chama assim que o mapa carregar
+carregarFerrovias();
+
+// ======================
+// RESTANTE DO SEU CÓDIGO ORIGINAL
+// ======================
 map.on('click', async function(e) {
     const latlng = e.latlng;
     clickPoints.push(latlng);
