@@ -28,7 +28,7 @@
 
     <h2>Informações</h2>
     <br>
-<form action="../controllers/CadastrarSensores.php" method="POST">
+<form action="../controllers/RemoverSensores.php" method="POST">
     <section class="seletores">
         <h3>Selecione o tipo de sensor:</h3>
         <select id="carga" name="carga" required>
