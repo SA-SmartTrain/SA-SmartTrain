@@ -46,7 +46,7 @@ $nome_usuarios = $dados["nome_usuarios"];
             <h1>Admin</h1>
             <div class="container-sections">
                 <a href="../admin/visualizar_user.php">
-                    <p>mysql view tabel</p>
+                    <p>Visualizar Usuários</p>
                 </a>
                 <hr>
             </div>
