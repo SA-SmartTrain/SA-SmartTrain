@@ -44,7 +44,7 @@
                         <div class="sections-double-left">
                             <p>Gerar Relatório</p>
                             <div class="section-double-left-img">
-                                <a href="../public/meu_perfil_beta.php"> <img
+                                <a href="../public/gerar_relatorio.html"> <img
                                         src="../src/assets/images/relatorio.png" alt=""></a>
                             </div>
                     </a>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             </div>
-            <div class="container-menu-bar">
+            <div class="container-menu-bar" style="position: relative; bottom: -125px;">
                 <div class="sections-menu-bar" id="press-effect">
                     <img src="../src/assets/images/inicio-bar.png" alt="">
                     <div id="incio">
@@ -85,7 +85,26 @@
     <script src="../src/calendar.js"></script>
 </body>
 <style>
+@media screen and (max-width: 480px) {
 
+    .container-baixo {
+        position: relative;
+        left: -199px;
+    }
+
+  .container-menu-bar {
+    position: relative;
+    top: 77px;
+    gap: 45px;
+    right: 30px;
+  }
+
+  .container-menu-bar img {
+    left: 5px;
+    width: 46px;
+    height: 46px;
+  }
+}
 </style>
 
 </html>
