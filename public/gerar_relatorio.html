@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/gerar_relatorio.css">
+    <title>SmartTrain - Gerenciamento de Sensores</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="container-accessibility-buttons">
+                <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
+                <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+            </div>
+        </div>
+        <div class="containerdois flex">
+            <div>
+                <a href="./gerenciamento_sensores.php" style=" text-decoration: none;">
+                    <h1 id="title">Gerenciamento de Sensores</h1>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <h2>Informações</h2>
+    <br>
+<form action="../controllers/CadastrarSensores.php" method="POST">
+    <section class="dados">
+
+        <h3>Selecione a data de criação do relatório:</h3>
+        <div class="container">
+            <div class="flex">
+                <input type="date" name="data" id="data_relatorio" required>
+            </div>
+        </div>
+
+        <h3>Escreva o seu CPF:</h3>
+        <input type="text" name="cpf" id="cpf_relatorio" placeholder="Ex: 435.908.675-26" maxlength="87" required style="margin-left: 20px;">
+
+        <h3>Escreva o seu relatório:</h3>
+        <input type="text" name="relatorio" id="gerar_relatorio" placeholder="Escreva o seu relatório..." required maxlength="87" required style="margin-left: 20px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container-dois">
+            <img src="../src/assets/images/impressora.png" id="impressora">
+             <img src="../src/assets/images/arquivo.png" id="arquivo">
+            <br>
+        <button type="submit">Salvar em PDF</button>
+        <button type="submit">Imprimir Relatório</button>
+        </div>
+    </section>
+</form>
+
+
+     <div class="container-menu-bar" style="position: relative; margin-top: 90px;">
+        <div class="sections-menu-bar" id="press-effect">
+            <img src="../src/assets/images/inicio-bar.png" alt="">
+            <div id="incio">
+                <a href="../public/pagina_inicial.php"><span>Início</span></a>
+            </div>
+        </div>
+        <div class="sections-menu-bar" id="press-effect">
+            <img src="../src/assets/images/menu-bar.png" alt="">
+            <a href="../public/documentacoes.html"><span>Menu</span></a>
+        </div>
+        <div class="sections-menu-bar" id="press-effect">
+            <img src="../src/assets/images/estoque-bar.png" alt="">
+            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
+        </div>
+        <div class="sections-menu-bar" id="press-effect">
+            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
+            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
+
+</html>

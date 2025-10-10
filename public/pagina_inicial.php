@@ -76,8 +76,8 @@ $dados = $resultado->fetch_assoc();
                             <p>Monitoramento de Cargas</p>
                         </a>
                         <hr>
-                        <a href="../public/manutencao_trilho.html">
-                            <p>Manutenção dos Trilhos</p>
+                        <a href="../public/painel_manutencao.php">
+                            <p>Painel de Manutenção</p>
                         </a>
                         <hr>
                         <a href="../public/relatorios_e_analises.html">
@@ -86,6 +86,10 @@ $dados = $resultado->fetch_assoc();
                         <hr>
                         <a href="../public/alertas_e_notificacoes.php">
                             <p>Alertas e Notificações</p>
+                        </a>
+                        <hr>
+                        <a href="../public/gestao_rotas.html">
+                            <p>Gestão de Rotas</p>
                         </a>
                         <hr>
                         <a href="../public/hub_de_gerenciamentos.php">
