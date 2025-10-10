@@ -88,10 +88,6 @@ $dados = $resultado->fetch_assoc();
                             <p>Alertas e Notificações</p>
                         </a>
                         <hr>
-                        <a href="../public/gestao_rotas.html">
-                            <p>Gestão de Rotas</p>
-                        </a>
-                        <hr>
                         <a href="../public/hub_de_gerenciamentos.php">
                             <p>Hub de Gerenciamentos</p>
                         </a>
