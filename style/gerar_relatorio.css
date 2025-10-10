@@ -1,0 +1,273 @@
+* {
+    color: #2C2C2C;
+    background-color: #F0F0F0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    position: relative;
+    margin-left: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+h2 {
+    position: relative;
+    margin-left: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.flex {
+    gap: 30px;
+    display: flex;
+}
+
+
+.container_dados {
+    width: 100px;
+    height: 15px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+#date {
+    border: none;
+    align-items: center;
+    background-color: #F0F0F0;
+}
+
+
+.dados {
+    max-width: 500px;
+    width: 100%;
+    margin-left: 35px;
+    margin-top: 45px;
+    position: relative;
+    bottom: 50px;
+}
+
+img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+
+h3 {
+    font-weight: 500;
+}
+
+/**/
+
+.container-menu-bar {
+    position: relative;
+    margin-top: 22%;
+    display: flex;
+    right: 1px;
+    justify-content: center;
+    width: 100vw;
+    height: 60px;
+    gap: 350px;
+}
+
+.sections-menu-bar {
+    position: relative;
+    left: 6px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    opacity: 0.3;
+}
+
+.sections-menu-bar span {
+    position: relative;
+    left: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+.sections-menu-bar a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-menu-bar img {
+    width: 100%;
+}
+
+#funcionarios {
+    position: relative;
+    left: 20px;
+}
+
+#press-effect:hover {
+    opacity: 1;
+}
+
+#notifications:hover {
+    cursor: pointer;
+}
+
+.container-accessibility-buttons {
+    display: flex;
+    position: relative;
+    top: 55px;
+    margin-left: 1000px;
+    width: 100px;
+    height: 30px;
+    gap: 1px;
+    z-index: 1;
+}
+
+.container-accessibility-buttons img {
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.container-dois img {
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+#tamanho {
+    background-color: #fff;
+}
+
+input {
+    border-radius: 5px;
+    border-radius: 4px;
+}
+
+
+
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 200px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+#cpf_relatorio {
+    position: relative;
+    right: 20px;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    background-color: #fff;
+}
+
+#gerar_relatorio {
+    position: relative;
+    right: 20px;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    background-color: #fff;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        position: relative;
+        left: -20px;
+        font-size: 22px;
+    }
+
+
+
+    #title {
+        position: relative;
+        top: -20px;
+    }
+
+    .container-accessibility-buttons {
+        position: relative;
+        right: 670px;
+        top: 25px;
+        gap: 16px;
+    }
+
+    .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
+    }
+
+    h3 {
+        position: relative;
+        right: 20px;
+        font-size: 18px;
+    }
+
+    select {
+        position: relative;
+        right: 20px;
+        max-width: 300px;
+    }
+
+    .container-menu-bar {
+        position: fixed;
+        left: -30px;
+        top: 660px;
+        gap: 40px;
+        z-index: 999;
+
+    }
+
+    .container-menu-bar img {
+        left: 5px;
+        width: 46px;
+        height: 46px;
+    }
+
+    input {
+        top: 13px;
+        right: 0px;
+        position: relative;
+    }
+
+    .table {
+        position: relative;
+        right: 20px;
+        height: auto;
+    }
+
+}
