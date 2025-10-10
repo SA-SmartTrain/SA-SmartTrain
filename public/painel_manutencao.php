@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style/dashboard.css">
     <link rel="stylesheet" href="../style/dashboard_calendar.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
-    <title>SmartTrain - Hub de Gerenciamento</title>
+    <title>SmartTrain - Painel Manutenção</title>
 </head>
 
 <body>
@@ -20,14 +20,14 @@
                     <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
                 </div>
                 <a href="./pagina_inicial.php" style=" text-decoration: none;">
-                    <h1 id="title">Hub de Gerenciamento</h1>
+                    <h1 id="title">Painel Manutenção</h1>
                 </a>
                 <a href="#linkar-page">
                     <div class="sections-double-left">
-                        <p>Gerenciamento de Sensores</p>
+                        <p>Manutenção dos trilhos</p>
                         <div class="section-double-left-img">
-                            <a href="../public/gerenciamento_sensores.php"> <img
-                                    src="../src/assets/images/sensores.png" alt=""></a>
+                            <a href="../public/manutencao_trilho.html"> <img
+                                    src="../src/assets/images/manutencao_trilhos.png" alt=""></a>
                         </div>
                 </a>
             </div>
@@ -38,24 +38,7 @@
                             alt=""></a>
                 </div>
 
-                <div class="container-baixo" style="position: relative; bottom: 50px; right: 390px;">
-                    </a>
-                    <a href="#linkar-page">
-                        <div class="sections-double-left">
-                            <p>Gerar Relatório</p>
-                            <div class="section-double-left-img">
-                                <a href="../public/meu_perfil_beta.php"> <img
-                                        src="../src/assets/images/relatorio.png" alt=""></a>
-                            </div>
-                    </a>
-                </div>
-                <div class="sections-double-right">
-                    <p>Gerenciamento de Trens</p>
-                    <div class="section-double-right-img">
-                        <a href="../public/gerenciamento_geral_trens.php"><img src="../src/assets/images/trem.png"
-                                alt=""></a>
-                    </div>
-                </div>
+
             </div>
             </div>
             <div class="container-menu-bar">
