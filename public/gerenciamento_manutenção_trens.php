@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/gerenciamento_manutenção_trens.css">
-    <title>SmartTrain - Gerenciamento de Sensores</title>
+    <title>SmartTrain - Gerenciamento de Manutenções dos Trens</title>
 </head>
 
 <body>
   <a href="./pagina_inicial.php"><h1>Gerenciamento de Manutenções dos Trens</h1></a>
     <div class="container">
+         <form action="enviar">
     <h3>Informe o código do trem:</h3>
     <input type="text" id="codigo" placeholder="Ex: 08639" name="codigo_trem">
     </div>
@@ -56,7 +57,10 @@
     <h3>Informe a causa:</h3>
     <input type="text" id="causa" placeholder="Ex: Batida" name="causa_trem">
     </div>
-    
+    <br>
+
+        <button type="button">Salvar</button>
+    </form>
 </body>
 
 </html>
