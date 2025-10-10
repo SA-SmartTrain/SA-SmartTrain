@@ -39,7 +39,7 @@ O aplicativo nomeado SmartTrain deve atender algumas funcionalidades:
 
 Após a instalação, acesse o aplicativo através do seu navegador web, navegando para o endereço onde o projeto foi configurado no seu servidor (ex: `http://localhost/SA-SmartTrain`).
 
-## Arquitetura do Projeto
+## Arquitetura do Projeto (V0.9.0-beta)
 
 ```
 SA-SmartTrain/
