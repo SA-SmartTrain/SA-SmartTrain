@@ -12,6 +12,7 @@
 <body>
   <a href="./pagina_inicial.php"><h1>Gerenciamento de Manutenções dos Trens</h1></a>
     <div class="container">
+         <form action="enviar">
     <h3>Informe o código do trem:</h3>
     <input type="text" id="codigo" placeholder="Ex: 08639" name="codigo_trem">
     </div>
@@ -56,7 +57,10 @@
     <h3>Informe a causa:</h3>
     <input type="text" id="causa" placeholder="Ex: Batida" name="causa_trem">
     </div>
-    
+    <br>
+
+        <button type="button">Salvar</button>
+    </form>
 </body>
 
 </html>
