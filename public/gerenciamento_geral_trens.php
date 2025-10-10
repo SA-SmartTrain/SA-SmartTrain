@@ -20,7 +20,7 @@
         <div class="containerdois flex">
             <div>
                 <a href="./hub_de_gerenciamentos.php" style=" text-decoration: none;">
-                    <h1 id="title">Cadastro de Cargas</h1>
+                    <h1 id="title">Gerenciamento de Trens</h1>
                 </a>
             </div>
         </div>
@@ -32,17 +32,30 @@
     <div class="container-opcoes">
         <div class="opcoes" style=" margin-left: 40px;">
 
-            <a href="./adicionar_cargas.php" style=" text-decoration: none;">
+            <a href="./gerenciamento_trens.html" style=" text-decoration: none;">
                 <img src="../src/assets/images/adicionar.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
                 <div class="opcao">
-                    <h3 id="opc">Adicionar Carga</h3>
+                    <h3 id="opc">Adicionar Trens</h3>
                 </div>
             </a>
 
+            <img src="../src/assets/images/remover.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
+            <a href="./remover_sensores.php" style=" text-decoration: none;">
+                <div class="opcao">
+                    <h3 id="opc">Remover Trens</h3>
+                </div>
+            </a>
+
+            <img src="../src/assets/images/listar.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
+            <a href="./listar_sensores.php" style=" text-decoration: none;">
+                <div class="opcao">
+                    <h3 id="opc">Listar Trens</h3>
+                </div>
+            </a>
         </div>
 
 
-        <div class="container-menu-bar" style="position: relative; bottom: -150px;">
+        <div class="container-menu-bar" style="position: relative; bottom: 0px;">
             <div class="sections-menu-bar" id="press-effect">
                 <img src="../src/assets/images/inicio-bar.png" alt="">
                 <div id="incio">
