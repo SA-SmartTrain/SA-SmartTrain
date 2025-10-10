@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o formulário foi env
                 </select>
             </div>
 
-             <div class="mb-3" style=background-color: #F0F0F0;>
+             <div class="mb-3" style="background-color: #F0F0F0;">
                 <div class="g-recaptcha" data-sitekey="6Lft5tYrAAAAAB4P6uSdIptR_pXn7fkO0HH04Xtk"></div>
              </div>
 

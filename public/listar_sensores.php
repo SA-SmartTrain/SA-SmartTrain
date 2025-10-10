@@ -19,16 +19,17 @@
         </div>
         <div class="containerdois flex">
             <div>
-                <a href="./pagina_inicial.html" style=" text-decoration: none;">
+                <a href="./gerenciamento_sensores.php" style=" text-decoration: none;">
                     <h1 id="title">Gerenciamento de Sensores</h1>
                 </a>
             </div>
         </div>
     </section>
 
-    <h2>Selecione uma opção para remover:</h2>
+    <h2>Lista Sensores Cadastrados:</h2>
     <br>
 
+    
     <table class="table" style="margin-left: 35px;">
         <thead class="table">
             <tr>
@@ -45,26 +46,26 @@
         </tbody>
     </table>
 
-    <div class="container-menu-bar">
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="../src/assets/images/inicio-bar.png" alt="">
-            <div id="incio">
-                <a href="../public/pagina_inicial.php"><span>Início</span></a>
+        <div class="container-menu-bar">
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="../src/assets/images/inicio-bar.png" alt="">
+                <div id="incio">
+                    <a href="../public/pagina_inicial.php"><span>Início</span></a>
+                </div>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="../src/assets/images/menu-bar.png" alt="">
+                <a href="../public/documentacoes.html"><span>Menu</span></a>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="../src/assets/images/estoque-bar.png" alt="">
+                <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
+                <a href="../public/funcionarios.html"><span>Funcionários</span></a>
             </div>
         </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="../src/assets/images/menu-bar.png" alt="">
-            <a href="../public/documentacoes.html"><span>Menu</span></a>
-        </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="../src/assets/images/estoque-bar.png" alt="">
-            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
-        </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
-        </div>
-    </div>
     </div>
 
     </section>

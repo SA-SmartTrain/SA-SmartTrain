@@ -17,35 +17,36 @@
                 <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
         </div>
+
         <div class="containerdois flex">
             <div>
-                <a href="./pagina_inicial.html" style=" text-decoration: none;">
-                    <h1 id="title">Gerenciamento de Sensores</h1>
+                <a href="./gerenciamento_sensores.php" style="text-decoration: none;">
+                    <h1 id="title">Alertas e Notificações</h1>
                 </a>
             </div>
         </div>
     </section>
 
-    <h2>Selecione uma opção para remover:</h2>
+    <h2>Informações</h2>
     <br>
 
-    <table class="table" style="margin-left: 35px;">
-        <thead class="table">
-            <tr>
-                <th>ID</th>
-                <th>Tipo do Sensor</th>
-                <th>Localização</th>
-                <th>Data</th>
-                <th>Observações</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php include("../controllers/ListarSensores.php"); ?>
-        </tbody>
-    </table>
+    <!-- Formulário para adicionar notificação -->
+    <form action="../controllers/AdicionarNotificacoes.php" method="POST" style="margin-left: 35px;">
+        <h3>Descreva a notificação:</h3>
+        <input 
+            type="text" 
+            name="notificacao" 
+            id="observacoes" 
+            placeholder="Descreva o procedimento..." 
+            maxlength="87" 
+            required 
+            style="margin-left: 20px;">
 
-    <div class="container-menu-bar">
+        <button type="submit">Cadastrar notificação</button>
+    </form>
+
+    <!-- Menu inferior -->
+    <div class="container-menu-bar" style="position: relative; margin-top: 530px;">
         <div class="sections-menu-bar" id="press-effect">
             <img src="../src/assets/images/inicio-bar.png" alt="">
             <div id="incio">
@@ -61,16 +62,12 @@
             <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
         </div>
         <div class="sections-menu-bar" id="press-effect">
-            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
+            <div id="funcionarios">
+                <img src="../src/assets/images/funcionarios-bar.png" alt="">
+            </div>
             <a href="../public/funcionarios.html"><span>Funcionários</span></a>
         </div>
     </div>
-    </div>
-
-    </section>
 
 </body>
-
-</html>
-
 </html>

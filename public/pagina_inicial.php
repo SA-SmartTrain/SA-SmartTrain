@@ -78,11 +78,11 @@ $nome_usuarios = $dados["nome_usuarios"];
                             <p>Relatórios e Análises</p>
                         </a>
                         <hr>
-                        <a href="../public/alertas_e_notificacoes.html">
+                        <a href="../public/alertas_e_notificacoes.php">
                             <p>Alertas e Notificações</p>
                         </a>
                         <hr>
-                        <a href="../public/cadastro_de_cargas.html">
+                        <a href="../public/cadastro_de_cargas.php">
                             <p>Cadastro de Cargas</p>
                         </a>
                         <hr>
