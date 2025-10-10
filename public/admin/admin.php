@@ -1,10 +1,38 @@
+<?php
+include_once __DIR__ . '/../../db/conn.php';
+
+session_start();
+
+// Verifica se o usuário já está logado
+if (!isset($_SESSION["email_usuarios"])) {
+    header('Location: ../public/login/cadastre-se-page.php'); // Redireciona para a página de login
+    exit;
+}
+
+// Pega o email da sessão
+$email = $_SESSION["email_usuarios"];
+
+// Busca o nome no banco
+$stmt = $conn->prepare("SELECT nome_usuarios FROM usuarios WHERE email_usuarios = ?");
+if (!$stmt) {
+    die("Erro na preparação da consulta: " . $conn->error);
+}
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$resultado = $stmt->get_result();
+$dados = $resultado->fetch_assoc();
+$nome_usuarios = $dados["nome_usuarios"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/src/assets/logo/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/SA-SmartTrain/src/assets/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/pagina_inicial.css">
+    <link rel="stylesheet" href="../style/global/container-size-mobile.css">
     <title>SmartTrain - Admin view</title>
 </head>
 
@@ -12,11 +40,8 @@
     <div class="container-size-mobile">
         <div class="container">
             <div class="container-accessibility-buttons">
-                <a href="../public/login/cadastre-se-page.html">
-                    <img src="/src/assets/images/sair.png" alt="exit">
-                </a>
-                <img src="/src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
-                <img src="/src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+                <img src="/SA-SmartTrain/src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
+                <img src="/SA-SmartTrain/src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
             <h1>Admin</h1>
             <div class="container-sections">
@@ -28,22 +53,22 @@
         </div>
         <div class="container-menu-bar">
             <div class="sections-menu-bar" id="press-effect">
-                <img src="../src/assets/images/inicio-bar.png" alt="">
+                <img src="/SA-SmartTrain/src/assets/images/inicio-bar.png" alt="">
                 <div id="incio">
-                    <a href="/public/pagina_inicial.html"><span>Inicío</span></a>
+                    <a href="../pagina_inicial.php"><span>Início</span></a>
                 </div>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <img src="../src/assets/images/menu-bar.png" alt="">
-                <a href="../public/documentacoes.html"><span>Menu</span></a>
+                <img src="/SA-SmartTrain/src/assets/images/menu-bar.png" alt="">
+                <a href="../documentacoes.html"><span>Menu</span></a>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <img src="../src/assets/images/estoque-bar.png" alt="">
-                <a href="#"><span>Estoque</span></a>
+                <img src="/SA-SmartTrain/src/assets/images/estoque-bar.png" alt="">
+                <a href="relatorios_e_analises.html"><span>Estoque</span></a>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-                <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+                <div id="funcionarios"><img src="/SA-SmartTrain/src/assets/images/funcionarios-bar.png" alt=""></div>
+                <a href="funcionarios.html"><span>Funcionários</span></a>
             </div>
         </div>
     </div>
@@ -158,6 +183,105 @@
     .container-sections a {
         text-decoration: none;
     }
+
+    @media screen and (max-width: 960px) {
+
+  .container-accessibility-buttons {
+    position: relative;
+    right: 1400px;
+  }
+
+  .container-sections hr {
+    position: relative;
+    right: 25px;
+  }
+
+  .container-menu-bar {
+    position: relative;
+    top: 30px;
+    gap: 55px;
+    right: 30px;
+  }
+
+
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: #F0F0F0;
+  }
+
+  .container-accessibility-buttons {
+    top: 32px;
+    margin-left: 0;
+    width: 100%;
+    gap: 16px;
+    justify-content: flex-end;
+    padding-right: 18px;
+    position: absolute;
+    right: 0;
+  }
+
+  .container-accessibility-buttons img {
+    margin-left: 0;
+    width: 26px;
+    height: 26px;
+  }
+
+  h1 {
+    margin-left: 0;
+    padding-left: 18px;
+    font-size: 22px;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+
+  .container-sections {
+    margin-left: 0;
+    top: 60px;
+    padding: 0 18px;
+  }
+
+  .container-sections a {
+    display: block;
+  }
+
+  .container-sections p {
+    top: 0;
+    font-size: 22px;
+    margin-bottom: 0;
+    margin-top: 28px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .container-sections hr {
+    right: 0;
+    width: 90%;
+    margin: 4px 0 0 0;
+    border: none;
+    border-top: 3px solid rgb(242, 211, 124);
+    background: rgb(242, 211, 124);
+    border-radius: 80px;
+    height: 0;
+    margin-right: 0;
+  }
+
+  .container-menu-bar {
+    position: relative;
+    top:517px;
+    gap: 40px;
+  }
+
+  .container-menu-bar img {
+    left: 5px;
+    width: 46px;
+    height: 46px;
+  }
+}
 </style>
 
 </html>

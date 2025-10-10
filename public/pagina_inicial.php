@@ -9,19 +9,21 @@ if (!isset($_SESSION["email_usuarios"])) {
     exit;
 }
 
-// Pega o email da sessão
 $email = $_SESSION["email_usuarios"];
+$perfil_usuarios = $_SESSION["perfil"] ?? '';
 
-// Busca o nome no banco
-$stmt = $conn->prepare("SELECT nome_usuarios FROM usuarios WHERE email_usuarios = ?");
+
+$stmt = $conn->prepare("SELECT nome_usuarios, perfil 
+                        FROM usuarios 
+                        WHERE email_usuarios = ?");
 if (!$stmt) {
     die("Erro na preparação da consulta: " . $conn->error);
 }
+
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $resultado = $stmt->get_result();
 $dados = $resultado->fetch_assoc();
-$nome_usuarios = $dados["nome_usuarios"];
 ?>
 
 
@@ -48,8 +50,12 @@ $nome_usuarios = $dados["nome_usuarios"];
                         </a>
                         <div id="modalOverlay" class="overlay" onclick="fecharModal()">
                             <div class="modal" onclick="event.stopPropagation()">
-                                <p><strong>Nome:</strong> <?php echo $nome_usuarios ?></p>
-                                <p><a href="../public/admin/admin.php" style="color: rgb(242, 211, 124);">Admin</a></p>
+                                <p><strong>Nome:</strong> <?php echo htmlspecialchars($nome_usuarios); ?></p>
+
+                                <?php if ($perfil_usuarios === 'administrador'): ?>
+                                    <p><a href="../public/admin/admin.php">Admin</a></p>
+                                <?php endif; ?>
+
                                 <p><a href="../public/login/logout.php" style="color: rgb(242, 211, 124);">Desconectar</a></p>
                             </div>
                         </div>
