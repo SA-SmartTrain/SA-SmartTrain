@@ -19,7 +19,7 @@
         </div>
         <div class="containerdois flex">
             <div>
-                <a href="./pagina_inicial.html" style=" text-decoration: none;">
+                <a href="./hub_de_gerenciamentos.php" style=" text-decoration: none;">
                     <h1 id="title">Gerenciamento de Sensores</h1>
                 </a>
             </div>

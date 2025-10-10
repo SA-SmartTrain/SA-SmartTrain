@@ -17,53 +17,75 @@
             <div class="container">
                 <div class="container-accessibility-buttons">
                     <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
-                        <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+                    <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
                 </div>
                 <a href="./pagina_inicial.php" style=" text-decoration: none;">
                     <h1 id="title">Hub de Gerenciamento</h1>
                 </a>
+                <a href="#linkar-page">
+                    <div class="sections-double-left">
+                        <p>Gerenciamento de Sensores</p>
+                        <div class="section-double-left-img">
+                            <a href="../public/gerenciamento_sensores.php"> <img
+                                    src="../src/assets/images/sensores.png" alt=""></a>
+                        </div>
+                </a>
+            </div>
+            <div class="sections-double-right">
+                <p>Gerenciamento de Cargas</p>
+                <div class="section-double-right-img">
+                    <a href="../public/documentacoes.html"><img src="../src/assets/images/cargas.png"
+                            alt=""></a>
+                </div>
+
+                <div class="container-baixo" style="position: relative; bottom: 50px; right: 390px;">
+                    </a>
                     <a href="#linkar-page">
                         <div class="sections-double-left">
-                            <p>Gerenciamento de Sensores</p>
+                            <p>Gerar Relatório</p>
                             <div class="section-double-left-img">
                                 <a href="../public/meu_perfil_beta.php"> <img
-                                        src="../src/assets/images/sensores.png" alt=""></a>
+                                        src="../src/assets/images/relatorio.png" alt=""></a>
                             </div>
                     </a>
                 </div>
                 <div class="sections-double-right">
                     <p>Gerenciamento de Cargas</p>
                     <div class="section-double-right-img">
-                        <a href="../public/documentacoes.html"><img src="../src/assets/images/cargas.png"
+                        <a href="../public/documentacoes.html"><img src="../src/assets/images/trem.png"
                                 alt=""></a>
                     </div>
+                </div>
             </div>
             </div>
             <div class="container-menu-bar">
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/inicio-bar.png" alt="">
-                            <div id="incio">
-                                <a href="../public/pagina_inicial.php"><span>Início</span></a>
-                            </div>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/menu-bar.png" alt="">
-                            <a href="../public/documentacoes.html"><span>Menu</span></a>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/estoque-bar.png" alt="">
-                            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-                            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
-                        </div>
+                <div class="sections-menu-bar" id="press-effect">
+                    <img src="../src/assets/images/inicio-bar.png" alt="">
+                    <div id="incio">
+                        <a href="../public/pagina_inicial.php"><span>Início</span></a>
                     </div>
+                </div>
+                <div class="sections-menu-bar" id="press-effect">
+                    <img src="../src/assets/images/menu-bar.png" alt="">
+                    <a href="../public/documentacoes.html"><span>Menu</span></a>
+                </div>
+                <div class="sections-menu-bar" id="press-effect">
+                    <img src="../src/assets/images/estoque-bar.png" alt="">
+                    <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
+                </div>
+                <div class="sections-menu-bar" id="press-effect">
+                    <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
+                    <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+                </div>
+            </div>
         </section>
     </main>
     <script src="../src/api_clima_dashboard.js"></script>
     <script src="../src/api_clima_dashboard.js"></script>
     <script src="../src/calendar.js"></script>
 </body>
+<style>
+
+</style>
 
 </html>
