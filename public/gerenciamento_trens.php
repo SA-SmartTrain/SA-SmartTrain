@@ -29,6 +29,7 @@
     </section>
 
     <section class="seletores">
+         <form action="enviar">
         <h3>Informe o código do trem:</h3>
                         <input type="text" id="codigo" placeholder="Ex:08639" name="codigo_trem">
 
@@ -99,6 +100,8 @@
             <option value="100km/h">100km/h</option>
             <option value="120km/h">120km/h</option>
         </select>
+          <button type="button">Salvar</button>
+    </form>
         <div class="container-menu-bar">
                         <div class="sections-menu-bar" id="press-effect">
                             <img src="../src/assets/images/inicio-bar.png" alt="">
