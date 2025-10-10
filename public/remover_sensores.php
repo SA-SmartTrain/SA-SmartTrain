@@ -19,33 +19,58 @@
         </div>
         <div class="containerdois flex">
             <div>
-                <a href="./pagina_inicial.html" style=" text-decoration: none;">
+                <a href="./gerenciamento_sensores.php" style=" text-decoration: none;">
                     <h1 id="title">Gerenciamento de Sensores</h1>
                 </a>
             </div>
         </div>
     </section>
 
-    <h2>Selecione uma opção para remover:</h2>
+    <h2>Informações</h2>
     <br>
+<form action="../controllers/CadastrarSensores.php" method="POST">
+    <section class="seletores">
+        <h3>Selecione o tipo de sensor:</h3>
+        <select id="carga" name="carga" required>
+            <option value="">Selecione o tipo...</option>
+            <option value="Ultrassonico">Ultrassônico</option>
+            <option value="LDR (luminosidade)">LDR (Luminosidade)</option>
+            <option value="Sensor DHT11">Sensor DHT11</option>
+        </select>
 
-    <table class="table" style="margin-left: 35px;">
-        <thead class="table">
-            <tr>
-                <th>ID</th>
-                <th>Tipo do Sensor</th>
-                <th>Localização</th>
-                <th>Data</th>
-                <th>Observações</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php include("../controllers/ListarSensores.php"); ?>
-        </tbody>
-    </table>
+        <h3>Selecione onde o sensor se encontra:</h3>
+        <select id="tamanho" name="tamanho" required>
+            <option value="">Selecione o trilho...</option>
+            <option value="Trilho 1-Sul">Trilho 1 - Sul</option>
+            <option value="Trilho 1-Norte">Trilho 1 - Norte</option>
+            <option value="Trilho 2-Sul">Trilho 2 - Sul</option>
+            <option value="Trilho 2-Norte">Trilho 2 - Norte</option>
+            <option value="Trilho 3-Sul">Trilho 3 - Sul</option>
+            <option value="Trilho 3-Norte">Trilho 3 - Norte</option>
+            <option value="Trilho 4-Sul">Trilho 4 - Sul</option>
+            <option value="Trilho 4-Norte">Trilho 4 - Norte</option>
+            <option value="Trilho 5-Sul">Trilho 5 - Sul</option>
+            <option value="Trilho 5-Norte">Trilho 5 - Norte</option>
+            <option value="Trilho 6-Sul">Trilho 6 - Sul</option>
+            <option value="Trilho 6-Norte">Trilho 6 - Norte</option>
+        </select>
 
-    <div class="container-menu-bar">
+        <h3>Selecione a data da adição:</h3>
+        <div class="container">
+            <div class="flex">
+                <input type="date" name="dataIda" id="dataIda" required>
+            </div>
+        </div>
+
+        <h3>Descreva o procedimento:</h3>
+        <input type="text" name="observacoes" id="observacoes" placeholder="Descreva o procedimento..." maxlength="87" required style="margin-left: 20px;">
+
+        <button type="submit">Remover Sensor</button>
+    </section>
+</form>
+
+
+     <div class="container-menu-bar" style="position: relative; margin-top: 90px;">
         <div class="sections-menu-bar" id="press-effect">
             <img src="../src/assets/images/inicio-bar.png" alt="">
             <div id="incio">
@@ -66,8 +91,6 @@
         </div>
     </div>
     </div>
-
-    </section>
 
 </body>
 
