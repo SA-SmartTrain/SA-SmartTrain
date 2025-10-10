@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/gerenciamento_manutenção_trens.css">
-    <title>SmartTrain - Gerenciamento de Sensores</title>
+    <title>SmartTrain - Gerenciamento de Manutenções dos Trens</title>
 </head>
 
 <body>
