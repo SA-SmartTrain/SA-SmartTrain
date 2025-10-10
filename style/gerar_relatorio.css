@@ -146,22 +146,28 @@ h3 {
     height: 30px;
 }
 
-.container-dois img {
-    margin-left: 30px;
+
+
+#arquivo {
+    margin-left: 50px;
     width: 50px;
     height: 50px;
 }
+
+#impressora {
+    margin-left: 100px;
+    width: 50px;
+    height: 50px;
+}
+
 
 #tamanho {
     background-color: #fff;
 }
 
-input {
-    border-radius: 5px;
-    border-radius: 4px;
+button{
+    margin-left: 30px;
 }
-
-
 
 
 input[type="date"] {
@@ -178,7 +184,6 @@ input[type="date"] {
     border-radius: 4px;
     cursor: pointer;
 }
-
 
 
 #cpf_relatorio {
@@ -200,8 +205,6 @@ input[type="date"] {
     height: 40px;
     background-color: #fff;
 }
-
-
 
 @media screen and (max-width: 480px) {
 
@@ -226,6 +229,11 @@ input[type="date"] {
     }
 
     .container-accessibility-buttons img {
+        margin-left: 0;
+        width: 26px;
+        height: 26px;
+    }
+    .container-dois img {
         margin-left: 0;
         width: 26px;
         height: 26px;
