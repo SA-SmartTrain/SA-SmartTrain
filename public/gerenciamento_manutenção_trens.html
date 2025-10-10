@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/gerenciamento_manutenção_trens.css">
     <title>Gerenciamento de Manutenções dos Trens</title>
 </head>
 
 <body>
+  <a href="./pagina_inicial.php"><h1>Gerenciamento de Manutenções dos Trens</h1></a>
     <div class="container">
     <h3>Informe o código do trem:</h3>
-    <input type="text" id="codigo" placeholder="Ex:08639" name="codigo_trem">
+    <input type="text" id="codigo" placeholder="Ex: 08639" name="codigo_trem">
     </div>
-    
+
     <div class="container-um">
-    <select name="pontodestino" required>
+    <h3>Informe o destino:</h3>
+    <select id="destino" name="destino" required>
         <option value>Selecione o destino...</option>
         <option value="Mafra">Mafra</option>
         <option value="São Francisco do Sul">São Francisco do Sul</option>
@@ -32,7 +35,6 @@
 <div class="container-dois">
      <section class="seletores">
         
-
         <h3>Informe a carga que o trem transportará:</h3>
         <select id="carga" name="tipocarga" form="tipo_carga">
             <option value="opcão">Selecione a carga...</option>
@@ -48,6 +50,12 @@
             <option value="petróleo">Petróleo</option>
         </select>
 </div>
+
+    <div class="container-tres">
+    <h3>Informe a causa:</h3>
+    <input type="text" id="causa" placeholder="Ex: Batida" name="causa_trem">
+    </div>
+    
 </body>
 
 </html>
