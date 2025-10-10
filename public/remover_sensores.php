@@ -55,7 +55,7 @@
             <option value="Trilho 6-Norte">Trilho 6 - Norte</option>
         </select>
 
-        <h3>Selecione a data da adição:</h3>
+        <h3>Selecione a data da modificação:</h3>
         <div class="container">
             <div class="flex">
                 <input type="date" name="dataIda" id="dataIda" required>
