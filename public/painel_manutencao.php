@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/SA-SmartTrain/src/assets/logo/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/dashboard.css">
     <link rel="stylesheet" href="../style/dashboard_calendar.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
@@ -32,9 +32,9 @@
                 </a>
             </div>
             <div class="sections-double-right">
-                <p>Gerenciamento de Cargas</p>
+                <p>Manutenção dos Trens</p>
                 <div class="section-double-right-img">
-                    <a href="../public/cadastro_de_cargas.php"><img src="../src/assets/images/cargas.png"
+                    <a href="../public/gerenciamento_manutenção_trens.php"><img src="../src/assets/images/trem.png"
                             alt=""></a>
                 </div>
 
