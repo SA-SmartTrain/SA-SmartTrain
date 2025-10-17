@@ -26,6 +26,7 @@
                 <div class="container-func">
                     <div class="container-aaa" style="display: flex;">
                         <div class="container-amarelo">Funcionário 1
+                            <a href="./perfil_beta.php" style=" text-decoration: none;">
                             <img src="../src/assets/images/profile-login.png" alt="Foto Usuário">
                         </div>
                         <div class="container-amarelo">Funcionário 2

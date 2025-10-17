@@ -5,7 +5,6 @@ session_start();
 $error = "";
 
 // Coleta os dados corretamente com os nomes do HTML
-$codigo   = isset($_POST["idtrens"]) ? trim($_POST["idtrens"]) : '';
 $carga = isset($_POST["carga_trem"]) ? trim($_POST["carga_trem"]) : '';
 $capacidade  = isset($_POST["capacidade_trem"]) ? trim($_POST["capacidade_trem"]) : '';
 $vagoes = isset($_POST["vagoes_trem"]) ? trim($_POST["vagoes_trem"]) : '';
@@ -15,7 +14,7 @@ $velocidade = isset($_POST["velocidade_trem"]) ? trim($_POST["velocidade_trem"])
 
 
 // Validação de campos obrigatórios
-if ($codigo === '' || $carga === '' || $capacidade === '' || $vagoes === '' || $estado === '' || $velocidade === '') {
+if ( $carga === '' || $capacidade === '' || $vagoes === '' || $estado === '' || $velocidade === '') {
     $error = "Preencha todos os campos obrigatórios.";
 } else {
     if (!$conn) {
@@ -26,11 +25,11 @@ if ($codigo === '' || $carga === '' || $capacidade === '' || $vagoes === '' || $
     $stmt = $conn->prepare("
         INSERT INTO sensores 
         (carga_trem, capacidade_trem, vagoes_trem, estado_trem, velocidade_trem)
-        VALUES (?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?)
     ");
 
     if ($stmt) {
-        $stmt->bind_param("ssss", $codigo, $carga, $capacidade, $vagoes, $estado, $velocidade);
+        $stmt->bind_param("sssss", $carga, $capacidade, $vagoes, $estado, $velocidade);
 
         if ($stmt->execute()) {
             header("Location: ../public/gerenciamento_trens.php");

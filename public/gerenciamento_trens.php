@@ -30,8 +30,7 @@
 
     <section class="seletores">
         <form action="../controllers/CadastrarTrens.php" method="POST">
-            <h3>Informe o código do trem:</h3>
-            <input type="text" id="codigo" placeholder="Ex:08639" name="codigo_trem">
+
 
             <h3>Informe a carga que o trem transportará:</h3>
             <select id="carga" name="carga_trem" form="tipo_carga">
