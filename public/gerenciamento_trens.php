@@ -15,7 +15,7 @@
         <div class="container">
             <div class="container-accessibility-buttons">
                 <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
-                        <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+                <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
         </div>
         <div class="containerdois flex">
@@ -29,99 +29,99 @@
     </section>
 
     <section class="seletores">
-         <form action="enviar">
-        <h3>Informe o código do trem:</h3>
-                        <input type="text" id="codigo" placeholder="Ex:08639" name="codigo_trem">
+        <form action="../controllers/CadastrarTrens.php" method="POST">
+            <h3>Informe o código do trem:</h3>
+            <input type="text" id="codigo" placeholder="Ex:08639" name="codigo_trem">
 
-        <h3>Informe a carga que o trem transportará:</h3>
-        <select id="carga" name="tipocarga" form="tipo_carga">
-            <option value="opcão">Selecione a carga...</option>
-            <option value="soja">Soja</option>
-            <option value="milho">Milho</option>
-            <option value="feijão">Feijão</option>
-            <option value="ervilha">Ervilha</option>
-            <option value="carvão">Carvão</option>
-            <option value="açucar">Açucar</option>
-            <option value="Barras de Aço">Barras de Aço</option>
-            <option value="minério">Minério</option>
-            <option value="cereais">Cereais</option>
-            <option value="petróleo">Petróleo</option>
-        </select>
+            <h3>Informe a carga que o trem transportará:</h3>
+            <select id="carga" name="carga_trem" form="tipo_carga">
+                <option value="opcão">Selecione a carga...</option>
+                <option value="soja">Soja</option>
+                <option value="milho">Milho</option>
+                <option value="feijão">Feijão</option>
+                <option value="ervilha">Ervilha</option>
+                <option value="carvão">Carvão</option>
+                <option value="açucar">Açucar</option>
+                <option value="Barras de Aço">Barras de Aço</option>
+                <option value="minério">Minério</option>
+                <option value="cereais">Cereais</option>
+                <option value="petróleo">Petróleo</option>
+            </select>
 
 
-        <h3>Informe a capacidade máxima do trem:</h3>
-        <select id="tamanho" name="tamanhocarga" form="tamanho_carga">
-            <option value="opcão">Selecione o tamanho...</option>
-            <option value="peso1">1-50 Toneladas</option>
-            <option value="peso2">50-100 Toneladas</option>
-            <option value="peso3">100-500 Toneladas</option>
-            <option value="peso4">500-1.000 Toneladas</option>
-            <option value="peso5">1.000-5.000 Toneladas</option>
-            <option value="peso6">5.000-10.000 Toneladas</option>
-            <option value="peso7">10.000-15.000 Toneladas</option>
-            <option value="peso8">Mais de 20 mil Toneladas</option>
-            <option value="peso9">Mais de 50 mil Toneladas</option>
-            <option value="peso10">Mais de 100 mil Toneladas</option>
-            <option value="peso11">Mais de 500 mil Toneladas</option>
-        </select>
+            <h3>Informe a capacidade máxima do trem:</h3>
+            <select id="tamanho" name="capacidade_trem" form="tamanho_carga">
+                <option value="opcão">Selecione o tamanho...</option>
+                <option value="peso1">1-50 Toneladas</option>
+                <option value="peso2">50-100 Toneladas</option>
+                <option value="peso3">100-500 Toneladas</option>
+                <option value="peso4">500-1.000 Toneladas</option>
+                <option value="peso5">1.000-5.000 Toneladas</option>
+                <option value="peso6">5.000-10.000 Toneladas</option>
+                <option value="peso7">10.000-15.000 Toneladas</option>
+                <option value="peso8">Mais de 20 mil Toneladas</option>
+                <option value="peso9">Mais de 50 mil Toneladas</option>
+                <option value="peso10">Mais de 100 mil Toneladas</option>
+                <option value="peso11">Mais de 500 mil Toneladas</option>
+            </select>
 
-        <h3>Informe a quantidade de vagões:</h3>
-        <select id="partida" name="pontopartida" form="ponto_partida">
-            <option value="opcão">Selecione a quantidade...</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
-            <option value="40">40</option>
-            <option value="45">45</option>
-            <option value="50">50</option>
-            <option value="55">55</option>
-            <option value="60">60</option>
-        </select>
+            <h3>Informe a quantidade de vagões:</h3>
+            <select id="partida" name="vagoes_trem" form="ponto_partida">
+                <option value="opcão">Selecione a quantidade...</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="60">60</option>
+            </select>
 
-        <h3>Informe o estado atual:</h3>
-        <select id="destino" name="pontodestino" form="ponto_destino">
-            <option value="opcão">Selecione o estado...</option>
-            <option value="Parado">Parado</option>
-            <option value="Em rota">Em rota</option>
-            <option value="Em manutenção">Em manutenção</option>
-            <option value="Em carregamento">Em carregamento</option>
-            <option value="Aguardando carga">Aguardando carga</option>
-            <option value="Chegou ao destino">Chegou ao destino</option>
-        </select>
+            <h3>Informe o estado atual:</h3>
+            <select id="destino" name="estado_trem" form="ponto_destino">
+                <option value="opcão">Selecione o estado...</option>
+                <option value="Parado">Parado</option>
+                <option value="Em rota">Em rota</option>
+                <option value="Em manutenção">Em manutenção</option>
+                <option value="Em carregamento">Em carregamento</option>
+                <option value="Aguardando carga">Aguardando carga</option>
+                <option value="Chegou ao destino">Chegou ao destino</option>
+            </select>
 
-        <h3>Informe a velocidade máxima:</h3>
-        <select id="velocidade" name="velocidade" form="velocidade_maxima">
-            <option value="opcão">Selecione a velocidade...</option>
-             <option value="60km/h">60km/h</option>
-            <option value="80km/h">80km/h</option>
-            <option value="100km/h">100km/h</option>
-            <option value="120km/h">120km/h</option>
-        </select>
-          <button type="button">Salvar</button>
-    </form>
+            <h3>Informe a velocidade máxima:</h3>
+            <select id="velocidade" name="velocidade_trem" form="velocidade_maxima">
+                <option value="opcão">Selecione a velocidade...</option>
+                <option value="60km/h">60km/h</option>
+                <option value="80km/h">80km/h</option>
+                <option value="100km/h">100km/h</option>
+                <option value="120km/h">120km/h</option>
+            </select>
+            <button type="submit">Salvar</button>
+        </form>
         <div class="container-menu-bar">
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/inicio-bar.png" alt="">
-                            <div id="incio">
-                                <a href="../public/pagina_inicial.php"><span>Início</span></a>
-                            </div>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/menu-bar.png" alt="">
-                            <a href="../public/documentacoes.html"><span>Menu</span></a>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <img src="../src/assets/images/estoque-bar.png" alt="">
-                            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
-                        </div>
-                        <div class="sections-menu-bar" id="press-effect">
-                            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-                            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
-                        </div>
-                    </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="../src/assets/images/inicio-bar.png" alt="">
+                <div id="incio">
+                    <a href="../public/pagina_inicial.php"><span>Início</span></a>
+                </div>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="../src/assets/images/menu-bar.png" alt="">
+                <a href="../public/documentacoes.html"><span>Menu</span></a>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <img src="../src/assets/images/estoque-bar.png" alt="">
+                <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
+            </div>
+            <div class="sections-menu-bar" id="press-effect">
+                <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
+                <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+            </div>
+        </div>
         </div>
 
     </section>
@@ -129,4 +129,3 @@
 </body>
 
 </html>
-
