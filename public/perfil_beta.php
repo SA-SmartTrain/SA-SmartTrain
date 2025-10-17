@@ -13,9 +13,9 @@ if (!isset($_SESSION["email_usuarios"])) {
 $email = $_SESSION["email_usuarios"];
 
 // Buscar nome, foto, telefone, endereço e perfil do usuário
-$stmt = $conn->prepare("SELECT email_funcionario, telefone_funcionario, endereco_funcionario,
-                        FROM funcionarios 
-                        WHERE email_funcionario = ?");
+$stmt = $conn->prepare("SELECT nome_usuarios, foto_usuarios, telefone_usuario, endereco_usuario, perfil 
+                        FROM usuarios 
+                        WHERE email_usuarios = ?");
 if (!$stmt) {
     die("Erro na preparação da consulta: " . $conn->error);
 }
@@ -26,10 +26,10 @@ $resultado = $stmt->get_result();
 $dados = $resultado->fetch_assoc();
 
 // Valores padrão caso algum campo seja nulo
-$nome_usuarios    = $dados["nome_funcionario"] ?? "Usuário";
+$nome_usuarios    = $dados["nome_usuarios"] ?? "Usuário";
 $foto_usuarios    = $dados["foto_usuarios"] ?? "";
-$telefone_usuario = $dados["telefone_funcionario"] ?? "Não definido";
-$endereco_usuario = $dados["endereco_funcionario"] ?? "Não definido";
+$telefone_usuario = $dados["telefone_usuario"] ?? "Não definido";
+$endereco_usuario = $dados["endereco_usuario"] ?? "Não definido";
 $perfil           = $dados["perfil"] ?? "Não definido";
 
 $stmt->close();
@@ -45,7 +45,7 @@ $conn->close();
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../style/meu_perfil_beta.css">
-    <title>SmartTrain - Funcionários</title>
+    <title>SmartTrain - Meu Perfil</title>
 </head>
 
 <body>
@@ -54,7 +54,7 @@ $conn->close();
         <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
     </div>
     <a href="./dashboard.html" style=" text-decoration: none;">
-        <h1 id="title">Perfil- Funcionários</h1>
+        <h1 id="title">Meu Perfil</h1>
     </a>
     <div class="profile-container">
         <div class="banner"></div>
@@ -70,10 +70,10 @@ $conn->close();
 
         <div class="user-info">
             <div class="username">
-                <h2><?php echo $nome_funcionario ?> <i class="fas fa-chevron-down"></i></h2>
+                <h2><?php echo $nome_usuarios ?> <i class="fas fa-chevron-down"></i></h2>
             </div>
             <div class="nickname">
-                <p>@<?php echo $nome_funcionario ?></p>
+                <p>@<?php echo $nome_usuarios ?></p>
             </div>
         </div>
 
@@ -95,6 +95,12 @@ $conn->close();
             <p>Informações</p>
         </div>
 
+        <div class="info-section">
+            <div class="section-title">Nome</div>
+            <div class="section-content">
+                <i class="fa-solid fa-user"></i> <?php echo $nome_usuarios ?>
+            </div>
+        </div>
 
         <div class="info-section">
             <div class="section-title">Email</div>
