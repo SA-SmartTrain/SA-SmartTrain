@@ -32,7 +32,7 @@
     <div class="container-opcoes">
         <div class="opcoes" style=" margin-left: 40px;">
 
-            <a href="./gerenciamento_trens.html" style=" text-decoration: none;">
+            <a href="./gerenciamento_trens.php" style=" text-decoration: none;">
                 <img src="../src/assets/images/adicionar.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
                 <div class="opcao">
                     <h3 id="opc">Adicionar Trens</h3>
