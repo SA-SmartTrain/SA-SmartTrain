@@ -10,11 +10,11 @@
 </head>
 
 <body>
-  <a href="./pagina_inicial.php"><h1>Gerenciamento de Manutenções dos Trens</h1></a>
+  <a href="insere_ger_trem.php"><h1>Gerenciamento de Manutenções dos Trens</h1></a>
     <div class="container">
-         <form action="enviar">
-    <h3>Informe o código do trem:</h3>
-    <input type="text" id="codigo" placeholder="Ex: 08639" name="codigo_trem">
+         <form method="POST" action="">
+         <h3>Informe o código do trem:</h3>
+         <input type="text" id="codigo" placeholder="Ex: 08639" name="codigo_trem">
     </div>
 
     <div class="container-um">
@@ -61,6 +61,21 @@
 
         <button type="button">Salvar</button>
     </form>
+
+     <?php /*
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST['codigo_trem'])){
+                
+                $codigo = $_POST['codigo'];
+
+                if($codigo = ()){
+                    echo "O códiigo $ é <strong>válido</strong>.";
+                }else{
+                    echo "O código  é <strong>inválido</strong>.";
+                }
+            }
+        }
+    */ ?>
 </body>
 
 </html>
