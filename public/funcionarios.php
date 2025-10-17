@@ -26,6 +26,7 @@
                 <div class="container-func">
                     <div class="container-aaa" style="display: flex;">
                         <div class="container-amarelo">Funcionário 1
+                            <a href="./perfil_beta.php" style=" text-decoration: none;">
                             <img src="../src/assets/images/profile-login.png" alt="Foto Usuário">
                         </div>
                         <div class="container-amarelo">Funcionário 2
@@ -67,7 +68,7 @@
                         </div>
                         <div class="sections-menu-bar" id="press-effect">
                             <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-                            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+                            <a href="../public/funcionarios.php"><span>Funcionários</span></a>
                         </div>
                     </div>
             </div>

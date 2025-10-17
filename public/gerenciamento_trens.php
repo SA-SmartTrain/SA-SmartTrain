@@ -30,8 +30,7 @@
 
     <section class="seletores">
         <form action="../controllers/CadastrarTrens.php" method="POST">
-            <h3>Informe o código do trem:</h3>
-            <input type="text" id="codigo" placeholder="Ex:08639" name="codigo_trem">
+
 
             <h3>Informe a carga que o trem transportará:</h3>
             <select id="carga" name="carga_trem" form="tipo_carga">
@@ -119,7 +118,7 @@
             </div>
             <div class="sections-menu-bar" id="press-effect">
                 <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-                <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+                <a href="../public/funcionarios.php"><span>Funcionários</span></a>
             </div>
         </div>
         </div>

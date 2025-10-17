@@ -3,6 +3,21 @@ include_once __DIR__ . '/../../db/conn.php';
 
 session_start();
 
+// Exclusão de usuário
+if (isset($_GET['id'])) {
+    $id = intval($_GET['id']);
+    $stmt = $conn->prepare("DELETE FROM usuarios WHERE idusuarios = ?");
+    $stmt->bind_param("i", $id);
+
+    if ($stmt->execute()) {
+        header("Location: visualizar_user.php?msg=excluido");
+        exit();
+    } else {
+        echo "Erro ao excluir usuário: " . $conn->error;
+        exit();
+    }
+}
+
 // Se o formulário de alteração de perfil foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['idusuarios'], $_POST['perfil'])) {
     $idusuarios = $_POST['idusuarios'];
@@ -14,13 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['idusuarios'], $_POST[
     }
 
     // Atualiza o perfil
-    $stmt = $conexao->prepare("UPDATE usuarios SET perfil = ? WHERE idusuarios = ?");
+    $stmt = $conn->prepare("UPDATE usuarios SET perfil = ? WHERE idusuarios = ?");
     $stmt->bind_param("si", $perfil, $idusuarios);
 
     if ($stmt->execute()) {
         $msg_sucesso = "Perfil atualizado com sucesso!";
     } else {
-        $msg_erro = "Erro ao atualizar perfil: " . $conexao->error;
+        $msg_erro = "Erro ao atualizar perfil: " . $conn->error;
     }
 }
 
@@ -86,8 +101,8 @@ $result = mysqli_query($conn, $query);
                     </form>
                 </td>
                 <td class="action-buttons">
-                    <a href="editar_usuario.php?id=<?php echo $row['idusuarios']; ?>">Editar</a> |
-                    <a href="excluir_usuario.php?id=<?php echo $row['idusuarios']; ?>" onclick="return confirm('Tem certeza que deseja excluir este usuário?');">Excluir</a>
+                    <a href="editar_user_id.php?id=<?php echo $row['idusuarios']; ?>">Editar</a>  |
+                    <a href="visualizar_user.php?id=<?php echo $row['idusuarios']; ?>" onclick="return confirm('Tem certeza que deseja excluir este usuário?');">Excluir</a>
                 </td>
             </tr>
         <?php endwhile; ?>
