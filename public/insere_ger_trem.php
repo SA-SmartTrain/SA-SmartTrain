@@ -10,7 +10,7 @@ $resultado = $stmt->get_result();
 if ($resultado && $resultado->num_rows >= 1) {
     
 
-    header("Location: pagina_inicial.php");
+    header("Location: ./pagina_inicial.php");
 } else {
     echo 'NÃO EXISTE.';
     return false;
