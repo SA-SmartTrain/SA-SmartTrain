@@ -109,7 +109,7 @@ $perfil_usuarios = $dados['perfil'] ?? '';
                         </div>
                         <div class="sections-menu-bar" id="press-effect">
                             <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-                            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+                            <a href="../public/funcionarios.php"><span>Funcionários</span></a>
                         </div>
                     </div>
                 </div>
