@@ -105,6 +105,7 @@ CREATE TABLE IF NOT EXISTS cargas (
 
 CREATE TABLE IF NOT EXISTS trens (
     codigo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    identificador_trem VARCHAR(10),
     capacidade_maxima ENUM(
         '1-50 Toneladas',
         '50-100 Toneladas',
