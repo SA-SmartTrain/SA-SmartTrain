@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS trens (
 );
 
 CREATE TABLE IF NOT EXISTS gerenciamento_trens(
-    idgerenciamento_trens INT PRIMARY KEY NOT NULL autoincrement,
+    idgerenciamento_trens INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     codigo INT NOT NULL,
     destino VARCHAR (45) NOT NULL,
     causa VARCHAR(255) NOT NULL,
@@ -222,7 +222,7 @@ CREATE TABLE IF NOT EXISTS trens (
         '50',
         '55',
         '60'
-    )NOT NULL
+    )NOT NULL,
 
     estado_trem ENUM(
         'Parado',
@@ -231,7 +231,7 @@ CREATE TABLE IF NOT EXISTS trens (
         'Em carregamento',
         'Aguardando carga',
         'Chegou ao destino'
-    )NOT NULL
+    )NOT NULL,
 
     velocidade_trem ENUM(
         '60km/h',
