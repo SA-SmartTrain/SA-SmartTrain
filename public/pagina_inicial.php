@@ -24,6 +24,7 @@ $stmt->bind_param("s", $email);
 $stmt->execute();
 $resultado = $stmt->get_result();
 $dados = $resultado->fetch_assoc();
+$nome_usuarios = $dados['nome_usuarios'] ?? '';
 ?>
 
 
