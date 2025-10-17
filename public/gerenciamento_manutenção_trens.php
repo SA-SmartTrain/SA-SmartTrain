@@ -61,21 +61,6 @@
 
         <button type="button">Salvar</button>
     </form>
-
-     <?php /*
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if (isset($_POST['codigo_trem'])){
-                
-                $codigo = $_POST['codigo'];
-
-                if($codigo = ()){
-                    echo "O códiigo $ é <strong>válido</strong>.";
-                }else{
-                    echo "O código  é <strong>inválido</strong>.";
-                }
-            }
-        }
-    */ ?>
 </body>
 
 </html>
