@@ -103,6 +103,60 @@ CREATE TABLE IF NOT EXISTS cargas (
         ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS trens (
+    codigo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    capacidade_maxima ENUM(
+        '1-50 Toneladas',
+        '50-100 Toneladas',
+        '100-500 Toneladas',
+        '500-1.000 Toneladas',
+        '1.000-5.000 Toneladas',
+        '5.000-10.000 Toneladas',
+        '10.000-15.000 Toneladas',
+        'Mais de 20 mil Toneladas',
+        'Mais de 50 mil Toneladas',
+        'Mais de 100 mil Toneladas',
+        'Mais de 500 mil Toneladas'
+    ) NOT NULL,
+    quantidade_vagoes ENUM
+    ('10', 
+    '15', 
+    '20', 
+    '25', 
+    '30', 
+    '35', 
+    '40', 
+    '45', 
+    '50',
+    '55',
+    '60') NOT NULL,
+    velocidade_maxima ENUM (
+        '60km/h',
+        '80km/h',
+        '100km/h',
+        '120km/h'
+    ) NOT NULL,
+    estado_atual ENUM(
+        'Parado',
+        'Em rota',
+        'Em manutenção',
+        'Em carregamento',
+        'Aguardando carga',
+        'Chegou ao destino'
+    ) NOT NULL,
+    fk_carga INT NOT NULL,
+    FOREIGN KEY (fk_carga) REFERENCES cargas(idcargas)
+);
+
+CREATE TABLE IF NOT EXISTS gerenciamento_trens(
+    idgerenciamento_trens INT PRIMARY KEY NOT NULL autoincrement,
+    codigo INT NOT NULL,
+    destino VARCHAR (45) NOT NULL,
+    causa VARCHAR(255) NOT NULL,
+    fk_trem INT NOT NULL,
+    FOREIGN KEY (fk_trem) REFERENCES trens(id_trem)
+);
+
 CREATE TABLE IF NOT EXISTS sensores (
     idsensores INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     tipo_sensor ENUM('Ultrassonico', 'LDR (luminosidade)', 'Sensor DHT11') NOT NULL,
@@ -119,7 +173,71 @@ CREATE TABLE IF NOT EXISTS sensores (
 );
 
 
+
+
 USE smarttrain;
 
 ALTER TABLE sensores
 ADD data_sensor_volta DATE;
+
+CREATE TABLE IF NOT EXISTS trens (
+    idtrens INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    carga_trem ENUM (
+        'Soja', 
+        'Milho', 
+        'Feijão', 
+        'Ervilha', 
+        'Carvão', 
+        'Açucar',
+        'Barras de Aço', 
+        'Minério', 
+        'Cereais', 
+        'Petróleo'
+    ) NOT NULL,
+
+    capacidade_trem ENUM(
+        '1-50 Toneladas',
+        '50-100 Toneladas',
+        '100-500 Toneladas',
+        '500-1.000 Toneladas',
+        '1.000-5.000 Toneladas',
+        '5.000-10.000 Toneladas',
+        '10.000-15.000 Toneladas',
+        'Mais de 20 mil Toneladas',
+        'Mais de 50 mil Toneladas',
+        'Mais de 100 mil Toneladas',
+        'Mais de 500 mil Toneladas'
+    ) NOT NULL,
+
+    vagoes_trem ENUM(
+        '10',
+        '15',
+        '20',
+        '25',
+        '30',
+        '35',
+        '40',
+        '45',
+        '50',
+        '55',
+        '60'
+    )NOT NULL
+
+    estado_trem ENUM(
+        'Parado',
+        'Em rota',
+        'Em manutenção',
+        'Em carregamento',
+        'Aguardando carga',
+        'Chegou ao destino'
+    )NOT NULL
+
+    velocidade_trem ENUM(
+        '60km/h',
+        '80km/h',
+        '100km/h',
+        '120km/h'
+    )NOT NULL
+
+
+)
