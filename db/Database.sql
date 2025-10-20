@@ -150,8 +150,7 @@ CREATE TABLE IF NOT EXISTS trens (
 );
 
 CREATE TABLE IF NOT EXISTS gerenciamento_trens(
-    idgerenciamento_trens INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    codigo INT NOT NULL,
+    codigo INT NOT NULL PRIMARY KEY,
     destino VARCHAR (45) NOT NULL,
     causa VARCHAR(255) NOT NULL,
     fk_trem INT NOT NULL,
