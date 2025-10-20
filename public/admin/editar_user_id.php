@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit">Salvar Alterações</button>
             <button type="submit" style="text-decoration: none;"><a href="visualizar_user.php" style="color: white; text-decoration: none;">Voltar</a></button>
         </form>
-        
+
 </body>
 <style>
     * {
@@ -171,6 +171,84 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     form {
         margin-left: 35px;
+    }
+
+
+    @media screen and (max-width: 480px) {
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background: #F0F0F0;
+        }
+
+        .container-accessibility-buttons {
+            top: 32px;
+            margin-left: 0;
+            width: 100%;
+            gap: 16px;
+            justify-content: flex-end;
+            padding-right: 18px;
+            position: absolute;
+            right: 0;
+        }
+
+        .container-accessibility-buttons img {
+            margin-left: 0;
+            width: 26px;
+            height: 26px;
+        }
+
+        h1 {
+            margin-left: 0;
+            padding-left: 18px;
+            font-size: 22px;
+            margin-top: 32px;
+            margin-bottom: 0;
+        }
+
+        .container-sections {
+            margin-left: 0;
+            top: 60px;
+            padding: 0 18px;
+        }
+
+        .container-sections a {
+            display: block;
+        }
+
+        .container-sections p {
+            top: 0;
+            font-size: 22px;
+            margin-bottom: 0;
+            margin-top: 28px;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        .container-sections hr {
+            right: 0;
+            width: 90%;
+            margin: 4px 0 0 0;
+            border: none;
+            border-top: 3px solid rgb(242, 211, 124);
+            background: rgb(242, 211, 124);
+            border-radius: 80px;
+            height: 0;
+            margin-right: 0;
+        }
+
+        .container-menu-bar {
+            position: relative;
+            top: 147px;
+            gap: 40px;
+        }
+
+        .container-menu-bar img {
+            left: 5px;
+            width: 46px;
+            height: 46px;
+        }
     }
 </style>
 
