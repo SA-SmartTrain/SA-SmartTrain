@@ -10,72 +10,60 @@
 </head>
 
 <body>
-  <a href="insere_ger_trem.php"><h1>Gerenciamento de Manutenções dos Trens</h1></a>
-    <div class="container">
-         <form method="POST" action="">
-         <h3>Informe o código do trem:</h3>
-         <input type="text" id="codigo" placeholder="Ex: 08639" name="codigo_trem">
-    </div>
+    <form method="POST" action="insere_ger_trem.php">
+        <h1>Gerenciamento de Manutenções dos Trens</h1>
 
-    <div class="container-um">
-    <h3>Informe o destino:</h3>
-    <select id="destino" name="destino" required>
-        <option value>Selecione o destino...</option>
-        <option value="Mafra">Mafra</option>
-        <option value="São Francisco do Sul">São Francisco do Sul</option>
-        <option value="Guaramirim">Guaramirim</option>
-        <option value="Joinville">Joinville</option>
-        <option value="Araquari">Araquari</option>
-        <option value="Itapoá">Itapoá</option>
-        <option value="Navegantes">Navegantes</option>
-        <option value="Rio do Sul">Rio do Sul</option>
-        <option value="Tubarão">Tubarão</option>
-        <option value="Curitiba">Curitiba</option>
-    </select>
-</div>
+        <div class="container">
 
-<div class="container-dois">
-     <section class="seletores">
-        
-        <h3>Informe a carga que o trem transportará:</h3>
-        <select id="carga" name="tipocarga" form="tipo_carga">
-            <option value="opcão">Selecione a carga...</option>
-            <option value="soja">Soja</option>
-            <option value="milho">Milho</option>
-            <option value="feijão">Feijão</option>
-            <option value="ervilha">Ervilha</option>
-            <option value="carvão">Carvão</option>
-            <option value="açucar">Açucar</option>
-            <option value="Barras de Aço">Barras de Aço</option>
-            <option value="minério">Minério</option>
-            <option value="cereais">Cereais</option>
-            <option value="petróleo">Petróleo</option>
-        </select>
-</div>
+            <h3>Informe o código do trem:</h3>
+            <input type="text" id="codigo" placeholder="Ex: 08639" name="codigo_trem">
+        </div>
 
-    <div class="container-tres">
-    <h3>Informe a causa:</h3>
-    <input type="text" id="causa" placeholder="Ex: Batida" name="causa_trem">
-    </div>
-    <br>
+        <div class="container-um">
+            <h3>Informe o destino:</h3>
+            <select id="destino" name="destino" required>
+                <option value>Selecione o destino...</option>
+                <option value="Mafra">Mafra</option>
+                <option value="São Francisco do Sul">São Francisco do Sul</option>
+                <option value="Guaramirim">Guaramirim</option>
+                <option value="Joinville">Joinville</option>
+                <option value="Araquari">Araquari</option>
+                <option value="Itapoá">Itapoá</option>
+                <option value="Navegantes">Navegantes</option>
+                <option value="Rio do Sul">Rio do Sul</option>
+                <option value="Tubarão">Tubarão</option>
+                <option value="Curitiba">Curitiba</option>
+            </select>
+        </div>
 
-        <button type="button">Salvar</button>
+        <div class="container-dois">
+            <section class="seletores">
+
+                <h3>Informe a carga que o trem transportará:</h3>
+                <select id="carga" name="tipocarga" form="tipo_carga">
+                    <option value="opcão">Selecione a carga...</option>
+                    <option value="soja">Soja</option>
+                    <option value="milho">Milho</option>
+                    <option value="feijão">Feijão</option>
+                    <option value="ervilha">Ervilha</option>
+                    <option value="carvão">Carvão</option>
+                    <option value="açúcar">Açucar</option>
+                    <option value="Barras de Aço">Barras de Aço</option>
+                    <option value="minério">Minério</option>
+                    <option value="cereais">Cereais</option>
+                    <option value="petróleo">Petróleo</option>
+                </select>
+        </div>
+
+        <div class="container-tres">
+            <h3>Informe a causa:</h3>
+            <input type="text" id="causa" placeholder="Ex: Batida" name="causa_trem">
+        </div>
+        <br>
+
+        <button type="submit">Salvar</button>
     </form>
-
-     <?php /*
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if (isset($_POST['codigo_trem'])){
-                
-                $codigo = $_POST['codigo'];
-
-                if($codigo = ()){
-                    echo "O códiigo $ é <strong>válido</strong>.";
-                }else{
-                    echo "O código  é <strong>inválido</strong>.";
-                }
-            }
-        }
-    */ ?>
 </body>
+
 
 </html>
