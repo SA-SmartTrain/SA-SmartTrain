@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS cargas (
         'Feijão', 
         'Ervilha', 
         'Carvão', 
-        'Açucar',
+        'Açúcar',
         'Barras de Aço', 
         'Minério', 
         'Cereais', 

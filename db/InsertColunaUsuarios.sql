@@ -20,3 +20,4 @@ VALUES
 ('Sofia Nunes', 'sofia@gmail.com', 'sofia!2025', '85296314700', 'usuario'),
 ('Carlos Pinto', 'carlos@gmail.com', 'carlos456', '96314785200', 'usuario'),
 ('Larissa Teixeira', 'larissa@gmail.com', 'larissa789', '74136985200', 'gestor');
+
