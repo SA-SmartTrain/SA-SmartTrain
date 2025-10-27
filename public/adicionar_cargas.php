@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style/cadastro_cargas.css">
+    <link rel="stylesheet" href="../style/adicionar_cargas.css">
     <title>SmartTrain - Cadastro de Cargas</title>
 </head>
 
@@ -18,33 +18,38 @@
                 <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
         </div>
-        <div class="containerdois flex">
+    </section> 
+
+    <div class="containerdois flex">
             <div>
                 <a href="./pagina_inicial.html" style=" text-decoration: none;">
                     <h1 id="title">Cadastro de Cargas</h1>
                 </a>
             </div>
         </div>
-    </section>
+<br>
+    <div class="containertres">
+        <form action="../controllers/CadastrarCargas.php" method="POST">
+            <label>Tipo de Carga:</label>
+            <select name="tipocarga" required>
+                <option value="">Selecione o tipo...</option>
+                <option value="Soja">Soja</option>
+                <option value="Milho">Milho</option>
+                <option value="Feijão">Feijão</option>
+                <option value="Ervilha">Ervilha</option>
+                <option value="Carvão">Carvão</option>
+                <option value="Açucar">Açucar</option>
+                <option value="Barras de Aço">Barras de Aço</option>
+                <option value="Minério">Minério</option>
+                <option value="Cereais">Cereais</option>
+                <option value="Petróleo">Petróleo</option>
+            </select>
+        </form>
+    </div>
 
-    <form action="../controllers/CadastrarCargas.php" method="POST">
-        <label>Tipo de Carga:</label>
-        <select name="tipocarga" required>
-            <option value="">Selecione o tipo...</option>
-            <option value="Soja">Soja</option>
-            <option value="Milho">Milho</option>
-            <option value="Feijão">Feijão</option>
-            <option value="Ervilha">Ervilha</option>
-            <option value="Carvão">Carvão</option>
-            <option value="Açucar">Açucar</option>
-            <option value="Barras de Aço">Barras de Aço</option>
-            <option value="Minério">Minério</option>
-            <option value="Cereais">Cereais</option>
-            <option value="Petróleo">Petróleo</option>
-        </select>
+    <br><br>
 
-        <br><br>
-
+    <div class="containerquatro">
         <label>Tamanho da Carga:</label>
         <select name="tamanhocarga" required>
             <option value="">Selecione o tamanho...</option>
@@ -60,9 +65,11 @@
             <option value="Mais de 100 mil Toneladas">Mais de 100 mil Toneladas</option>
             <option value="Mais de 500 mil Toneladas">Mais de 500 mil Toneladas</option>
         </select>
+    </div>
 
-        <br><br>
+    <br><br>
 
+    <div class="containercinco">
         <label>Ponto de Partida:</label>
         <select name="pontopartida" required>
             <option value="">Selecione a partida...</option>
@@ -77,9 +84,10 @@
             <option value="Tubarão">Tubarão</option>
             <option value="Curitiba">Curitiba</option>
         </select>
+    </div>
 
-        <br><br>
-
+    <br><br>
+    <div class="containerseis">
         <label>Ponto de Destino:</label>
         <select name="pontodestino" required>
             <option value="">Selecione o destino...</option>
@@ -94,22 +102,25 @@
             <option value="Tubarão">Tubarão</option>
             <option value="Curitiba">Curitiba</option>
         </select>
-
-        <br><br>
-
+    </div>
+    <br><br>
+    <div class="containersete">
         <label>Data de Envio:</label>
         <input type="date" name="envio_cargas" required>
+    </div>
 
-        <br><br>
+    <br><br>
 
+    <div class="containeroito">
         <label>Data de Chegada:</label>
         <input type="date" name="chegada_cargas" required>
+    </div>
 
-        <br><br>
+    <br><br>
 
+    <div class="containernove">
         <input type="submit" value="Cadastrar">
-    </form>
-
+    </div>
     <div class="container-menu-bar">
         <div class="sections-menu-bar" id="press-effect">
             <img src="../src/assets/images/inicio-bar.png" alt="">
