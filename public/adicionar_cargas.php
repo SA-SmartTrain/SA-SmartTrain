@@ -79,22 +79,22 @@
         </select>
 
         <br><br>
-
-        <label>Ponto de Destino:</label>
-        <select name="pontodestino" required>
-            <option value="">Selecione o destino...</option>
-            <option value="Mafra">Mafra</option>
-            <option value="São Francisco do Sul">São Francisco do Sul</option>
-            <option value="Guaramirim">Guaramirim</option>
-            <option value="Joinville">Joinville</option>
-            <option value="Araquari">Araquari</option>
-            <option value="Itapoá">Itapoá</option>
-            <option value="Navegantes">Navegantes</option>
-            <option value="Rio do Sul">Rio do Sul</option>
-            <option value="Tubarão">Tubarão</option>
-            <option value="Curitiba">Curitiba</option>
-        </select>
-
+        <div class="container">
+            <label>Ponto de Destino:</label>
+            <select name="pontodestino" required>
+                <option value="">Selecione o destino...</option>
+                <option value="Mafra">Mafra</option>
+                <option value="São Francisco do Sul">São Francisco do Sul</option>
+                <option value="Guaramirim">Guaramirim</option>
+                <option value="Joinville">Joinville</option>
+                <option value="Araquari">Araquari</option>
+                <option value="Itapoá">Itapoá</option>
+                <option value="Navegantes">Navegantes</option>
+                <option value="Rio do Sul">Rio do Sul</option>
+                <option value="Tubarão">Tubarão</option>
+                <option value="Curitiba">Curitiba</option>
+            </select>
+        </div>
         <br><br>
 
         <label>Data de Envio:</label>
