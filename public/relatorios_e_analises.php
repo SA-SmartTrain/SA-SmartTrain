@@ -1,37 +1,50 @@
 <?php
-require_once '/config.php';
+// ...existing code...
+require_once __DIR__ . '/../db/conn.php';
 
-$conexao = '';
+$success = '';
 $error = '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ids']) && is_array($_POST['ids'])) {
-    $stmt = $mysqli->prepare("UPDATE relatorios SET carga = ?, data = ?, quantidade = ? WHERE id = ?");
-    if (!$stmt) {
-        $error = 'Erro ao incializar ' . $mysqli->error;
-    } else {
-        foreach ($_POST['ids'] as $id) {
-            $id = (int)$id;
-            $carga = isset($_POST['carga'][$id]) ? trim($_POST['carga'][$id]) : '';
-            $data = isset($_POST['data'][$id]) && $_POST['data'][$id] !== '' ? $_POST['data'][$id] : null;
-            $quantidade = isset($_POST['quantidade'][$id]) ? (int)$_POST['quantidade'][$id] : 0;
+if (!isset($mysqli) || !$mysqli) {
+    $error = 'Conexão com o banco não encontrada. Verifique db/conn.php';
+} else {
+    // tabela (troque se seu BD usar outro nome)
+    $table = 'relatorios';
 
-            $stmt->bind_param('ssii', $carga, $data, $quantidade, $id);
-            if (!$stmt->execute()) {
-                $error = 'Erro ao atualizar ID ' . $id . ': ' . $stmt->error;
-                break;
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ids']) && is_array($_POST['ids'])) {
+        $sql = "UPDATE {$table} SET carga = ?, data = NULLIF(?,''), quantidade = ? WHERE id = ?";
+        $stmt = $mysqli->prepare($sql);
+        if (!$stmt) {
+            $error = 'Erro ao preparar statement: ' . $mysqli->error;
+        } else {
+            foreach ($_POST['ids'] as $id) {
+                $id = (int)$id;
+                $carga = isset($_POST['carga'][$id]) ? trim($_POST['carga'][$id]) : '';
+                $data = isset($_POST['data'][$id]) && $_POST['data'][$id] !== '' ? $_POST['data'][$id] : '';
+                $quantidade = isset($_POST['quantidade'][$id]) ? (int)$_POST['quantidade'][$id] : 0;
+
+                $stmt->bind_param('ssii', $carga, $data, $quantidade, $id);
+                if (!$stmt->execute()) {
+                    $error = 'Erro ao atualizar ID ' . $id . ': ' . $stmt->error;
+                    break;
+                }
             }
+            if ($error === '') $success = 'Alterações salvas com sucesso.';
+            $stmt->close();
         }
-        if ($error === '') $conexao = 'Alterações salvas com sucesso.';
-        $stmt->close();
+    }
+
+    $result = $mysqli->query("SELECT id, carga, data, quantidade FROM {$table} ORDER BY id ASC");
+    $rows = [];
+    if ($result) {
+        while ($r = $result->fetch_assoc()) $rows[] = $r;
+        $result->free();
+    } else {
+        // se tabela não existir ou erro, mostra mensagem breve
+        if ($error === '') $error = 'Erro ao carregar registros: ' . $mysqli->error;
     }
 }
-
-$result = $mysqli->query("SELECT id, carga, data, quantidade FROM relatorios ORDER BY id ASC");
-$rows = [];
-if ($result) {
-    while ($r = $result->fetch_assoc()) $rows[] = $r;
-    $result->free();
-}
+// ...existing code...
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -69,7 +82,7 @@ if ($result) {
                 <?php if (empty($rows)): ?>
                     <p>Nenhum registro encontrado.</p>
                 <?php else: ?>
-                    <?php foreach ($rows as $row): 
+                    <?php foreach ($rows as $row):
                         $id = (int)$row['id'];
                     ?>
                         <div class="flex linha-registro" style="margin-bottom:8px;">
