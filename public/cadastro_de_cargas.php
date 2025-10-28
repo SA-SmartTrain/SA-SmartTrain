@@ -41,6 +41,29 @@
 
         </div>
 
+         <div class="opcoes" style=" margin-left: 40px;">
+
+            <a href="./adicionar_cargas.php" style=" text-decoration: none;">
+                <img src="../src/assets/images/remover.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
+                <div class="opcao">
+                    <h3 id="opc">Remover Carga</h3>
+                </div>
+            </a>
+
+        </div>
+
+         <div class="opcoes" style=" margin-left: 40px;">
+
+            <a href="./adicionar_cargas.php" style=" text-decoration: none;">
+                <img src="../src/assets/images/listar.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
+                <div class="opcao">
+                    <h3 id="opc">Listar Cargas</h3>
+                </div>
+            </a>
+
+        </div>
+
+
 
         <div class="container-menu-bar" style="position: relative; bottom: -150px;">
             <div class="sections-menu-bar" id="press-effect">
