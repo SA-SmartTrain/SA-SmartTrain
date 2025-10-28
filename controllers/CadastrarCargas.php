@@ -2,46 +2,68 @@
 require_once __DIR__ . '/../db/conn.php';
 session_start();
 
-// Verifica se usuário está logado
-if (!isset($_SESSION["email_usuarios"])) {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    exit('Método não permitido.');
+}
+
+if (!isset($_SESSION['email_usuarios'])) {
     header('Location: ../public/login/cadastre-se-page.php');
     exit;
 }
 
-// Pega o email da sessão
-$email = $_SESSION["email_usuarios"];
+if (!isset($conn) || !$conn) {
+    http_response_code(500);
+    exit('Erro: conexão com o banco de dados.');
+}
 
-// Busca o idusuario correspondente
+$email = $_SESSION['email_usuarios'];
+
 $stmt_id = $conn->prepare("SELECT idusuarios FROM usuarios WHERE email_usuarios = ?");
+if (!$stmt_id) {
+    exit('Erro (prepare): ' . $conn->error);
+}
 $stmt_id->bind_param("s", $email);
-$stmt_id->execute();
-$result_id = $stmt_id->get_result();
-$row = $result_id->fetch_assoc();
-$idusuario = $row['idusuarios'] ?? null;
+if (!$stmt_id->execute()) {
+    exit('Erro (execute): ' . $stmt_id->error);
+}
+
+$idusuario = null;
+if (method_exists($stmt_id, 'get_result')) {
+    $res = $stmt_id->get_result();
+    $row = $res->fetch_assoc();
+    $idusuario = $row['idusuarios'] ?? null;
+    $res->free();
+} else {
+    $stmt_id->bind_result($id_tmp);
+    if ($stmt_id->fetch()) $idusuario = $id_tmp;
+}
+$stmt_id->close();
 
 if (!$idusuario) {
-    die("Erro: usuário não encontrado no banco.");
+    exit('Erro: usuário não encontrado no banco.');
 }
 
-// Coleta dados do POST
-$tipocarga = $_POST['tipocarga'] ?? '';
-$tamanhocarga = $_POST['tamanhocarga'] ?? '';
-$pontopartida = $_POST['pontopartida'] ?? '';
-$pontodestino = $_POST['pontodestino'] ?? '';
-$envio_cargas = $_POST['envio_cargas'] ?? '';
-$chegada_cargas = $_POST['chegada_cargas'] ?? '';
+$tipocarga     = trim($_POST['tipocarga'] ?? '');
+$tamanhocarga  = trim($_POST['tamanhocarga'] ?? '');
+$pontopartida  = trim($_POST['pontopartida'] ?? '');
+$pontodestino  = trim($_POST['pontodestino'] ?? '');
+$envio_cargas  = trim($_POST['envio_cargas'] ?? '');
+$chegada_cargas= trim($_POST['chegada_cargas'] ?? '');
 
-// Validação
-if (!$tipocarga || !$tamanhocarga || !$pontopartida || !$pontodestino || !$envio_cargas || !$chegada_cargas) {
-    die("Preencha todos os campos obrigatórios.");
+if ($tipocarga === '' || $tamanhocarga === '' || $pontopartida === '' ||
+    $pontodestino === '' || $envio_cargas === '' || $chegada_cargas === '') {
+    exit('Preencha todos os campos obrigatórios.');
 }
 
-// Inserção no banco
 $stmt = $conn->prepare("
     INSERT INTO cargas 
     (tipo_carga, tamanho_carga, partida_carga, destino_carga, envio_cargas, chegada_cargas, idusuarios)
     VALUES (?, ?, ?, ?, ?, ?, ?)
 ");
+if (!$stmt) {
+    exit('Erro (prepare insert): ' . $conn->error);
+}
 
 $stmt->bind_param(
     "ssssssi",
@@ -55,9 +77,10 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    echo "Carga cadastrada com sucesso!";
+    header('Location: ../public/relatorios_e_analises.php?status=success');
+    exit;
 } else {
-    echo "Erro ao cadastrar carga: " . $stmt->error;
+    exit('Erro ao cadastrar carga: ' . $stmt->error);
 }
 
 $stmt->close();
