@@ -239,5 +239,11 @@ CREATE TABLE IF NOT EXISTS trens (
         '120km/h'
     )NOT NULL
 
+CREATE TABLE relatorios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  carga VARCHAR(255) NOT NULL,
+  data DATE NULL,
+  quantidade INT DEFAULT 0
+);
 
 )
