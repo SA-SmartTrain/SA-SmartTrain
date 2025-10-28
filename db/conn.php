@@ -1,8 +1,7 @@
-
 <?php
 $dbHost     = 'localhost';
 $dbUsername = 'root';
-$dbPassword = 'root'; 
+$dbPassword = ''; 
 $dbName     = 'smarttrain';
 
 mysqli_report(MYSQLI_REPORT_OFF);
