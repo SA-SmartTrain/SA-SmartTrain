@@ -5,9 +5,9 @@ $conexao = '';
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ids']) && is_array($_POST['ids'])) {
-    $stmt = $mysqli->prepare("UPDATE cargas SET carga = ?, data = ?, quantidade = ? WHERE id = ?");
+    $stmt = $mysqli->prepare("UPDATE relatorios SET carga = ?, data = ?, quantidade = ? WHERE id = ?");
     if (!$stmt) {
-        $error = 'Erro ao preparar statement: ' . $mysqli->error;
+        $error = 'Erro ao incializar ' . $mysqli->error;
     } else {
         foreach ($_POST['ids'] as $id) {
             $id = (int)$id;
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ids']) && is_array($_
     }
 }
 
-$result = $mysqli->query("SELECT id, carga, data, quantidade FROM cargas ORDER BY id ASC");
+$result = $mysqli->query("SELECT id, carga, data, quantidade FROM relatorios ORDER BY id ASC");
 $rows = [];
 if ($result) {
     while ($r = $result->fetch_assoc()) $rows[] = $r;
