@@ -1,17 +1,17 @@
+
 <?php
-
-$inipath = php_ini_loaded_file();
-$ini_array = parse_ini_file($inipath, true)["PHP"];
-
 $dbHost     = 'localhost';
 $dbUsername = 'root';
-$dbPassword = '';
-$dbPassword = 'root';
+$dbPassword = 'root'; 
 $dbName     = 'smarttrain';
 
-$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+mysqli_report(MYSQLI_REPORT_OFF);
+$mysqli = @new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+$conn = $mysqli;
 
-if ($conn->connect_errno) {
-    die("Falha na conexão: " . $conn->connect_error);
+if ($mysqli->connect_errno) {
+    die("Falha na conexão: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error);
 }
-$conn->set_charset($ini_array['default_charset'] ?? 'utf8mb4');
+
+$mysqli->set_charset('utf8mb4');
+?>
