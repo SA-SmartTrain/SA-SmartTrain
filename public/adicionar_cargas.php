@@ -120,7 +120,7 @@
                 <input type="submit" value="Cadastrar">
             </div>
     </div>
-</div>
+    </div>
 
     </form>
     </section>
