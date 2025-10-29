@@ -54,10 +54,10 @@
 
          <div class="opcoes" style=" margin-left: 40px;">
 
-            <a href="./.php" style=" text-decoration: none;">
+            <a href="./editar_cargas.php" style=" text-decoration: none;">
                 <img src="../src/assets/images/listar.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
                 <div class="opcao">
-                    <h3 id="opc">Listar Cargas</h3>
+                    <h3 id="opc">Editar Cargas</h3>
                 </div>
             </a>
 
