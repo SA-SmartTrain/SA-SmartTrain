@@ -39,13 +39,6 @@
                 </div>
             </a>
 
-            <img src="../src/assets/images/remover.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
-            <a href="./remover_sensores.php" style=" text-decoration: none;">
-                <div class="opcao">
-                    <h3 id="opc">Remover Sensor</h3>
-                </div>
-            </a>
-
             <img src="../src/assets/images/listar.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
             <a href="./listar_sensores.php" style=" text-decoration: none;">
                 <div class="opcao">
