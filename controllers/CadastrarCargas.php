@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 if (!isset($_SESSION['email_usuarios'])) {
-    header('Location: ../public/login/cadastre-se-page.php');
+    header('Location: ../public/cadastro_de_cargas.php');
     exit;
 }
 
@@ -77,7 +77,7 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    header('Location: ../public/relatorios_e_analises.php?status=success');
+    header('Location: ../public/cadastro_de_cargas.php?status=success');
     exit;
 } else {
     exit('Erro ao cadastrar carga: ' . $stmt->error);
