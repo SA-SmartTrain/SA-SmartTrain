@@ -44,105 +44,85 @@
                 <option value="Cereais">Cereais</option>
                 <option value="Petróleo">Petróleo</option>
             </select>
-        </form>
-    </div>
 
-    <br><br>
+            <br><br>
 
-    <div class="containerquatro">
-        <label>Tamanho da Carga:</label>
-        <select name="tamanhocarga" required>
-            <option value="">Selecione o tamanho...</option>
-            <option value="1-50 Toneladas">1-50 Toneladas</option>
-            <option value="50-100 Toneladas">50-100 Toneladas</option>
-            <option value="100-500 Toneladas">100-500 Toneladas</option>
-            <option value="500-1.000 Toneladas">500-1.000 Toneladas</option>
-            <option value="1.000-5.000 Toneladas">1.000-5.000 Toneladas</option>
-            <option value="5.000-10.000 Toneladas">5.000-10.000 Toneladas</option>
-            <option value="10.000-15.000 Toneladas">10.000-15.000 Toneladas</option>
-            <option value="Mais de 20 mil Toneladas">Mais de 20 mil Toneladas</option>
-            <option value="Mais de 50 mil Toneladas">Mais de 50 mil Toneladas</option>
-            <option value="Mais de 100 mil Toneladas">Mais de 100 mil Toneladas</option>
-            <option value="Mais de 500 mil Toneladas">Mais de 500 mil Toneladas</option>
-        </select>
-    </div>
-
-    <br><br>
-
-    <div class="containercinco">
-        <label>Ponto de Partida:</label>
-        <select name="pontopartida" required>
-            <option value="">Selecione a partida...</option>
-            <option value="Mafra">Mafra</option>
-            <option value="São Francisco do Sul">São Francisco do Sul</option>
-            <option value="Guaramirim">Guaramirim</option>
-            <option value="Joinville">Joinville</option>
-            <option value="Araquari">Araquari</option>
-            <option value="Itapoá">Itapoá</option>
-            <option value="Navegantes">Navegantes</option>
-            <option value="Rio do Sul">Rio do Sul</option>
-            <option value="Tubarão">Tubarão</option>
-            <option value="Curitiba">Curitiba</option>
-        </select>
-    </div>
-
-    <br><br>
-    <div class="containerseis">
-        <label>Ponto de Destino:</label>
-        <select name="pontodestino" required>
-            <option value="">Selecione o destino...</option>
-            <option value="Mafra">Mafra</option>
-            <option value="São Francisco do Sul">São Francisco do Sul</option>
-            <option value="Guaramirim">Guaramirim</option>
-            <option value="Joinville">Joinville</option>
-            <option value="Araquari">Araquari</option>
-            <option value="Itapoá">Itapoá</option>
-            <option value="Navegantes">Navegantes</option>
-            <option value="Rio do Sul">Rio do Sul</option>
-            <option value="Tubarão">Tubarão</option>
-            <option value="Curitiba">Curitiba</option>
-        </select>
-    </div>
-    <br><br>
-    <div class="containersete">
-        <label>Data de Envio:</label>
-        <input type="date" name="envio_cargas" required>
-    </div>
-
-    <br><br>
-
-    <div class="containeroito">
-        <label>Data de Chegada:</label>
-        <input type="date" name="chegada_cargas" required>
-    </div>
-
-    <br><br>
-
-    <div class="containernove">
-        <input type="submit" value="Cadastrar">
-    </div>
-    <div class="container-menu-bar">
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="../src/assets/images/inicio-bar.png" alt="">
-            <div id="incio">
-                <a href="../public/pagina_inicial.php"><span>Início</span></a>
+            <div class="containerquatro">
+                <label>Tamanho da Carga:</label>
+                <select name="tamanhocarga" required>
+                    <option value="">Selecione o tamanho...</option>
+                    <option value="1-50 Toneladas">1-50 Toneladas</option>
+                    <option value="50-100 Toneladas">50-100 Toneladas</option>
+                    <option value="100-500 Toneladas">100-500 Toneladas</option>
+                    <option value="500-1.000 Toneladas">500-1.000 Toneladas</option>
+                    <option value="1.000-5.000 Toneladas">1.000-5.000 Toneladas</option>
+                    <option value="5.000-10.000 Toneladas">5.000-10.000 Toneladas</option>
+                    <option value="10.000-15.000 Toneladas">10.000-15.000 Toneladas</option>
+                    <option value="Mais de 20 mil Toneladas">Mais de 20 mil Toneladas</option>
+                    <option value="Mais de 50 mil Toneladas">Mais de 50 mil Toneladas</option>
+                    <option value="Mais de 100 mil Toneladas">Mais de 100 mil Toneladas</option>
+                    <option value="Mais de 500 mil Toneladas">Mais de 500 mil Toneladas</option>
+                </select>
             </div>
-        </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="../src/assets/images/menu-bar.png" alt="">
-            <a href="../public/documentacoes.html"><span>Menu</span></a>
-        </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="../src/assets/images/estoque-bar.png" alt="">
-            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
-        </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
-            <a href="../public/funcionarios.php"><span>Funcionários</span></a>
-        </div>
+
+            <br><br>
+
+            <div class="containercinco">
+                <label>Ponto de Partida:</label>
+                <select name="pontopartida" required>
+                    <option value="">Selecione a partida...</option>
+                    <option value="Mafra">Mafra</option>
+                    <option value="São Francisco do Sul">São Francisco do Sul</option>
+                    <option value="Guaramirim">Guaramirim</option>
+                    <option value="Joinville">Joinville</option>
+                    <option value="Araquari">Araquari</option>
+                    <option value="Itapoá">Itapoá</option>
+                    <option value="Navegantes">Navegantes</option>
+                    <option value="Rio do Sul">Rio do Sul</option>
+                    <option value="Tubarão">Tubarão</option>
+                    <option value="Curitiba">Curitiba</option>
+                </select>
+            </div>
+
+            <br><br>
+            <div class="containerseis">
+                <label>Ponto de Destino:</label>
+                <select name="pontodestino" required>
+                    <option value="">Selecione o destino...</option>
+                    <option value="Mafra">Mafra</option>
+                    <option value="São Francisco do Sul">São Francisco do Sul</option>
+                    <option value="Guaramirim">Guaramirim</option>
+                    <option value="Joinville">Joinville</option>
+                    <option value="Araquari">Araquari</option>
+                    <option value="Itapoá">Itapoá</option>
+                    <option value="Navegantes">Navegantes</option>
+                    <option value="Rio do Sul">Rio do Sul</option>
+                    <option value="Tubarão">Tubarão</option>
+                    <option value="Curitiba">Curitiba</option>
+                </select>
+            </div>
+            <br><br>
+            <div class="containersete">
+                <label>Data de Envio:</label>
+                <input type="date" name="envio_cargas" required>
+            </div>
+
+            <br><br>
+
+            <div class="containeroito">
+                <label>Data de Chegada:</label>
+                <input type="date" name="chegada_cargas" required>
+            </div>
+
+            <br><br>
+
+            <div class="containernove">
+                <input type="submit" value="Cadastrar">
+            </div>
     </div>
     </div>
 
+    </form>
     </section>
 
 </body>

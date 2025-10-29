@@ -172,6 +172,15 @@ CREATE TABLE IF NOT EXISTS sensores (
     observacao_sensor VARCHAR(87) NOT NULL
 );
 
+CREATE TABLE `estacoes` (
+  `idestacoes` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `latitude` decimal(10,8) NOT NULL,
+  `longitude` decimal(11,8) NOT NULL,
+  `endereco` text DEFAULT NULL,
+  `data_criacao` timestamp NOT NULL DEFAULT current_timestamp()
+)
+
 
 
 
