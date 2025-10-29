@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style/cadastro_sensores.css">
+    <link rel="stylesheet" href="../style/cadastrar_rotas.css">
     <title>SmartTrain - Cadastro de Rota</title>
 </head>
 
@@ -19,14 +19,17 @@
         </div>
         <div class="containerdois flex">
             <div>
-                <a href="./gerenciamento_sensores.php" style=" text-decoration: none;">
+                <a href="../pagina_inicial" style=" text-decoration: none;">
                     <h1 id="title">Cadastro de Rotas</h1>
                 </a>
             </div>
         </div>
     </section>
 
-    <h2>Informações</h2>
+    <div class="containerh2">
+        <h2>Informações</h2>
+    </div>
+
     <br>
     <form action="../controllers/CadastrarSensores.php" method="POST">
         <section class="seletores">
@@ -46,19 +49,18 @@
                 <option value="araquari">Araquari</option>
                 <option value="sfs">São Franscisco do Sul</option>
             </select>
-
-            <h3>Selecione a data:</h3>
-            <div class="container">
+            <div class="containerdata">
+                <h3>Selecione a data:</h3>
                 <div class="flex">
                     <input type="date" name="dataIda" id="dataIda" required>
                 </div>
             </div>
-
-            <h3>Descreva o procedimento:</h3>
-            <input type="text" name="observacoes" id="observacoes" placeholder="Descreva o procedimento..." maxlength="87" required style="margin-left: 20px;">
-
-            <button type="submit">Adicionar Rota</button>
+            <div class="containerproce">
+                <h3>Descreva o procedimento:</h3>
+                <input type="text" name="observacoes" id="observacoes" placeholder="Descreva o procedimento...">
+            </div>
         </section>
+        <button type="submit">Adicionar Rota</button>
     </form>
 
 

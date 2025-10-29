@@ -18,16 +18,16 @@
                 <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
         </div>
-    </section> 
+    </section>
 
     <div class="containerdois flex">
-            <div>
-                <a href="./pagina_inicial.html" style=" text-decoration: none;">
-                    <h1 id="title">Cadastro de Cargas</h1>
-                </a>
-            </div>
+        <div>
+            <a href="./pagina_inicial.html" style=" text-decoration: none;">
+                <h1 id="title">Cadastro de Cargas</h1>
+            </a>
         </div>
-<br>
+    </div>
+    <br>
     <div class="containertres">
         <form action="../controllers/CadastrarCargas.php" method="POST">
             <label>Tipo de Carga:</label>
