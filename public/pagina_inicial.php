@@ -71,7 +71,7 @@ $perfil_usuarios = $dados['perfil'] ?? '';
                             <p>Gestão de Rotas</p>
                         </a>
                         <hr>
-                        <a href="../public/monitoramento_cargas.html">
+                        <a href="../public/monitoramento_cargas.php">
                             <p>Monitoramento de Cargas</p>
                         </a>
                         <hr>
