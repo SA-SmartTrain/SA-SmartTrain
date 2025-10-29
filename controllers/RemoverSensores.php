@@ -4,7 +4,7 @@ session_start();
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION["email"])) {
-    header('Location: login.php');
+    header('Location: /SA-SmartTrain/public/gerenciamento_sensores.php');
     exit;
 }
 
