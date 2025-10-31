@@ -255,4 +255,7 @@ CREATE TABLE relatorios (
   quantidade INT DEFAULT 0
 );
 
+CREATE TABLE estacao (
+-- 	idestacao	nome_estacao	endereco_estacao	latitute	longitude	
+);
 )
