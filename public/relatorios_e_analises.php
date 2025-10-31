@@ -34,7 +34,7 @@ if (!isset($mysqli) || !$mysqli) {
         }
     }
 
-    $result = $mysqli->query("SELECT id, carga, data, quantidade FROM {$table} ORDER BY id ASC");
+    $result = $mysqli->query("SELECT idrelatorios, carga_relatorio	, data_relatorio, quantidade_relatorio FROM relatorios ORDER BY idusuarios ASC");
     $rows = [];
     if ($result) {
         while ($r = $result->fetch_assoc()) $rows[] = $r;

@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +53,7 @@
 
         <div class="botoes-container"
             style="position: absolute; top: 700px; right: 60px; z-index: 1000; display: flex; gap: 20px;">
-            <a href="cadastrar_rota.php" style="text-decoration: none;">
+            <a href="#" onclick="openAddStationModal()" style="text-decoration: none;">
                 <div class="adicionar-alerta"
                     style="width: 170px; display: flex; align-items: center; background: #222; border-radius: 8px; padding: 6px 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <img src="../src/assets/images/adicionar.png" alt=""
@@ -126,6 +131,50 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         </div>
     </main>
+    
+    <!-- Código do Popup -->
+    <div id="add-station-modal" style="font-family: Arial; display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+        <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 400px; border-radius: 10px; position: relative;">
+            <span onclick="closeAddStationModal()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+            <h2 style="text-align: center; margin-bottom: 20px;">Adicionar Estação</h2>
+            <form action="processar_adicionar_estacao.php" method="POST">
+                <label for="station_name" style="display: block; margin-bottom: 5px;">Nome da Estação:</label>
+                <input type="text" id="station_name" name="station_name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+
+                <label for="address" style="display: block; margin-bottom: 5px;">Endereço:</label>
+                <input type="text" id="address" name="address" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+
+                <label for="latitude" style="display: block; margin-bottom: 5px;">Latitude:</label>
+                <input type="text" id="latitude" name="latitude" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" placeholder="-14.225000">
+
+                <label for="longitude" style="display: block; margin-bottom: 5px;">Longitude:</label>
+                <input type="text" id="longitude" name="longitude" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" placeholder="-51.925500">
+
+                <button type="submit" style="background-color: rgb(242, 211, 124); color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px;">Salvar Estação</button>
+            </form>
+        </div>
+    </div>
+
+    
+    
+    <script>
+        function openAddStationModal() {
+            document.getElementById('add-station-modal').style.display = 'block';
+        }
+
+        function closeAddStationModal() {
+            document.getElementById('add-station-modal').style.display = 'none';
+        }
+
+        // Fecha o modal se o usuário clicar fora dele
+        window.onclick = function(event) {
+            const modal = document.getElementById('add-station-modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
 </body>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
