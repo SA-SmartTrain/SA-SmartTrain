@@ -46,6 +46,7 @@ if (!isset($mysqli) || !$mysqli) {
 }
 // ...existing code...
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
