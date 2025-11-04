@@ -14,6 +14,7 @@ if (!$result) {
     die("Erro na consulta: " . $conn->error);
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
