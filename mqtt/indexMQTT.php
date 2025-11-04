@@ -2,8 +2,8 @@
 require("phpMQTT.php");
 
 $server = "test.mosquitto.org";
-$port = 1883;
-$topic = "TESTEIcaroTOP";
+$port = 8883;
+$topic = "TOPIC_PONTEH";
 
 // Publicação via formulário
 if (isset($_POST['msg']) && !empty($_POST['msg'])) {
@@ -86,32 +86,4 @@ if (isset($_POST['msg']) && !empty($_POST['msg'])) {
         <button type="submit">Enviar</button>
     </form>
 </body>
-
 </html>
-<script>
-    let allMessages = [];
-
-    function fetchMessages() {
-        fetch('get_message.php?t=' + new Date().getTime())
-            .then(response => response.json())
-            .then(data => {
-                    if (data.error) {
-                        console.error('Erro:', data.error);
-                    } else {
-                        data.forEach(m => {
-                                const key = m.time + m.msg;
-                            }
-                        }
-                    }
-                    if (data.length > 0) {
-                        data.forEach(m => {
-                                const key = m.time + m.msg;
-                            }
-                        }
-                        data.forEach(m => {
-                                const key = m.time + m.msg;
-                            }
-                        }
-                        data.forEach(m => {
-                                    const key = m.time + m.msg;
-                                }
