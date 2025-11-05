@@ -1,6 +1,8 @@
 # Situação de Aprendizagem- SmartTrain
 
-> Esta Situação de Aprendizagem foi desenvolvida durante o componente curricular nomeado Programação de Aplicativos. 
+> Esta Situação de Aprendizagem foi desenvolvida durante o componente curricular nomeado Programação de Aplicativos. Como objetivo central de desenvolvimento do aplicativo SmartTrain, pode-se destacar a "dor" absorvida de gerenciadores de ferrovias de trens, através da necessidade de adicionar conceitos tecnológicos na efetivação das mesmas, buscando facilitar a conexão efetiva entre ferrovias, trens, gestores e usuários.
+
+
 
 ### Ajustes
 
