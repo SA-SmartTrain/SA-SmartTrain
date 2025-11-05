@@ -179,16 +179,16 @@ necessárias:
   <tr>
     <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/beatrizcc.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/>Beatriz Cercal Cachoeira<br>
+        <img src="/src/assets/images/readme/beatrizcc.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/>Beatriz Cercal<br>
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/miguel.jpg" width="100px;" alt="Foto de Miguel Rocha Xavier"/>Miguel Rocha Xavier<br>
+        <img src="/src/assets/images/readme/miguel.jpg" width="100px;" alt="Foto de Miguel Rocha Xavier"/>Miguel Rocha<br>
     <td align="center">
       <a href="#" title="Fotografia Pessoal">
         <img src="/src/assets/images/readme/iasmin.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/>Iasmin Rabelo<br>
             <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/beatrizco.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/>Beatriz Crispim de Oliveira<br>
+        <img src="/src/assets/images/readme/beatrizco.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/>Beatriz Crispim<br>
       
 
 
