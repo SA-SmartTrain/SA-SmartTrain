@@ -62,7 +62,8 @@ if (!$result) {
                             </div>
                         </div>
                     </div>
-                <?php } ?>
+                <?php 
+            } ?>
 
             </div>
 

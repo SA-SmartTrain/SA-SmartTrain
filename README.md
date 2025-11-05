@@ -1,6 +1,8 @@
 # Situação de Aprendizagem- SmartTrain
 
-> Esta Situação de Aprendizagem foi desenvolvida durante o componente curricular nomeado Programação de Aplicativos. 
+> Esta Situação de Aprendizagem foi desenvolvida durante o componente curricular nomeado Programação de Aplicativos. Como objetivo central de desenvolvimento do aplicativo SmartTrain, pode-se destacar a "dor" absorvida de gerenciadores de ferrovias de trens, através da necessidade de adicionar conceitos tecnológicos na efetivação das mesmas, buscando facilitar a conexão efetiva entre ferrovias, trens, gestores e usuários.
+
+
 
 ### Ajustes
 
@@ -177,16 +179,16 @@ necessárias:
   <tr>
     <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/beatrizcc.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
+        <img src="/src/assets/images/readme/beatrizcc.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/>Beatriz Cercal Cachoeira<br>
   <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/miguel.jpg" width="100px;" alt="Foto de Miguel Rocha Xavier"/><br>
+        <img src="/src/assets/images/readme/miguel.jpg" width="100px;" alt="Foto de Miguel Rocha Xavier"/>Miguel Rocha Xavier<br>
     <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/iasmin.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
+        <img src="/src/assets/images/readme/iasmin.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/>Iasmin Rabelo<br>
             <td align="center">
       <a href="#" title="Fotografia Pessoal">
-        <img src="/src/assets/images/readme/beatrizco.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/><br>
+        <img src="/src/assets/images/readme/beatrizco.jpg" width="100px;" alt="Foto de Beatriz Cercal Cachoeira"/>Beatriz Crispim de Oliveira<br>
       
 
 
