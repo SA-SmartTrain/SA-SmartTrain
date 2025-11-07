@@ -20,9 +20,20 @@ h3{
     border-radius: 10px;
 }
 
+
 #arquivo {
     margin-left: 50px;
     width: 700px;
     height: 300px;
     border-radius: 10px;
+}
+
+#imagem_trem {
+    width: 70px;
+    height: 70px;
+}
+
+.container1{
+    display: flex;
+    unicode-bidi: isolate;
 }
