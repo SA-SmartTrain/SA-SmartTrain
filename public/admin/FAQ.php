@@ -59,11 +59,11 @@ $nome_usuarios = $dados["nome_usuarios"];
             </div>
             <div class="sections-menu-bar" id="press-effect">
                 <img src="/SA-SmartTrain/src/assets/images/estoque-bar.png" alt="">
-                <a href="relatorios_e_analises.html"><span>Estoque</span></a>
+                <a href="relatorios_e_analises.php"><span>Estoque</span></a>
             </div>
             <div class="sections-menu-bar" id="press-effect">
                 <div id="funcionarios"><img src="/SA-SmartTrain/src/assets/images/funcionarios-bar.png" alt=""></div>
-                <a href="funcionarios.html"><span>Funcionários</span></a>
+                <a href="funcionarios.php"><span>Funcionários</span></a>
             </div>
         </div>
     </div>

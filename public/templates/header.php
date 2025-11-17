@@ -11,11 +11,11 @@
                         </div>
                         <div class="sections-menu-bar" id="press-effect">
                             <img src="https://media.discordapp.net/attachments/1418730196617396327/1418741388912361765/estoque-bar.png?ex=68cf3962&is=68cde7e2&hm=2f81ca0a243c1ba493fa2b154e76d3483cd3a2aee8b28787247a1d77eb169de1&=&format=webp&quality=lossless" alt="">
-                            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
+                            <a href="../public/relatorios_e_analises.php"><span>Estoque</span></a>
                         </div>
                         <div class="sections-menu-bar" id="press-effect">
                             <div id="funcionarios"><img src="https://media.discordapp.net/attachments/1418730196617396327/1418741387599548526/funcionarios-bar.png?ex=68cf3961&is=68cde7e1&hm=8129bcfc6bd85e81d312f7dfd7ff8ce81bd21d75925fcd2b0a43e9f594873ccd&=&format=webp&quality=lossless" alt=""></div>
-                            <a href="../public/funcionarios.html"><span>Funcionários</span></a>
+                            <a href="../public/funcionarios.php"><span>Funcionários</span></a>
                         </div>
                     </div>
                 </div>

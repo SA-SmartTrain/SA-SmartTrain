@@ -59,7 +59,7 @@
         </div>
         <div class="sections-menu-bar" id="press-effect">
             <img src="../src/assets/images/estoque-bar.png" alt="">
-            <a href="../public/relatorios_e_analises.html"><span>Estoque</span></a>
+            <a href="../public/relatorios_e_analises.php"><span>Estoque</span></a>
         </div>
         <div class="sections-menu-bar" id="press-effect">
             <div id="funcionarios">
