@@ -33,7 +33,7 @@ $nome_usuarios = $dados["nome_usuarios"];
     <link rel="shortcut icon" href="/SA-SmartTrain/src/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/pagina_inicial.css">
     <link rel="stylesheet" href="../style/global/container-size-mobile.css">
-    <title>SmartTrain - Admin view</title>
+    <title>SmartTrain - FAQ</title>
 </head>
 
 <body>
@@ -43,17 +43,8 @@ $nome_usuarios = $dados["nome_usuarios"];
                 <img src="/SA-SmartTrain/src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
                 <img src="/SA-SmartTrain/src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
-            <h1>Admin</h1>
-            <div class="container-sections">
-                <a href="../admin/visualizar_user.php">
-                    <p>Visualizar Usuários</p>
-                </a>
-                <hr>
-                <a href="../admin/FAQ.php">
-                    <p>Hub Suporte FAQ</p>
-                </a>
-                <hr>
-            </div>
+            <h1>Hub Suporte FAQ</h1>
+            
         </div>
         <div class="container-menu-bar">
             <div class="sections-menu-bar" id="press-effect">
@@ -114,7 +105,7 @@ $nome_usuarios = $dados["nome_usuarios"];
 
     .container-menu-bar {
         position: relative;
-        margin-top: 29.6%;
+        margin-top: 34.6%;
         display: flex;
         justify-content: center;
         width: 100vw;
