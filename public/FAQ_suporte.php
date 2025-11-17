@@ -379,38 +379,38 @@ $nome_usuarios = $dados["nome_usuarios"];
 <script>
     const faqData = [{
             id: 1,
-            question: "What happens when I first join as an advisor?",
-            answer: "When you join as an advisor, you'll get access to our platform..."
+            question: "Onde posso acessar/alterar informações de cadastro?",
+            answer: "Através do Dashboard, clicando em Meu Perfil"
         },
         {
             id: 2,
-            question: "I am already a professional travel advisor. Can I join Fora?",
-            answer: "Yes, absolutely!..."
+            question: "Sendo um Administrador, posso alterar informações de meus funcionários?",
+            answer: "Sim, você está habilitado"
         },
         {
             id: 3,
-            question: "What types of travel can I book as a Fora Advisor?",
-            answer: "As a Fora Advisor, you can book a wide range..."
+            question: "Posso alterar informações de sensores, alarmes, trens e rotas após salvas? ",
+            answer: "Todas as características salvas podem ser alteradas."
         },
         {
             id: 4,
-            question: "What types of travel can I book as a Fora Advisor?",
-            answer: "As a Fora Advisor, you can book a wide range..."
+            question: "É possível gerar relatórios de movimentação?",
+            answer: "Sim, através da página Relatórios"
         },
         {
             id: 5,
-            question: "What types of travel can I book as a Fora Advisor?",
-            answer: "As a Fora Advisor, you can book a wide range..."
+            question: "Posso cadastrar novos sensores na linha de trem?",
+            answer: "O aplicativo já oferece as opções de sensores disponíveis para utilização"
         },
         {
             id: 6,
-            question: "What types of travel can I book as a Fora Advisor?",
-            answer: "As a Fora Advisor, you can book a wide range..."
+            question: "As rotas de passagem do trem podem ser escolhidas conforme necessidade?",
+            answer: "Sim, o maquinista pode definir sua rota a partir da logística necessária"
         },
         {
             id: 7,
-            question: "What types of travel can I book as a Fora Advisor?",
-            answer: "As a Fora Advisor, you can book a wide range..."
+            question: "Clientes podem acessar informações de transporte, formuladas pelo maquinista?",
+            answer: "As informações são tratadas e disponibilizadas ao usuário "
         }
         
     ];
