@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
     $id = (int) $_GET['id'];
 
-    $stmt = $conn->prepare("SELECT idsensores, tipo_sensor, localizacao_sensor FROM sensores WHERE idsensores = ?");
+    $stmt = $mysqli->prepare("SELECT idsensores, tipo_sensor, localizacao FROM sensores WHERE idsensores = ?");
     $stmt->bind_param('i', $id);
     $stmt->execute();
     $res = $stmt->get_result();
@@ -25,19 +25,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     <head>
         <meta charset="utf-8">
         <title>Confirmar exclusão</title>
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="../src/assets/css/bootstrap.min.css"> 
     </head>
     <body class="p-4">
         <div class="container">
             <h4>Confirmar exclusão</h4>
             <p>Deseja realmente excluir o sensor #<?php echo htmlspecialchars($sensor['idsensores']); ?> —
-               <?php echo htmlspecialchars($sensor['tipo_sensor']); ?> (<?php echo htmlspecialchars($sensor['localizacao_sensor']); ?>)?</p>
+               <?php echo htmlspecialchars($sensor['tipo_sensor']); ?> (<?php echo htmlspecialchars($sensor['localizacao']); ?>)?</p>
 
             <form method="post" action="remover_sensores.php" class="d-inline">
                 <input type="hidden" name="idsensores" value="<?php echo htmlspecialchars($sensor['idsensores']); ?>">
                 <button type="submit" class="btn btn-danger">Excluir</button>
             </form>
-            <a href="ListarSensores.php" class="btn btn-secondary">Cancelar</a>
+            <a href="../public/listar_sensores.php" class="btn btn-secondary">Cancelar</a>
         </div>
     </body>
     </html>
@@ -47,21 +47,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['idsensores'] ?? null;
-    if (!is_numeric($id)) {
+    if (!$id || !is_numeric($id)) {
         echo "ID inválido.";
         exit;
     }
     $id = (int) $id;
 
-    $stmt = $conn->prepare("DELETE FROM sensores WHERE idsensores = ?");
+    $stmt = $mysqli->prepare("DELETE FROM sensores WHERE idsensores = ?");
     $stmt->bind_param('i', $id);
 
     if ($stmt->execute()) {
         $stmt->close();
-        header('Location: ListarSensores.php');
+        header('Location: ../public/listar_sensores.php');
         exit;
     } else {
-        echo "Erro ao excluir o sensor.";
+        echo "Erro ao excluir o sensor: " . $stmt->error;
     }
 
     $stmt->close();
