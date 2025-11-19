@@ -67,7 +67,7 @@ $perfil_usuarios = $dados['perfil'] ?? '';
                             <p>Dashboard Geral</p>
                         </a>
                         <hr>
-                        <a href="../public/gestao_rotas.html">
+                        <a href="../public/gestao_rotas.php">
                             <p>Gestão de Rotas</p>
                         </a>
                         <hr>

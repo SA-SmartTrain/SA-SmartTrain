@@ -47,6 +47,7 @@ if (!isset($mysqli) || !$mysqli) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style/relatorios_e_analises.css">
     <title>Document</title>
 </head>
 <body>
@@ -100,3 +101,24 @@ if (!isset($mysqli) || !$mysqli) {
                             </div>
                         </div>
                     <?php endforeach; ?>
+
+                      <div class="container-menu-bar">
+                        <div class="sections-menu-bar" id="press-effect">
+                            <img src="../src/assets/images/inicio-bar.png" alt="">
+                            <div id="incio">
+                                <a href="../public/pagina_inicial.php"><span>Início</span></a>
+                            </div>
+                        </div>
+                        <div class="sections-menu-bar" id="press-effect">
+                            <img src="../src/assets/images/menu-bar.png" alt="">
+                            <a href="../public/documentacoes.html"><span>Menu</span></a>
+                        </div>
+                        <div class="sections-menu-bar" id="press-effect">
+                            <img src="../src/assets/images/estoque-bar.png" alt="">
+                            <a href="../public/relatorios_e_analises.php"><span>Estoque</span></a>
+                        </div>
+                        <div class="sections-menu-bar" id="press-effect">
+                            <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
+                            <a href="../public/funcionarios.php"><span>Funcionários</span></a>
+                        </div>
+                    </div>
