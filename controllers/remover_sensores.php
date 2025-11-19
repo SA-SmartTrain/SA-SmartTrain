@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
     $id = (int) $_GET['id'];
 
-    $stmt = $mysqli->prepare("SELECT idsensores, tipo_sensor, localizacao FROM sensores WHERE idsensores = ?");
+    $stmt = $mysqli->prepare("SELECT idsensores, tipo_sensor, localizacao_sensor FROM sensores WHERE idsensores = ?");
     $stmt->bind_param('i', $id);
     $stmt->execute();
     $res = $stmt->get_result();
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         <div class="container">
             <h4>Confirmar exclusão</h4>
             <p>Deseja realmente excluir o sensor #<?php echo htmlspecialchars($sensor['idsensores']); ?> —
-               <?php echo htmlspecialchars($sensor['tipo_sensor']); ?> (<?php echo htmlspecialchars($sensor['localizacao']); ?>)?</p>
+               <?php echo htmlspecialchars($sensor['tipo_sensor']); ?> (<?php echo htmlspecialchars($sensor['localizacao_sensor']); ?>)?</p>
 
             <form method="post" action="remover_sensores.php" class="d-inline">
                 <input type="hidden" name="idsensores" value="<?php echo htmlspecialchars($sensor['idsensores']); ?>">
