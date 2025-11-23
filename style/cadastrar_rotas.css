@@ -31,11 +31,12 @@ h1 {
     border-radius: 10px;
 }
 
-.flex {
-    gap: 30px;
-    display: flex;
+#observacoes{
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    background-color: rgb(242, 211, 124);;
 }
-
 
 .container_dados {
     width: 100px;
@@ -50,14 +51,11 @@ h1 {
     text-align: center;
 }
 
-
-
 #date {
     border: none;
     align-items: center;
     background-color: #F0F0F0;
 }
-
 
 .seletores {
     max-width: 500px;
@@ -95,11 +93,6 @@ h3 {
     height: 50px;
 }
 
-#destino {
-    border-radius: 10px;
-    width: 400px;
-    height: 50px;
-}
 
 /**/
 
@@ -169,10 +162,11 @@ h3 {
     height: 30px;
 }
 
-#dataTeste {
-    top: 3px;
-    right: 10px;
-    position: relative;
+#dataIda{
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    background-color: rgb(242, 211, 124);
 }
 
 #carga {
@@ -183,21 +177,6 @@ h3 {
     background-color: rgb(242, 211, 124);
 }
 
-#destino {
-    background-color: rgb(242, 211, 124);
-}
-
-#partida {
-    background-color: rgb(242, 211, 124);
-}
-
-#dia {
-    border-right: 500px;
-}
-
-#date {
-    border: none;
-}
 
 @media screen and (max-width: 480px) {
 
@@ -259,7 +238,6 @@ h3 {
         border-radius: 10px;
         width: 400px;
         height: 50px;
-        background-color: rgb(242, 211, 124);
     }
 
 

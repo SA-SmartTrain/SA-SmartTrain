@@ -67,7 +67,7 @@ $perfil_usuarios = $dados['perfil'] ?? '';
                             <p>Dashboard Geral</p>
                         </a>
                         <hr>
-                        <a href="../public/gestao_rotas.html">
+                        <a href="../public/gestao_rotas.php">
                             <p>Gestão de Rotas</p>
                         </a>
                         <hr>
@@ -92,7 +92,7 @@ $perfil_usuarios = $dados['perfil'] ?? '';
                         </a>
                         <hr>
                     </div>
-                    <div class="container-menu-bar">
+                    <div class="container-menu-bar" style="position: relative; bottom: -90px;">
                         <div class="sections-menu-bar" id="press-effect">
                             <img src="../src/assets/images/inicio-bar.png" alt="">
                             <div id="incio">
