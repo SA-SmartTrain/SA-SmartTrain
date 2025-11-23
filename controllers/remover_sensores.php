@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             <p>Deseja realmente excluir o sensor #<?php echo htmlspecialchars($sensor['idsensores']); ?> —
                <?php echo htmlspecialchars($sensor['tipo_sensor']); ?> (<?php echo htmlspecialchars($sensor['localizacao_sensor']); ?>)?</p>
 
-            <form method="post" action="remover_sensores.php" class="d-inline">
+            <form method="post" action="../controllers/remover_sensores.php" class="d-inline">
                 <input type="hidden" name="idsensores" value="<?php echo htmlspecialchars($sensor['idsensores']); ?>">
                 <button type="submit" class="btn btn-danger">Excluir</button>
             </form>
