@@ -34,24 +34,16 @@
                         </div>
                     </div>
                     <div class="container-aaa" style="display: flex;">
-                        <div class="container-amarelo">Funcionário 1
+                        <div class="container-amarelo">Funcionário 3
                             <img src="../src/assets/images/profile-login.png" alt="Foto Usuário">
                         </div>
-                        <div class="container-amarelo">Funcionário 2
-                            <img src="../src/assets/images/profile-login.png" alt="Foto Usuário">
-                        </div>
-                    </div>
-                    <div class="container-aaa" style="display: flex;">
-                        <div class="container-amarelo">Funcionário 1
-                            <img src="../src/assets/images/profile-login.png" alt="Foto Usuário">
-                        </div>
-                        <div class="container-amarelo">Funcionário 2
+                        <div class="container-amarelo">Funcionário 4
                             <img src="../src/assets/images/profile-login.png" alt="Foto Usuário">
                         </div>
                     </div>
                 </div>
 
-                <div class="container-menu-bar">
+                 <div class="container-menu-bar" style="position: relative; bottom: -90px;">
                         <div class="sections-menu-bar" id="press-effect">
                             <img src="../src/assets/images/inicio-bar.png" alt="">
                             <div id="incio">
