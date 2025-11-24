@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 </div>
 
                 <button type="submit">Salvar</button>
-                <a href="../public/listar_sensores.php" class="btn btn-secondary">Cancelar</a>
+                <a href="../controllers/ListarSensores.php" class="btn btn-secondary">Cancelar</a>
             </form>
         </div>
     </body>
@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param('ssssi', $tipo, $local, $data, $obs, $id);
     if ($stmt->execute()) {
         $stmt->close();
-        header('Location: ../public/listar_sensores.php'); 
+        header('Location: ../controllers/ListarSensores.php'); 
         exit;
     } else {
         echo "Erro ao atualizar: " . $stmt->error;

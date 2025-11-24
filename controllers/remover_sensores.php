@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 <input type="hidden" name="idsensores" value="<?php echo htmlspecialchars($sensor['idsensores']); ?>">
                 <button type="submit" class="btn btn-danger">Excluir</button>
             </form>
-            <a href="../public/listar_sensores.php" class="btn btn-secondary">Cancelar</a>
+            <a href="../controllers/ListarSensores.php" class="btn btn-secondary">Cancelar</a>
         </div>
     </body>
     </html>
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         $stmt->close();
-        header('Location: ../public/listar_sensores.php');
+        header('Location: ');
         exit;
     } else {
         echo "Erro ao excluir o sensor: " . $stmt->error;
