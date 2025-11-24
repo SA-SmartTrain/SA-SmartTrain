@@ -30,7 +30,7 @@ $nome_usuarios = $dados["nome_usuarios"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/SA-SmartTrain/src/assets/logo/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/pagina_inicial.css">
     <link rel="stylesheet" href="../style/global/container-size-mobile.css">
     <title>SmartTrain - FAQ Perguntas Frequentes</title>
@@ -40,8 +40,8 @@ $nome_usuarios = $dados["nome_usuarios"];
     <div class="container-size-mobile">
         <div class="container">
             <div class="container-accessibility-buttons">
-                <img src="/SA-SmartTrain/src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
-                <img src="/SA-SmartTrain/src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+                <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
+                <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
             <h1>Suporte FAQ - Perguntas Frequentes</h1>
 
@@ -60,24 +60,24 @@ $nome_usuarios = $dados["nome_usuarios"];
             </div>
         </main>
 
-        <div class="container-menu-bar">
+        <div class="container-menu-bar" style="position: relative; top: -400px;">
             <div class="sections-menu-bar" id="press-effect">
-                <img src="/SA-SmartTrain/src/assets/images/inicio-bar.png" alt="">
+                <img src="../src/assets/images/inicio-bar.png" alt="">
                 <div id="incio">
-                    <a href="../pagina_inicial.php"><span>Início</span></a>
+                    <a href="../public/pagina_inicial.php"><span>Início</span></a>
                 </div>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <img src="/SA-SmartTrain/src/assets/images/menu-bar.png" alt="">
-                <a href="../documentacoes.html"><span>Menu</span></a>
+                <img src="../src/assets/images/menu-bar.png" alt="">
+                <a href="../public/documentacoes.html"><span>Menu</span></a>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <img src="/SA-SmartTrain/src/assets/images/estoque-bar.png" alt="">
-                <a href="relatorios_e_analises.html"><span>Estoque</span></a>
+                <img src="../src/assets/images/estoque-bar.png" alt="">
+                <a href="../public/relatorios_e_analises.php"><span>Estoque</span></a>
             </div>
             <div class="sections-menu-bar" id="press-effect">
-                <div id="funcionarios"><img src="/SA-SmartTrain/src/assets/images/funcionarios-bar.png" alt=""></div>
-                <a href="funcionarios.html"><span>Funcionários</span></a>
+                <div id="funcionarios"><img src="../src/assets/images/funcionarios-bar.png" alt=""></div>
+                <a href="../public/funcionarios.php"><span>Funcionários</span></a>
             </div>
         </div>
     </div>

@@ -52,7 +52,7 @@ $perfil_usuarios = $dados['perfil'] ?? '';
                                 <p><strong>Nome:</strong> <?php echo htmlspecialchars($nome_usuarios); ?></p>
 
                                 <?php if ($perfil_usuarios === 'Administrador'): ?>
-                                    <p><a href="/SA-SmartTrain/public/admin/admin.php" style="color: rgb(242, 211, 124);">Admin</a></p>
+                                    <p><a href="../public/admin/admin.php" style="color: rgb(242, 211, 124);">Admin</a></p>
                                 <?php endif; ?>
 
                                 <p><a href="../public/login/logout.php" style="color: rgb(242, 211, 124);">Desconectar</a></p>

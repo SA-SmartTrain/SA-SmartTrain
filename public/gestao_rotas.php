@@ -5,7 +5,7 @@ $trens = [];
 $sensores = [];
 
 if (isset($mysqli) && $mysqli) {
-    
+
 
     $result_trens = $mysqli->query("SELECT idtrens, identificador_trem, carga_trem, capacidade_trem, vagoes_trem, estado_trem, velocidade_trem FROM trens ORDER BY idtrens DESC LIMIT 5");
     if ($result_trens) {
@@ -25,6 +25,7 @@ if (isset($mysqli) && $mysqli) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +33,7 @@ if (isset($mysqli) && $mysqli) {
     <link rel="stylesheet" href="../style/gestao_rotas.css">
     <title>SmartTrain - Gestão de Rotas</title>
 </head>
+
 <body>
     <main>
         <section>
@@ -79,7 +81,7 @@ if (isset($mysqli) && $mysqli) {
                                         <br>
                                     <?php endforeach; ?>
                                 <?php else: ?>
-                                    <p>Nenhum trem disponível</p>
+                                    <p style="background-color: rgb(242, 211, 124);">Nenhum trem disponível</p>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -92,8 +94,9 @@ if (isset($mysqli) && $mysqli) {
                         <div class="flex">
                             <?php if (!empty($sensores)): ?>
                                 <?php foreach ($sensores as $sensor): ?>
-                                    <div class="container_status">
-                                        <h3><?php echo htmlspecialchars($sensor['tipo_sensor']); ?></h3>
+                                    <div class="container_status" style="display: flex; max-width: 550px;
+    max-height: 60px;">
+                                        <h3 style="position: relative; bottom: 10px;"><?php echo htmlspecialchars($sensor['tipo_sensor']); ?></h3>
                                         <p><strong>Localização:</strong> <?php echo htmlspecialchars($sensor['localizacao_sensor']); ?></p>
                                         <p><strong>Data:</strong> <?php echo htmlspecialchars($sensor['data_sensor']); ?></p>
                                         <p><strong>Observação:</strong> <?php echo htmlspecialchars($sensor['observacao_sensor']); ?></p>
@@ -109,7 +112,7 @@ if (isset($mysqli) && $mysqli) {
             </div>
         </section>
 
-        <div class="container-menu-bar">
+        <div class="container-menu-bar" style="position: relative; top: 330px; right: -10px;">
             <div class="sections-menu-bar" id="press-effect">
                 <img src="../src/assets/images/inicio-bar.png" alt="">
                 <a href="../public/pagina_inicial.php"><span>Início</span></a>
@@ -134,4 +137,5 @@ if (isset($mysqli) && $mysqli) {
         </div>
     </main>
 </body>
+
 </html>
