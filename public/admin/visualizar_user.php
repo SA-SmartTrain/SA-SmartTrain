@@ -107,25 +107,6 @@ $result = mysqli_query($conn, $query);
             </tr>
         <?php endwhile; ?>
     </table>
-    <div class="container-menu-bar">
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="/SA-SmartTrain/src/assets/images/inicio-bar.png" alt="">
-            <div id="incio">
-                <a href="../pagina_inicial.php"><span>Início</span></a>
-            </div>
-        </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="/SA-SmartTrain/src/assets/images/menu-bar.png" alt="">
-            <a href="../documentacoes.html"><span>Menu</span></a>
-        </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <img src="/SA-SmartTrain/src/assets/images/estoque-bar.png" alt="">
-            <a href="relatorios_e_analises.php"><span>Estoque</span></a>
-        </div>
-        <div class="sections-menu-bar" id="press-effect">
-            <div id="funcionarios"><img src="/SA-SmartTrain/src/assets/images/funcionarios-bar.png" alt=""></div>
-            <a href="/SA-SmartTrain/funcionarios.php"><span>Funcionários</span></a>
-        </div>
     </div>
 </body>
 <style>

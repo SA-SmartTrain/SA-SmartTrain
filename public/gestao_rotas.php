@@ -93,9 +93,8 @@ if (isset($mysqli) && $mysqli) {
                         <h2>Sensores Cadastrados</h2>
                         <div class="flex">
                             <?php if (!empty($sensores)): ?>
-                                <?php foreach ($sensores as $sensor): ?>
-                                    <div class="container_status" style="display: flex; max-width: 550px;
-    max-height: 60px;">
+                                <?php foreach (array_reverse($sensores) as $sensor): ?>
+                                    <div class="container_status" style="display: flex; max-width: 550px; max-height: 60px;">
                                         <h3 style="position: relative; bottom: 10px;"><?php echo htmlspecialchars($sensor['tipo_sensor']); ?></h3>
                                         <p><strong>Localização:</strong> <?php echo htmlspecialchars($sensor['localizacao_sensor']); ?></p>
                                         <p><strong>Data:</strong> <?php echo htmlspecialchars($sensor['data_sensor']); ?></p>
