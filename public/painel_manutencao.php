@@ -26,7 +26,7 @@
                     <div class="sections-double-left">
                         <p>Manutenção dos trilhos</p>
                         <div class="section-double-left-img">
-                            <a href="../public/manutencao_trilho.html"> <img
+                            <a href="../public/manutencao_trilho.php"> <img
                                     src="../src/assets/images/manutencao_trilhos.png" alt=""></a>
                         </div>
                 </a>

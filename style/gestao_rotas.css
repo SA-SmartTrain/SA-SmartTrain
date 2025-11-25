@@ -267,4 +267,12 @@ h3 {
         bottom: 30px;
         height: 180px;
     }
+
+    .container_status {
+        width: 80px;
+        height: 70px;
+        margin: 0 auto;
+        background-color: #f0f0f0;
+        padding: 10px;
+    }
 }

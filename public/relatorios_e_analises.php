@@ -55,10 +55,11 @@ if (!isset($mysqli) || !$mysqli) {
         <section>
             <div class="container">
                 <div id="topo" class="flex">
-                    <div class="seta">
-                        <img src="../src/assets/images/seta.png" alt="Seta">
+                         <div class="container-accessibility-buttons">
+            <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
+            <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+        </div>
                     </div>
-                    <a href="./pagina_inicial.php" style="text-decoration: none;">
                         <h1 id="title">Relatórios e Análises</h1>
                     </a>
                 </div>
@@ -71,43 +72,7 @@ if (!isset($mysqli) || !$mysqli) {
                     <p style="color: red; margin: 10px 0;"><?php echo htmlspecialchars($error); ?></p>
                 <?php endif; ?>
 
-                <form method="POST" action="">
-                    <div class="flex-containers">
-                        <div class="container_amarelo">Carga
-                            <select name="tipocarga" required>
-                                <option value="">Selecione a carga...</option>
-                                <option value="Soja">Soja</option>
-                                <option value="Milho">Milho</option>
-                                <option value="Feijão">Feijão</option>
-                                <option value="Ervilha">Ervilha</option>
-                                <option value="Carvão">Carvão</option>
-                                <option value="Açúcar">Açúcar</option>
-                                <option value="Barras de Aço">Barras de Aço</option>
-                                <option value="Minério">Minério</option>
-                                <option value="Cereais">Cereais</option>
-                                <option value="Petróleo">Petróleo</option>
-                            </select>
-                        </div>
-                        <div class="container_amarelo">Data
-                            <input type="date" name="data_relatorio" required>
-                        </div>
-                        <div class="container_amarelo">Quantidade
-                            <select name="quantidade_relatorio" required>
-                                <option value="">Selecione o tamanho...</option>
-                                <option value="1-50 Toneladas">1-50 Toneladas</option>
-                                <option value="50-100 Toneladas">50-100 Toneladas</option>
-                                <option value="100-500 Toneladas">100-500 Toneladas</option>
-                                <option value="500-1.000 Toneladas">500-1.000 Toneladas</option>
-                                <option value="1.000-5.000 Toneladas">1.000-5.000 Toneladas</option>
-                                <option value="5.000-10.000 Toneladas">5.000-10.000 Toneladas</option>
-                                <option value="10.000-15.000 Toneladas">10.000-15.000 Toneladas</option>
-                                <option value="Mais de 20 mil Toneladas">Mais de 20 mil Toneladas</option>
-                                <option value="Mais de 50 mil Toneladas">Mais de 50 mil Toneladas</option>
-                                <option value="Mais de 100 mil Toneladas">Mais de 100 mil Toneladas</option>
-                                <option value="Mais de 500 mil Toneladas">Mais de 500 mil Toneladas</option>
-                            </select>
-                        </div>
-                    </div>
+                
 
                     <h2 style="margin-top: 30px;">Registros</h2>
                     <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
@@ -168,11 +133,6 @@ if (!isset($mysqli) || !$mysqli) {
                 <img src="../src/assets/images/funcionarios-bar.png" alt="">
                 <a href="../public/funcionarios.php"><span>Funcionários</span></a>
             </div>
-        </div>
-
-        <div class="container-accessibility-buttons">
-            <img src="../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
-            <img src="../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
         </div>
     </main>
 </body>

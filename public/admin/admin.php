@@ -40,39 +40,25 @@ $nome_usuarios = $dados["nome_usuarios"];
     <div class="container-size-mobile">
         <div class="container">
             <div class="container-accessibility-buttons">
-                <img src="/SA-SmartTrain/src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
-                <img src="/SA-SmartTrain/src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
+                <img src="../../src/assets/images/notifications.png" onclick="pushNot()" id="notifications">
+                <img src="../../src/assets/images/dark_and_white-mode.png" id="dark_and_white-mode">
             </div>
             <h1>Admin</h1>
+            <h1 style="position: relative; font-family: Arial;">
+                Bem-vindo, <?php echo htmlspecialchars($nome_usuarios); ?>!
+            </h1>
+            <h3 style="font-family: Arial; position: relative; left: 35px; font-weight: 400;">
+                Controle central de usuários e sensores do Sistema de Gestão Ferroviária SmartTrain.
+            </h3>
             <div class="container-sections">
                 <a href="../admin/visualizar_user.php">
                     <p>Visualizar Usuários</p>
                 </a>
                 <hr>
-                <a href="../admin/FAQ.php">
-                    <p>Hub Suporte FAQ</p>
+                <a href="../admin/">
+                    <p>Visualizar Sensores MQTT Ativos</p>
                 </a>
                 <hr>
-            </div>
-        </div>
-        <div class="container-menu-bar">
-            <div class="sections-menu-bar" id="press-effect">
-                <img src="/SA-SmartTrain/src/assets/images/inicio-bar.png" alt="">
-                <div id="incio">
-                    <a href="../pagina_inicial.php"><span>Início</span></a>
-                </div>
-            </div>
-            <div class="sections-menu-bar" id="press-effect">
-                <img src="/SA-SmartTrain/src/assets/images/menu-bar.png" alt="">
-                <a href="../documentacoes.html"><span>Menu</span></a>
-            </div>
-            <div class="sections-menu-bar" id="press-effect">
-                <img src="/SA-SmartTrain/src/assets/images/estoque-bar.png" alt="">
-                <a href="relatorios_e_analises.php"><span>Estoque</span></a>
-            </div>
-            <div class="sections-menu-bar" id="press-effect">
-                <div id="funcionarios"><img src="/SA-SmartTrain/src/assets/images/funcionarios-bar.png" alt=""></div>
-                <a href="funcionarios.php"><span>Funcionários</span></a>
             </div>
         </div>
     </div>
@@ -190,102 +176,102 @@ $nome_usuarios = $dados["nome_usuarios"];
 
     @media screen and (max-width: 960px) {
 
-  .container-accessibility-buttons {
-    position: relative;
-    right: 1400px;
-  }
+        .container-accessibility-buttons {
+            position: relative;
+            right: 1400px;
+        }
 
-  .container-sections hr {
-    position: relative;
-    right: 25px;
-  }
+        .container-sections hr {
+            position: relative;
+            right: 25px;
+        }
 
-  .container-menu-bar {
-    position: relative;
-    top: 30px;
-    gap: 55px;
-    right: 30px;
-  }
+        .container-menu-bar {
+            position: relative;
+            top: 30px;
+            gap: 55px;
+            right: 30px;
+        }
 
 
-}
+    }
 
-@media screen and (max-width: 480px) {
-  body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    background: #F0F0F0;
-  }
+    @media screen and (max-width: 480px) {
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background: #F0F0F0;
+        }
 
-  .container-accessibility-buttons {
-    top: 32px;
-    margin-left: 0;
-    width: 100%;
-    gap: 16px;
-    justify-content: flex-end;
-    padding-right: 18px;
-    position: absolute;
-    right: 0;
-  }
+        .container-accessibility-buttons {
+            top: 32px;
+            margin-left: 0;
+            width: 100%;
+            gap: 16px;
+            justify-content: flex-end;
+            padding-right: 18px;
+            position: absolute;
+            right: 0;
+        }
 
-  .container-accessibility-buttons img {
-    margin-left: 0;
-    width: 26px;
-    height: 26px;
-  }
+        .container-accessibility-buttons img {
+            margin-left: 0;
+            width: 26px;
+            height: 26px;
+        }
 
-  h1 {
-    margin-left: 0;
-    padding-left: 18px;
-    font-size: 22px;
-    margin-top: 32px;
-    margin-bottom: 0;
-  }
+        h1 {
+            margin-left: 0;
+            padding-left: 18px;
+            font-size: 22px;
+            margin-top: 32px;
+            margin-bottom: 0;
+        }
 
-  .container-sections {
-    margin-left: 0;
-    top: 60px;
-    padding: 0 18px;
-  }
+        .container-sections {
+            margin-left: 0;
+            top: 60px;
+            padding: 0 18px;
+        }
 
-  .container-sections a {
-    display: block;
-  }
+        .container-sections a {
+            display: block;
+        }
 
-  .container-sections p {
-    top: 0;
-    font-size: 22px;
-    margin-bottom: 0;
-    margin-top: 28px;
-    font-weight: 400;
-    text-align: left;
-  }
+        .container-sections p {
+            top: 0;
+            font-size: 22px;
+            margin-bottom: 0;
+            margin-top: 28px;
+            font-weight: 400;
+            text-align: left;
+        }
 
-  .container-sections hr {
-    right: 0;
-    width: 90%;
-    margin: 4px 0 0 0;
-    border: none;
-    border-top: 3px solid rgb(242, 211, 124);
-    background: rgb(242, 211, 124);
-    border-radius: 80px;
-    height: 0;
-    margin-right: 0;
-  }
+        .container-sections hr {
+            right: 0;
+            width: 90%;
+            margin: 4px 0 0 0;
+            border: none;
+            border-top: 3px solid rgb(242, 211, 124);
+            background: rgb(242, 211, 124);
+            border-radius: 80px;
+            height: 0;
+            margin-right: 0;
+        }
 
-  .container-menu-bar {
-    position: relative;
-    top:517px;
-    gap: 40px;
-  }
+        .container-menu-bar {
+            position: relative;
+            top: 517px;
+            gap: 40px;
+        }
 
-  .container-menu-bar img {
-    left: 5px;
-    width: 46px;
-    height: 46px;
-  }
-}
+        .container-menu-bar img {
+            left: 5px;
+            width: 46px;
+            height: 46px;
+        }
+    }
 </style>
 
 </html>

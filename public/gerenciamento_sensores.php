@@ -39,8 +39,8 @@
                 </div>
             </a>
 
+              <a href="../controllers/ListarSensores.php" style=" text-decoration: none;">
             <img src="../src/assets/images/listar.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
-            <a href="./listar_sensores.php" style=" text-decoration: none;">
                 <div class="opcao">
                     <h3 id="opc">Listar Sensores</h3>
                 </div>
