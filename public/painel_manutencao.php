@@ -31,12 +31,7 @@
                         </div>
                 </a>
             </div>
-            <div class="sections-double-right">
-                <p>Manutenção dos Trens</p>
-                <div class="section-double-right-img">
-                    <a href="../public/gerenciamento_trens.php"><img src="../src/assets/images/trem.png"
-                            alt=""></a>
-                </div>
+
 
 
             </div>
