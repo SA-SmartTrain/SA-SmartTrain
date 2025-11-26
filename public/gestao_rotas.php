@@ -52,9 +52,7 @@ if (isset($mysqli) && $mysqli) {
                     <div class="container_amarelo">
                         <h2>Trens Cadastrados</h2>
                         <div class="flex">
-                            <div class="relogio">
-                                <img src="../src/assets/images/relogio.png" alt="Relógio">
-                            </div>
+                            
                             <div class="container_interno">
                                 <?php if (!empty($trens)): ?>
                                     <?php foreach ($trens as $trem): ?>
@@ -103,7 +101,7 @@ if (isset($mysqli) && $mysqli) {
                                     <br>
                                 <?php endforeach; ?>
                             <?php else: ?>
-                                <p>Nenhum sensor disponível</p>
+                                <p style="background-color: rgb(242, 211, 124);">Nenhum sensor disponível</p>
                             <?php endif; ?>
                         </div>
                     </div>

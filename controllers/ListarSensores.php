@@ -12,9 +12,9 @@ if (!$result) {
     exit;
 }
 
-echo '<table class="table" style="width:100%; border-collapse:collapse;">';
+echo '<table class="table" style="width:90%; border-collapse:collapse; font-family: Arial">';
 echo '<thead><tr>';
-echo '<th>ID</th><th>Tipo</th><th>Localização</th><th>Data</th><th>Observação</th><th>Ações</th>';
+echo '<th >ID</th><th>Tipo</th><th>Localização</th><th>Data</th><th>Observação</th><th>Ações</th>';
 echo '</tr></thead>';
 echo '<tbody>';
 while ($row = $result->fetch_assoc()) {
@@ -32,6 +32,9 @@ while ($row = $result->fetch_assoc()) {
 }
 echo '</tbody></table>';
 
+
 $result->free();
 $mysqli->close();
 ?>
+
+

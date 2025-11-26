@@ -74,8 +74,9 @@ if (!isset($mysqli) || !$mysqli) {
 
                 
 
-                    <h2 style="margin-top: 30px;">Registros</h2>
-                    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                    <h2 style="margin-top: 30px; font-family:Arial, Helvetica, sans-serif;">Registros - Inseridos no BD</h2>
+
+                    <table style="width: 90%; border: collapse 50%; margin-bottom: 20px; font-family: Arial, Helvetica, sans-serif;">
                         <thead>
                             <tr style="background-color: #f4f4f4;">
                                 <th style="border: 1px solid #ddd; padding: 8px;">ID</th>

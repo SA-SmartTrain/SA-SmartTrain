@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         $stmt->close();
-        header('Location: ');
+        header('Location: ../controllers/ListarSensores.php');
         exit;
     } else {
         echo "Erro ao excluir o sensor: " . $stmt->error;
