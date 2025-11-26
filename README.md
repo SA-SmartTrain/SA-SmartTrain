@@ -69,6 +69,19 @@ SA-SmartTrain/
 
 
 ```
+## Funcionalidades principais
+
+Gerenciamento completo de dados (CRUD)
+O sistema permite criar, visualizar, atualizar e excluir informações essenciais, como trens, ferrovias, usuários, horários, viagens e status operacionais. Isso garante controle total sobre os registros e operações do ambiente ferroviário.
+
+Adequação à formatação e regras de negócio
+Todas as informações seguem padrões definidos de validação e formatação, assegurando consistência, organização e funcionamento correto das rotinas internas do sistema.
+
+Interface Web Responsiva
+O sistema oferece uma interface acessível diretamente pelo navegador, permitindo que gestores e usuários interajam com todas as funcionalidades sem necessidade de instalação adicional.
+
+Integração com Hardware (Arduino/ESP)
+Possui suporte opcional para conexão com módulos Arduino, ESP8266 e ESP32, possibilitando integração com sensores, atuadores e outros dispositivos IoT para monitoramento e controle em tempo real.
 
 ## 🖥️ Tecnologias utilizadas
 
