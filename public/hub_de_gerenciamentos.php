@@ -44,7 +44,7 @@
                         <div class="sections-double-left">
                             <p>Gerar Relatório</p>
                             <div class="section-double-left-img">
-                                <a href="../public/gerar_relatorio.html"> <img
+                                <a href="../public/gerar_relatorio.php"> <img
                                         src="../src/assets/images/relatorio.png" alt=""></a>
                             </div>
                     </a>
