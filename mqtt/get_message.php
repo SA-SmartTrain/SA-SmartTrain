@@ -3,7 +3,7 @@ require("phpMQTT.php");
 
 $server = "test.mosquitto.org";
 $port = 8883;
-$topic = "TOPIC_PONTEH";
+$topic = "Trem/Vel";
 $client_id = "SMARTTRAIN-" . rand();
 
 $username = "SMARTTRAIN_TREM";

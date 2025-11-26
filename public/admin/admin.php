@@ -55,7 +55,7 @@ $nome_usuarios = $dados["nome_usuarios"];
                     <p>Visualizar Usuários</p>
                 </a>
                 <hr>
-                <a href="../admin/">
+                <a href="../../mqtt/sensores_mqtt_activated.php">
                     <p>Visualizar Sensores MQTT Ativos</p>
                 </a>
                 <hr>

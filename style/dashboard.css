@@ -288,7 +288,7 @@ h1 {
 
 @media screen and (max-width: 480px) {
 
-    body{
+    body {
         position: relative;
         left: 703px;
         overflow-y: hidden;
@@ -304,6 +304,11 @@ h1 {
     #title {
         position: relative;
         top: -60px;
+    }
+
+    .container-right-calendar {
+        position: relative;
+        bottom: 20px;
     }
 
     .container-accessibility-buttons {
@@ -322,7 +327,7 @@ h1 {
     .container-menu-bar {
         position: fixed;
         left: -36px;
-        top: 650px;
+        top: 705px;
         gap: 40px;
         z-index: 999;
 
@@ -401,27 +406,28 @@ h1 {
     }
 
     .weather-card .icon {
-    position: absolute;
-    left: 320px;
-    bottom: 120px;
+        position: absolute;
+        left: 320px;
+        bottom: 120px;
+    }
+
+    .details span {
+        position: relative;
+        left: 200px;
+        bottom: 27px;
+    }
+
+
+    .weather-card h1 {
+        position: relative;
+        left: 0px;
+        top: 1px;
+        font-size: 48px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
 }
 
-.details span {
-    position: relative;
-    left: 200px;
-    bottom: 27px;
-}
-
-
-.weather-card h1 {
-    position: relative;
-    left: 0px;
-    top: 1px;
-    font-size: 48px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-}
 .sections-main-bottom img {
     width: 100%;
     height: 100%;
