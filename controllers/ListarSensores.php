@@ -39,7 +39,24 @@ echo '<style>
     }
     .tabela-sensores-container tr:hover {
         background-color: #f9f9f9;
-  
+    }
+    .tabela-sensores-container a {
+        color: #2C2C2C;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    .tabela-sensores-container a:hover {
+        background-color: #2C2C2C;
+        color: #FFC107;
+        text-decoration: none;
+    }
+    .tabela-sensores-container a:last-child {
+        margin-right: 0;
+    }
 </style>';
 
 echo '<div class="tabela-sensores-container">';
