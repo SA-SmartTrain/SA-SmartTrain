@@ -12,9 +12,40 @@ if (!$result) {
     exit;
 }
 
-echo '<table class="table" style="width:90%; border-collapse:collapse; font-family: Arial">';
+echo '<style>
+    .tabela-sensores-container {
+        background-color: #FFC107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+    .tabela-sensores-container table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        font-family: Arial, sans-serif;
+    }
+    .tabela-sensores-container th {
+        background-color: #2C2C2C;
+        color: #FFC107;
+        padding: 12px;
+        text-align: left;
+        font-weight: bold;
+        border-bottom: 2px solid #FFC107;
+    }
+    .tabela-sensores-container td {
+        padding: 10px 12px;
+        border-bottom: 1px solid #ddd;
+    }
+    .tabela-sensores-container tr:hover {
+        background-color: #f9f9f9;
+  
+</style>';
+
+echo '<div class="tabela-sensores-container">';
+echo '<table>';
 echo '<thead><tr>';
-echo '<th >ID</th><th>Tipo</th><th>Localização</th><th>Data</th><th>Observação</th><th>Ações</th>';
+echo '<th>ID</th><th>Tipo</th><th>Localização</th><th>Data</th><th>Observação</th><th>Ações</th>';
 echo '</tr></thead>';
 echo '<tbody>';
 while ($row = $result->fetch_assoc()) {
@@ -25,13 +56,13 @@ while ($row = $result->fetch_assoc()) {
     echo '<td>' . htmlspecialchars($row['data_sensor']) . '</td>';
     echo '<td>' . htmlspecialchars($row['observacao_sensor']) . '</td>';
     echo '<td>';
-    echo '<a href="../controllers/editar_sensores.php?id=' . urlencode($row['idsensores']) . '">Editar</a> ';
+    echo '<a href="../controllers/editar_sensores.php?id=' . urlencode($row['idsensores']) . '">Editar</a>';
     echo '<a href="../controllers/remover_sensores.php?id=' . urlencode($row['idsensores']) . '">Excluir</a>';
     echo '</td>';
     echo '</tr>';
 }
 echo '</tbody></table>';
-
+echo '</div>';
 
 $result->free();
 $mysqli->close();
