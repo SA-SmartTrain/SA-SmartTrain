@@ -10,7 +10,7 @@
         echo "";
     }
     if (isset($_POST['logout'])) {
-        session_destroy();
+        unset($_SESSION["email_usuarios"]);
         header('Location: cadastre-se-page.php');
         echo '<script>
             setTimeout(function() {
@@ -46,7 +46,7 @@
 
      .logo {
          width: 310px;
-         height: auto;
+        animation: none;
          margin-bottom: 20px;
      }
      
