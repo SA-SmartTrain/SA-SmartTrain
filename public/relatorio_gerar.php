@@ -1,6 +1,6 @@
 <?php
 
-require_once 'smarttrain'; //trocar pelo seu db.php
+require_once __DIR__ . '/../db/conn.php';
 require_once 'dompdf/autoload.inc.php';
 
 $tipo_relatorio = $_GET['tipo'] ?? '';
@@ -20,10 +20,9 @@ function gerar_dados_relatorio($conn, $tipo)
         case 'usuarios': //Arrumar
             $dados['titulo'] = "Relatório de Usuários Ativos";
             $dados['colunas'] = ['ID', 'Nome', 'E-mail', 'CPF', 'Perfil', 'Telefone', 'Endereço'];
-            $sql = "SELECT f.idusuarios, u.nome_usuarios, f.email_usuarios, f.cpf_usuarios, f.perfil, f.telefone_usuario, f.endereco_usuario
-                    FROM usuarios f 
-                    INNER JOIN usuarios u ON f.idusuarios = u.idusuarios 
-                    ORDER BY u.nome_usuarios ASC";
+            $sql = "SELECT idusuarios, nome_usuarios, email_usuarios, cpf_usuarios, perfil, telefone_usuario, endereco_usuario
+                    FROM usuarios
+                    ORDER BY nome_usuarios ASC";
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
                 $dados['registros'][] = [
@@ -33,7 +32,7 @@ function gerar_dados_relatorio($conn, $tipo)
                     $row['cpf_usuarios'],
                      $row['perfil'],
                       $row['telefone_usuario'],
-                       $row['endereco_usuarios'],
+                       $row['endereco_usuario'],
                 ];
             }
             break;
@@ -42,11 +41,9 @@ function gerar_dados_relatorio($conn, $tipo)
             $dados['titulo'] = "Relatório de Trens em Manutenção";
             $dados['colunas'] = ['ID da Manutenção', 'Horário', 'Observações', 'Linha', 'ID do Usuário'];
             $sql = "SELECT 
-                        t.idmanutencao, t.horario_manutencao, t.observacao_manutencao, t.linha_manutencao, t.idusuarios
-                    FROM manutencao t
-                    LEFT JOIN manutencoes m ON t.idmanutencao = m.id.manutencao
-                    GROUP BY t.id_trem
-                    ORDER BY t.idmanutencao ASC";
+                        idmanutencao, horario_manutencao, observacao_manutencao, linha_manutencao, idusuarios
+                    FROM manutencao 
+                    ORDER BY idmanutencao ASC";
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
                 $dados['registros'][] = [
@@ -55,15 +52,13 @@ function gerar_dados_relatorio($conn, $tipo)
                     $row['observacao_manutencao'],
                     $row['linha_manutencao'],
                     $row['idusuarios'],
-                    ucfirst($row['idmanutencao']),
-                    $row['ultima_os'] ? date('d/m/Y H:i', strtotime($row['ultima_os'])) : 'N/A'
                 ];
             }
             break;
 
         case 'sensores': //Arrumar
             $dados['titulo'] = "Relatório de Sensores";
-            $dados['colunas'] = ['Identificação', 'Tipo', 'Modelo', 'Status', 'Instalação'];
+            $dados['colunas'] = ['Identificação', 'Tipo', 'Localização', 'Data', 'Observação'];
             $sql = "SELECT 
                         idsensores, tipo_sensor, localizacao_sensor, data_sensor, observacao_sensor
                     FROM sensores
