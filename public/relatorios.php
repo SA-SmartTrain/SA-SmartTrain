@@ -85,8 +85,8 @@
                     <div class="col-md-6 col-lg-4 mb-4">
                         <div class="card shadow-sm">
                             <div class="card-body">
-                                <h5 class="card-title">Funcionários Ativos</h5>
-                                <p class="card-text">Gera um relatório detalhado sobre funcionários ativos.</p>
+                                <h5 class="card-title">Usuários</h5>
+                                <p class="card-text">Gera um relatório detalhado sobre os usuários.</p>
                                 <div class="d-flex justify-content-between">
                                     <a href="relatorio_gerar.php?tipo=usuarios&formato=html" target="_blank" class="btn btn-sm btn-info">
                                         Visualizar
@@ -104,7 +104,7 @@
                         <div class="card shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title">Trens em Manutenção</h5>
-                                <p class="card-text">Gera um relatório detalhado sobre trens em manutenção.</p>
+                                <p class="card-text">Gera um relatório detalhado sobre os trens em manutenção.</p>
                                 <div class="d-flex justify-content-between">
                                     <a href="relatorio_gerar.php?tipo=manutencao&formato=html" target="_blank" class="btn btn-sm btn-info">
                                         Visualizar
@@ -122,7 +122,7 @@
                         <div class="card shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title">Sensores</h5>
-                                <p class="card-text">Gera um relatório detalhado sobre sensores.</p>
+                                <p class="card-text">Gera um relatório detalhado sobre os sensores.</p>
                                 <div class="d-flex justify-content-between">
                                     <a href="relatorio_gerar.php?tipo=sensores&formato=html" target="_blank" class="btn btn-sm btn-info">
                                         Visualizar
