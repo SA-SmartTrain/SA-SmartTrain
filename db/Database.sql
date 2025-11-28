@@ -230,7 +230,7 @@ CREATE TABLE IF NOT EXISTS trens (
         '50',
         '55',
         '60'
-    )NOT NULL,
+    ) NOT NULL,
 
     estado_trem ENUM(
         'Parado',
@@ -239,14 +239,15 @@ CREATE TABLE IF NOT EXISTS trens (
         'Em carregamento',
         'Aguardando carga',
         'Chegou ao destino'
-    )NOT NULL,
+    ) NOT NULL,
 
     velocidade_trem ENUM(
         '60km/h',
         '80km/h',
         '100km/h',
         '120km/h'
-    )NOT NULL
+    ) NOT NULL
+);
 
 CREATE TABLE relatorios (
   id INT AUTO_INCREMENT PRIMARY KEY,
