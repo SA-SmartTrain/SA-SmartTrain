@@ -2,6 +2,10 @@
 require_once __DIR__ . '/../db/conn.php';
 
 $opcoes_cargas = [];
+$trens = [];
+$success = '';
+$error = '';
+
 if (isset($mysqli) && $mysqli) {
     $res = $mysqli->query("SELECT idcargas, tipo_carga, partida_carga, destino_carga FROM cargas");
     if ($res) {
@@ -9,6 +13,37 @@ if (isset($mysqli) && $mysqli) {
             $opcoes_cargas[] = $row;
         }
         $res->free();
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $carga = trim($_POST['carga_trem'] ?? '');
+        $capacidade = trim($_POST['capacidade_trem'] ?? '');
+        $vagoes = trim($_POST['vagoes_trem'] ?? '');
+        $estado = trim($_POST['estado_trem'] ?? '');
+        $velocidade = trim($_POST['velocidade_trem'] ?? '');
+
+        if ($carga && $capacidade && $vagoes && $estado && $velocidade) {
+            $stmt = $mysqli->prepare("INSERT INTO trens (carga_trem, capacidade_trem, vagoes_trem, estado_trem, velocidade_trem) VALUES (?, ?, ?, ?, ?)");
+            if ($stmt) {
+                $stmt->bind_param('sssss', $carga, $capacidade, $vagoes, $estado, $velocidade);
+                if ($stmt->execute()) {
+                    $success = 'Trem cadastrado com sucesso!';
+                } else {
+                    $error = 'Erro ao cadastrar: ' . $stmt->error;
+                }
+                $stmt->close();
+            }
+        } else {
+            $error = 'Preencha todos os campos.';
+        }
+    }
+
+    $res_trens = $mysqli->query("SELECT idtrens, identificador_trem, carga_trem, capacidade_trem, vagoes_trem, estado_trem, velocidade_trem FROM trens ORDER BY idtrens DESC");
+    if ($res_trens) {
+        while ($row = $res_trens->fetch_assoc()) {
+            $trens[] = $row;
+        }
+        $res_trens->free();
     }
 }
 ?>
@@ -19,7 +54,60 @@ if (isset($mysqli) && $mysqli) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../src/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/gerenciamento_trens.css">
-    <title>SmartTrain - Cadastro de Cargas</title>
+    <style>
+        .tabela-container {
+            margin-top: 40px;
+            background-color: #FFC107;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .tabela-container h3 {
+            color: #2C2C2C;
+            margin-bottom: 15px;
+        }
+        .tabela-container table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        .tabela-container th {
+            background-color: #2C2C2C;
+            color: #FFC107;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        .tabela-container td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        .tabela-container tr:hover {
+            background-color: #f9f9f9;
+        }
+        .tabela-container a {
+            color: #2C2C2C;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .tabela-container a:hover {
+            text-decoration: underline;
+        }
+        .msg-sucesso {
+            color: green;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .msg-erro {
+            color: red;
+            background-color: #ffebee;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <section>
@@ -39,7 +127,14 @@ if (isset($mysqli) && $mysqli) {
     </section>
 
     <section class="seletores">
-        <form action="gerenciar_trens.php" method="POST">
+        <?php if ($success): ?>
+            <p class="msg-sucesso"><?php echo htmlspecialchars($success); ?></p>
+        <?php endif; ?>
+        <?php if ($error): ?>
+            <p class="msg-erro"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
+
+        <form action="gerenciamento_trens.php" method="POST">
             <h3>Informe a carga que o trem transportará:</h3>
             <select id="carga" name="carga_trem" required>
                 <option value="">Selecione a carga...</option>
@@ -116,6 +211,9 @@ if (isset($mysqli) && $mysqli) {
 
             <input type="submit" value="Salvar"/>
         </form>
+
+        
+        </div>
 
         <div class="container-menu-bar">
             <div class="sections-menu-bar" id="press-effect">
