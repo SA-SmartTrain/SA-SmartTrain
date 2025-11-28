@@ -52,7 +52,7 @@
 
         </div>
 
-        <div class="container-menu-bar" style="position: relative; bottom: -150px;">
+        <div class="container-menu-bar" style="position: relative; bottom: -90px;">
             <div class="sections-menu-bar" id="press-effect">
                 <img src="../src/assets/images/inicio-bar.png" alt="">
                 <div id="incio">
