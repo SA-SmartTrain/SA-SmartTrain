@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
     $id = (int) $_GET['id'];
 
-    $stmt = $mysqli->prepare("SELECT idtrens, identificador_trem, carga_trem, estado_trem FROM trens WHERE idtrens = ?");
+    $stmt = $mysqli->prepare("SELECT idtrens,  carga_trem, estado_trem FROM trens WHERE idtrens = ?");
     $stmt->bind_param('i', $id);
     $stmt->execute();
     $res = $stmt->get_result();
@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         <div class="container">
             <h4>Confirmar exclusão</h4>
             <p>Deseja realmente excluir o trem #<?php echo htmlspecialchars($trem['idtrens']); ?> —
-               <?php echo htmlspecialchars($trem['identificador_trem']); ?> (<?php echo htmlspecialchars($trem['carga_trem']); ?>)?</p>
 
             <form method="post" action="" class="d-inline">
                 <input type="hidden" name="idtrens" value="<?php echo htmlspecialchars($trem['idtrens']); ?>">
@@ -58,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         $stmt->close();
-        header('Location: ../public/gerenciamento_trens.php');
+        header('Location: ../public/gerenciamento_geral_trens.php');
         exit;
     } else {
         echo "Erro ao excluir o trem: " . $stmt->error;

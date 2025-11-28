@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         exit;
     }
     $id = (int)$_GET['id'];
-    $stmt = $mysqli->prepare("SELECT idtrens, identificador_trem, carga_trem, capacidade_trem, vagoes_trem, estado_trem, velocidade_trem FROM trens WHERE idtrens = ?");
+    $stmt = $mysqli->prepare("SELECT idtrens, carga_trem, capacidade_trem, vagoes_trem, estado_trem, velocidade_trem FROM trens WHERE idtrens = ?");
     $stmt->bind_param('i', $id);
     $stmt->execute();
     $res = $stmt->get_result();
@@ -44,10 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             <form method="post" action="../controllers/editar_trem.php">
                 <input type="hidden" name="idtrens" value="<?php echo htmlspecialchars($trem['idtrens']); ?>">
                 
-                <div class="form-group">
-                    <label>Identificador:</label>
-                    <input type="text" name="identificador_trem" value="<?php echo htmlspecialchars($trem['identificador_trem'] ?? ''); ?>">
-                </div>
+    
 
                 <div class="form-group">
                     <label>Carga:</label>
@@ -138,7 +135,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = (int)($_POST['idtrens'] ?? 0);
-    $identificador = $_POST['identificador_trem'] ?? '';
     $carga = $_POST['carga_trem'] ?? '';
     $capacidade = $_POST['capacidade_trem'] ?? '';
     $vagoes = $_POST['vagoes_trem'] ?? '';
@@ -150,15 +146,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $stmt = $mysqli->prepare("UPDATE trens SET identificador_trem = ?, carga_trem = ?, capacidade_trem = ?, vagoes_trem = ?, estado_trem = ?, velocidade_trem = ? WHERE idtrens = ?");
+    $stmt = $mysqli->prepare("UPDATE trens SET  carga_trem = ?, capacidade_trem = ?, vagoes_trem = ?, estado_trem = ?, velocidade_trem = ? WHERE idtrens = ?");
     if (!$stmt) {
         echo "Erro ao preparar query: " . $mysqli->error;
         exit;
     }
-    $stmt->bind_param('ssssssi', $identificador, $carga, $capacidade, $vagoes, $estado, $velocidade, $id);
+    $stmt->bind_param('sssssi', $carga, $capacidade, $vagoes, $estado, $velocidade, $id);
     if ($stmt->execute()) {
         $stmt->close();
-        header('Location: ../public/gerenciamento_trens.php'); 
+        header('Location: ../public/gerenciamento_geral_trens.php'); 
         exit;
     } else {
         echo "Erro ao atualizar: " . $stmt->error;

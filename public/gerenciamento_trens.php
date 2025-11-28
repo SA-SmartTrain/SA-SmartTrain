@@ -1,5 +1,4 @@
 <?php
-<?php
 require_once __DIR__ . '/../db/conn.php';
 
 $opcoes_cargas = [];
@@ -213,43 +212,7 @@ if (isset($mysqli) && $mysqli) {
             <input type="submit" value="Salvar"/>
         </form>
 
-        <div class="tabela-container">
-            <h3>Trens Cadastrados</h3>
-            <?php if (!empty($trens)): ?>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Identificador</th>
-                            <th>Carga</th>
-                            <th>Capacidade</th>
-                            <th>Vagões</th>
-                            <th>Estado</th>
-                            <th>Velocidade</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($trens as $trem): ?>
-                            <tr>
-                                <td><?php echo htmlspecialchars($trem['idtrens']); ?></td>
-                                <td><?php echo htmlspecialchars($trem['identificador_trem'] ?? 'N/A'); ?></td>
-                                <td><?php echo htmlspecialchars($trem['carga_trem']); ?></td>
-                                <td><?php echo htmlspecialchars($trem['capacidade_trem']); ?></td>
-                                <td><?php echo htmlspecialchars($trem['vagoes_trem']); ?></td>
-                                <td><?php echo htmlspecialchars($trem['estado_trem']); ?></td>
-                                <td><?php echo htmlspecialchars($trem['velocidade_trem']); ?></td>
-                                <td>
-                                    <a href="../controllers/editar_trem.php?id=<?php echo $trem['idtrens']; ?>">Editar</a>
-                                    <a href="../controllers/remover_trem.php?id=<?php echo $trem['idtrens']; ?>" onclick="return confirm('Tem certeza?');">Excluir</a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            <?php else: ?>
-                <p>Nenhum trem cadastrado.</p>
-            <?php endif; ?>
+        
         </div>
 
         <div class="container-menu-bar">

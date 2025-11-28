@@ -41,7 +41,7 @@
 
 
             <img src="../src/assets/images/listar.png" style=" width: 30px; height: 30px;  margin-bottom: -47px;">
-            <a href="./listar_trens.php" style=" text-decoration: none;">
+            <a href="../controllers/listar_trens.php" style=" text-decoration: none;">
                 <div class="opcao">
                     <h3 id="opc">Listar Trens</h3>
                 </div>

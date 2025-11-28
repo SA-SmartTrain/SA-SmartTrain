@@ -6,7 +6,7 @@ if (!isset($mysqli) || !$mysqli) {
     exit;
 }
 
-$result = $mysqli->query("SELECT idtrens, identificador_trem, carga_trem, capacidade_trem, vagoes_trem, estado_trem, velocidade_trem FROM trens ORDER BY idtrens DESC");
+$result = $mysqli->query("SELECT idtrens, carga_trem, capacidade_trem, vagoes_trem, estado_trem, velocidade_trem FROM trens ORDER BY idtrens DESC");
 if (!$result) {
     echo '<p>Erro ao consultar trens: ' . htmlspecialchars($mysqli->error) . '</p>';
     exit;
@@ -20,7 +20,6 @@ echo '<tbody>';
 while ($row = $result->fetch_assoc()) {
     echo '<tr>';
     echo '<td>' . htmlspecialchars($row['idtrens']) . '</td>';
-    echo '<td>' . htmlspecialchars($row['identificador_trem'] ?? 'N/A') . '</td>';
     echo '<td>' . htmlspecialchars($row['carga_trem']) . '</td>';
     echo '<td>' . htmlspecialchars($row['capacidade_trem']) . '</td>';
     echo '<td>' . htmlspecialchars($row['vagoes_trem']) . '</td>';
